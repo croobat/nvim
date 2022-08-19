@@ -40,14 +40,19 @@ local options = {
   sidescrolloff = 8,
   guifont = "JetBrainsMono Nerd Font:h13",  -- the font used in graphical neovim applications
   fdm = "marker",				                    -- Marker fold method {{{}}}
-  wildmode = "longest,full"              -- Better tab completion
+  wildmode = "longest,full"                 -- Better tab completion
 }
-
-o.shm:append "I"				        -- Start screen
-o.shortmess:append "T" 	                		-- Truncate long messages
-o.shortmess:append "c"	                		-- Dont give ins-completion menu
-o.list.lcs = "tab:|"
 
 for k, v in pairs(options) do               -- abreviando vim.opt.x con local options y o
   o[k] = v
 end
+
+o.shm:append "TIc"				        -- Disable start screen, truncate long msg, dont give ins-completion menu
+o.list.lcs = "tab:|"
+
+vim.cmd "set whichwrap+=<,>,[,],h,l"
+vim.cmd [[[set iskeyword+=-]]
+
+vim.cmd("autocmd BufEnter * set formatoptions-=cro") -- Disable auto command new line
+vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
+
