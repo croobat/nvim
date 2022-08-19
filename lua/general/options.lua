@@ -51,7 +51,7 @@ o.shm:append "TIc"				        -- Disable start screen, truncate long msg, dont g
 o.list.lcs = "tab:|"
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
-vim.cmd [[[set iskeyword+=-]]
+vim.cmd [[set iskeyword+=-]]
 
 vim.cmd("autocmd BufEnter * set formatoptions-=cro") -- Disable auto command new line
 vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
