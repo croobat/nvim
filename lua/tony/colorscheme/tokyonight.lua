@@ -6,4 +6,4 @@ vim.g.tokyonight_transparent = true
 
 vim.g.tokyonight_colors = { comment = "#626c9c", }
 
-vim.cmd[[colorscheme tokyonight]]
+vim.cmd "colorscheme tokyonight"

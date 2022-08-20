@@ -6,5 +6,8 @@ vim.g.dracula_colors = {
   fg = "#eae6f0",
 }
 
+vim.cmd "colorscheme dracula"
+
 -- transparency
 vim.cmd "hi Normal guibg=NONE ctermbg=NONE"
+

@@ -144,12 +144,12 @@ return packer.startup(function(use)
 -- │    Colorscheme │
 -- ╰────────────────╯
   -- use "lunarvim/colorschemes" 
-  use { "Mofiqul/dracula.nvim", config = "require 'tony.color-conf.dracula'" }
+  use { "Mofiqul/dracula.nvim" }
   -- use "lunarvim/darkplus.nvim" 
   -- use "navarasu/onedark.nvim"
   -- use "ellisonleao/gruvbox.nvim" 
   -- use "shaunsingh/nord.nvim"
-  use { 'folke/tokyonight.nvim', config = "require 'tony.color-conf.tokyonight'" }
+  use { 'folke/tokyonight.nvim' }
 
 -- ╭───────────────╮
 -- │    Treesitter │
