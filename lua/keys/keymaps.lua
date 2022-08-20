@@ -135,9 +135,6 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
--- Substitute
-keymap("n", "<C-s>", ":%s///g<left><left><left>", opts)
-
 --faster scrolling
 keymap("x", "<C-j>", "5j", opts)
 keymap("x", "<C-k>", "5k", opts)
