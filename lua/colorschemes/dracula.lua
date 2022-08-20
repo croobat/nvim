@@ -6,10 +6,5 @@ vim.g.dracula_colors = {
   fg = "#eae6f0",
 }
 
-if not status_ok then
-  vim.notify("colorscheme " .. colorscheme .. " not found!")
-  return
-end
-
 -- transparency
 vim.cmd "hi Normal guibg=NONE ctermbg=NONE"

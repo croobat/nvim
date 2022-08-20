@@ -126,13 +126,38 @@ cmp.setup {
       end,
     },
 
-    ["<tab>"] = cmp.config.disable,
+    --["<tab>"] = cmp.config.disable,
+    ["<Tab>"] = cmp.mapping(function(fallback)
+      if luasnip.expandable() then
+        luasnip.expand()
+      elseif luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+      else
+        fallback()
+      end
+    end, {
+      "i",
+      "s",
+    }),
 
     -- Testing
     ["<c-q>"] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
     },--}}}
+  },
+
+  sources = {
+    { name = "npm" },       -- npm
+
+    { name = "luasnip" },   -- Main snippets
+    -- { name = "ultisnips" },
+
+    { name = "nvim_lua" },  -- Lua API
+    { name = "nvim_lsp" },  -- LSP
+    { name = "buffer" },    -- Text
+    { name = "calc" },      -- Calculator
+    { name = "path", keyword_length = 5 },      -- Folder path
   },
 
   formatting = {
@@ -153,19 +178,6 @@ cmp.setup {
       })[entry.source.name]
       return vim_item
     end,
-  },
-
-  sources = {
-    { name = "npm" },       -- npm
-
-    { name = "luasnip" },   -- Main snippets
-    -- { name = "ultisnips" },
-
-    { name = "nvim_lua" },  -- Lua API
-    { name = "nvim_lsp" },  -- LSP
-    { name = "buffer" },    -- Text
-    { name = "calc" },      -- Calculator
-    { name = "path", keyword_length = 5 },      -- Folder path
   },
 
   -- other options
