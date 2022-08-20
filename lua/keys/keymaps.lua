@@ -125,18 +125,6 @@ keymap("v", "<C-k>", "5k", opts)
 keymap("v", "<C-h>", "3h", opts)
 keymap("v", "<C-l>", "3l", opts)
 
---comment-boxes (needs comment-box plugin)
-keymap("v", "<leader>cc", "<cmd>lua require('comment-box').albox(1)<cr>", opts)
-keymap("v", "<leader>cab", "<cmd>lua require('comment-box').albox(10)<cr>", opts)
-keymap("v", "<leader>ch", "<cmd>lua require('comment-box').albox(3)<cr>", opts)
-
-keymap("v", "<leader>ct", "<cmd>lua require('comment-box').accbox(7)<cr>", opts)
-keymap("v", "<leader>cT", "<cmd>lua require('comment-box').accbox(3)<cr>", opts)
-
-keymap("v", "<leader>cl", "<cmd>lua require('comment-box').cline(1)<cr>", opts)
-keymap("v", "<leader>cL", "<cmd>lua require('comment-box').cline(2)<cr>", opts)
-keymap("v", "<leader>al", "<cmd>lua require('comment-box').cline(10)<cr>", opts)
-
 --}}}
 
 --## Visual Block ## {{{
