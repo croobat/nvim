@@ -41,7 +41,6 @@ packer.init {
 
 return packer.startup(function(use)
   --}}}
-
   --                                  ╔═════════╗
   --                                  ║ PLUGINS ║
   --                                  ╚═════════╝
@@ -144,14 +143,12 @@ return packer.startup(function(use)
 -- │    Colorscheme │
 -- ╰────────────────╯
   -- use "lunarvim/colorschemes" 
-  --use { "Mofiqul/dracula.nvim", config = "require 'general.color-dracula'" }
+  use { "Mofiqul/dracula.nvim", config = "require 'colorschemes.dracula'" }
   -- use "lunarvim/darkplus.nvim" 
   -- use "navarasu/onedark.nvim"
   -- use "ellisonleao/gruvbox.nvim" 
   -- use "shaunsingh/nord.nvim"
-  use { 'folke/tokyonight.nvim', config = "require 'general.color-tokyo'" }
-  --use { 'tiagovla/tokyodark.nvim', config = "require 'general.color-tokyodark'" }
-  -- use { 'folke/tokyonight.nvim' }
+  use { 'folke/tokyonight.nvim', config = "require 'colorschemes.tokyonight'" }
 
 -- ╭───────────────╮
 -- │    Treesitter │
@@ -212,12 +209,12 @@ return packer.startup(function(use)
 
   -- Inserters
   -- use { "windwp/nvim-autopairs", config = "require 'config.autopairs'" }
+  use { "rstacruz/vim-closer" }
   -- use { "windwp/nvim-ts-autotag", event = "InsertEnter" } --autoclose tags
   -- use { "johmsalas/text-case.nvim", config = function() require('textcase').setup {} end }
 -- 
   -- Comment boxes
   use { "LudoPinelli/comment-box.nvim", config = "require 'config.comment-box'" }
-
 
   -- ┏━━━━━━━━━━━━━━━━━┓
   -- ┃   ## Compile ## ┃
