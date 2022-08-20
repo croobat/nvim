@@ -73,7 +73,7 @@ return packer.startup(function(use)
   -- use "tamago324/nlsp-settings.nvim"
 
   -- LSP handle config
-  -- use { "neovim/nvim-lspconfig", config = "require 'config.lsp'" }
+  -- use { "neovim/nvim-lspconfig", config = "require 'tony.plug-conf.lsp'" }
   use { "neovim/nvim-lspconfig" }
 
   -- Prettier
@@ -83,7 +83,7 @@ return packer.startup(function(use)
   -- │    CMP │
   -- ╰────────╯
   -- Main plugin
-  use { "hrsh7th/nvim-cmp", config = "require 'config.cmp'" }
+  use { "hrsh7th/nvim-cmp" }
 
   -- CMP sources
   use { "David-Kunz/cmp-npm" } -- npm
@@ -117,24 +117,24 @@ return packer.startup(function(use)
   -- ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
   -- File manager
   -- use { "kyazdani42/nvim-tree.lua", requires = { 'kyazdani42/nvim-web-devicons' },
-    -- config = "require 'config.nvim-tree'" }
+    -- config = "require 'tony.plug-conf.nvim-tree'" }
 
   -- Fuzzy finder
   -- use { "nvim-telescope/telescope.nvim", requires = { { 'nvim-lua/plenary.nvim' } },
-    -- config = "require 'config.telescope'" }
+    -- config = "require 'tony.plug-conf.telescope'" }
 
   -- Visual buffer tabs
   -- use { "akinsho/bufferline.nvim", requires = { 'kyazdani42/nvim-web-devicons' }, event = "BufWinEnter",
-    -- config = "require 'config.bufferline'" }
+    -- config = "require 'tony.plug-conf.bufferline'" }
 
   -- Close buffers
   -- use { "moll/vim-bbye" }
 
   -- Project manager
-  -- use { "ahmedkhalf/project.nvim", config = "require 'config.project'" }
+  -- use { "ahmedkhalf/project.nvim", config = "require 'tony.plug-conf.project'" }
 
   -- Better t and f
-  -- use { "unblevable/quick-scope", config = "require 'config.quickscope'" }
+  -- use { "unblevable/quick-scope", config = "require 'tony.plug-conf.quickscope'" }
 
 
   -- ┏━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -144,25 +144,25 @@ return packer.startup(function(use)
 -- │    Colorscheme │
 -- ╰────────────────╯
   -- use "lunarvim/colorschemes" 
-  use { "Mofiqul/dracula.nvim", config = "require 'colorschemes.dracula'" }
+  use { "Mofiqul/dracula.nvim", config = "require 'tony.color-conf.dracula'" }
   -- use "lunarvim/darkplus.nvim" 
   -- use "navarasu/onedark.nvim"
   -- use "ellisonleao/gruvbox.nvim" 
   -- use "shaunsingh/nord.nvim"
-  use { 'folke/tokyonight.nvim', config = "require 'colorschemes.tokyonight'" }
+  use { 'folke/tokyonight.nvim', config = "require 'tony.color-conf.tokyonight'" }
 
 -- ╭───────────────╮
 -- │    Treesitter │
 -- ╰───────────────╯
   -- Main plugin
   -- use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", event = "BufWinEnter",
-    -- config = "require 'config.treesitter'" }
+    -- config = "require 'tony.plug-conf.treesitter'" }
 
   -- Rainbow parens
   -- use { "p00f/nvim-ts-rainbow", requires = "nvim-treesitter/nvim-treesitter" }
 
   -- Contextual comments
-  -- use { "JoosepAlviste/nvim-ts-context-commentstring", config = "require 'config.comment'",
+  -- use { "JoosepAlviste/nvim-ts-context-commentstring", config = "require 'tony.plug-conf.comment'",
     -- after = "nvim-treesitter" }
 
 -- ╭─────────────────╮
@@ -170,10 +170,10 @@ return packer.startup(function(use)
 -- ╰─────────────────╯
   -- Info line
   -- use { "nvim-lualine/lualine.nvim", requires = { 'kyazdani42/nvim-web-devicons', opt = true }, event = "BufWinEnter",
-    -- config = "require 'config.lualine'" }
+    -- config = "require 'tony.plug-conf.lualine'" }
 
   -- Start page
-  -- use { "goolord/alpha-nvim", config = "require 'config.alpha'" }
+  -- use { "goolord/alpha-nvim", config = "require 'tony.plug-conf.alpha'" }
 
   -- Fix lsp doc highlight
   -- use "antoinemadec/FixCursorHold.nvim"
@@ -182,10 +182,10 @@ return packer.startup(function(use)
   -- use { "norcalli/nvim-colorizer.lua", config = "require'colorizer'.setup()" }
 
   -- Git symbols
-  -- use { "lewis6991/gitsigns.nvim", config = "require 'config.gitsigns'" }
+  -- use { "lewis6991/gitsigns.nvim", config = "require 'tony.plug-conf.gitsigns'" }
 
   -- Indented visual lines
-  -- use { "lukas-reineke/indent-blankline.nvim", config = "require 'config.indentline'", event = "BufRead" } --indent lines
+  -- use { "lukas-reineke/indent-blankline.nvim", config = "require 'tony.plug-conf.indentline'", event = "BufRead" } --indent lines
 
   -- Extra icons
   -- use 'kyazdani42/nvim-web-devicons' --extra icons
@@ -209,13 +209,14 @@ return packer.startup(function(use)
   -- use "wellle/targets.vim"
 
   -- Inserters
-  -- use { "windwp/nvim-autopairs", config = "require 'config.autopairs'" }
+  -- use { "windwp/nvim-autopairs", config = "require 'tony.plug-conf.autopairs'" }
   use { "rstacruz/vim-closer" }
   -- use { "windwp/nvim-ts-autotag", event = "InsertEnter" } --autoclose tags
   -- use { "johmsalas/text-case.nvim", config = function() require('textcase').setup {} end }
 -- 
-  -- Comment boxes
-  use { "LudoPinelli/comment-box.nvim", config = "require 'config.comment-box'" }
+  -- Comments
+  use { "LudoPinelli/comment-box.nvim", config = "require 'tony.plug-conf.comment-box'" }
+  use { "numToStr/Comment.nvim", config = "require 'tony.plug-conf.comment'" }
 
   -- ┏━━━━━━━━━━━━━━━━━┓
   -- ┃   ## Compile ## ┃
@@ -225,7 +226,7 @@ return packer.startup(function(use)
   --  setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" },
   --  cmd = { 'MarkdownPreview' } })
   -- Latex
-  -- use { "lervag/vimtex", ft = { "tex" }, config = "require 'config.vimtex'" }
+  -- use { "lervag/vimtex", ft = { "tex" }, config = "require 'tony.plug-conf.vimtex'" }
 
   -- Codi real time completion
   -- use { 'metakirby5/codi.vim' }
@@ -234,7 +235,7 @@ return packer.startup(function(use)
   -- ┃   ## Miscellaneous (10ms) ## ┃
   -- ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
   -- Toggle terminal
-  -- use { "akinsho/toggleterm.nvim", config = "require 'config.toggleterm'" }
+  -- use { "akinsho/toggleterm.nvim", config = "require 'tony.plug-conf.toggleterm'" }
   -- Sort selection
   -- use { "sQVe/sort.nvim", cmd = { 'Sort' } }
   -- Zen mode
@@ -242,7 +243,7 @@ return packer.startup(function(use)
   -- Keymap reminder
   -- use { "folke/which-key.nvim", config = "require 'keys.whichkey'" }
   -- Vim wiki
-  use { "vimwiki/vimwiki", config = "require 'config.vimwiki'" }
+  use { "vimwiki/vimwiki", config = "require 'tony.plug-conf.vimwiki'" }
 
   --## EOF ## {{{
   -- Automatically set up your configuration after cloning packer.nvim

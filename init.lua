@@ -1,5 +1,7 @@
-require "general.options"
-require "keys.keymaps"
-require "plugins"
-require "colorschemes.colorscheme"
--- vim.cmd[[colorscheme tokyonight]]
+require "tony.options"
+require "tony.keymaps"
+require "tony.plugins"
+-- require "tony.colorscheme"
+require "tony.cmp"
+
+vim.cmd[[colorscheme tokyonight]]
