@@ -74,6 +74,7 @@ return packer.startup(function(use)
 
   -- LSP handle config
   -- use { "neovim/nvim-lspconfig", config = "require 'config.lsp'" }
+  use { "neovim/nvim-lspconfig" }
 
   -- Prettier
   -- use('MunifTanjim/prettier.nvim')
@@ -82,25 +83,25 @@ return packer.startup(function(use)
   -- │    CMP │
   -- ╰────────╯
   -- Main plugin
-  -- use { "hrsh7th/nvim-cmp", config = "require 'config.cmp'" }
+  use { "hrsh7th/nvim-cmp", config = "require 'config.cmp'" }
 
   -- CMP sources
-  -- use { "hrsh7th/cmp-buffer" } -- buffer words
-  -- use { "hrsh7th/cmp-path" } -- path
-  -- use { "hrsh7th/cmp-cmdline" } -- cmdline
-  -- use { "hrsh7th/cmp-nvim-lua" } -- lua API
-  -- use { "David-Kunz/cmp-npm" } -- npm
-  -- use { "hrsh7th/cmp-calc" } --calculator
+  use { "David-Kunz/cmp-npm" } -- npm
+  use { "saadparwaiz1/cmp_luasnip" } -- Luasnip plugin
+  use { "hrsh7th/cmp-nvim-lua" } -- lua API
+  use { "hrsh7th/cmp-nvim-lsp" } -- LSP integrated
+  use { "hrsh7th/cmp-buffer" } -- buffer words
+  use { "hrsh7th/cmp-calc" } --calculator
+  use { "hrsh7th/cmp-path" } -- path
+  use { "hrsh7th/cmp-cmdline" } -- cmdline
 
   -- ╭─────────────╮
   -- │    Snippets │
   -- ╰─────────────╯
   -- Snippets engine
-  -- use { "L3MON4D3/LuaSnip", }
-  -- Cmp integration
-  -- use { "saadparwaiz1/cmp_luasnip" } -- cmp integration
+  use { "L3MON4D3/LuaSnip", }
   -- A bunch of snippets
-  -- use { "rafamadriz/friendly-snippets" }
+  use { "rafamadriz/friendly-snippets" }
 
   -- use { "SirVer/ultisnips" }
   -- use { "quangnguyen30192/cmp-nvim-ultisnips" }
