@@ -131,8 +131,8 @@ return packer.startup(function(use)
 -- │    Treesitter │
 -- ╰───────────────╯
   -- Main plugin
-  -- use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", event = "BufWinEnter",
-    -- config = "require 'tony.plug-conf.treesitter'" }
+  use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", event = "BufWinEnter",
+    config = "require 'tony.plug-conf.treesitter'" }
 
   -- Rainbow parens
   -- use { "p00f/nvim-ts-rainbow", requires = "nvim-treesitter/nvim-treesitter" }
