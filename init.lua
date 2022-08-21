@@ -1,6 +1,8 @@
+require "impatient"
+
 require "tony.options"
 require "tony.keymaps"
 require "tony.plugins"
-require "tony.cmp"
+require "tony.lsp"
 
-require "tony.colorscheme.dracula"
+require "tony.colorscheme.tokyonight"

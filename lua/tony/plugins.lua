@@ -47,46 +47,31 @@ return packer.startup(function(use)
   -- ┏━━━━━━━━━━━━━━━━━━━━┓
   -- ┃    ## Mandatory ## ┃
   -- ┗━━━━━━━━━━━━━━━━━━━━┛
+  use { "lewis6991/impatient.nvim" } -- Faster startup
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used by a lot of plugins
-  -- use { "lewis6991/impatient.nvim" } -- Faster startup
-  --
 
 
   -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
   -- ┃   ## Completion (30ms) ## ┃
   -- ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-  -- use { "github/copilot.vim" }
-
   -- ╭────────╮
   -- │    LSP │
   -- ╰────────╯
-  -- Main plugin
-  -- use { "hrsh7th/cmp-nvim-lsp" }
-
   -- Language Server Installer
-  -- use "williamboman/nvim-lsp-installer"
-
-  -- Set of cool LSP settings
-  -- use "tamago324/nlsp-settings.nvim"
-
-  -- LSP handle config
-  -- use { "neovim/nvim-lspconfig", config = "require 'tony.plug-conf.lsp'" }
+  use "williamboman/nvim-lsp-installer"
+  -- Configuration helper
   use { "neovim/nvim-lspconfig" }
-
-  -- Prettier
-  -- use('MunifTanjim/prettier.nvim')
 
   -- ╭────────╮
   -- │    CMP │
   -- ╰────────╯
   -- Main plugin
-  use { "hrsh7th/nvim-cmp" }
+  use { "hrsh7th/nvim-cmp", config = "require 'tony.plug-conf.cmp'" }
 
-  -- CMP sources
-  use { "David-Kunz/cmp-npm" } -- npm
+  -- Sources
   use { "saadparwaiz1/cmp_luasnip" } -- Luasnip plugin
   use { "hrsh7th/cmp-nvim-lua" } -- lua API
   use { "hrsh7th/cmp-nvim-lsp" } -- LSP integrated
@@ -95,19 +80,10 @@ return packer.startup(function(use)
   use { "hrsh7th/cmp-path" } -- path
   use { "hrsh7th/cmp-cmdline" } -- cmdline
 
-  -- ╭─────────────╮
-  -- │    Snippets │
-  -- ╰─────────────╯
   -- Snippets engine
   use { "L3MON4D3/LuaSnip", }
   -- A bunch of snippets
   use { "rafamadriz/friendly-snippets" }
-
-  -- use { "SirVer/ultisnips" }
-  -- use { "quangnguyen30192/cmp-nvim-ultisnips" }
-
-  -- VS Code ES7+ React/Redux...
-  -- use { "mlaursen/vim-react-snippets"}
 
   -- Main Null-ls plugin
   -- use "jose-elias-alvarez/null-ls.nvim" -- External formatters and linters
@@ -145,11 +121,11 @@ return packer.startup(function(use)
 -- ╰────────────────╯
   -- use "lunarvim/colorschemes" 
   use { "Mofiqul/dracula.nvim" }
+  use { 'folke/tokyonight.nvim' }
   -- use "lunarvim/darkplus.nvim" 
   -- use "navarasu/onedark.nvim"
   -- use "ellisonleao/gruvbox.nvim" 
   -- use "shaunsingh/nord.nvim"
-  use { 'folke/tokyonight.nvim' }
 
 -- ╭───────────────╮
 -- │    Treesitter │

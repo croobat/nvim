@@ -33,10 +33,6 @@ keymap("", "<leader>q", "<Nop>", opts)
 
 -- ## Global ## --{{{
 
--- Emacs-like
-keymap("", "<C-a>", "<ESC>^", opts)
-keymap("", "<C-e>", "<ESC>$", opts)--}}}
-
 -- ## Normal ## -- {{{
 
 -- Lexplorer
