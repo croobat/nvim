@@ -99,8 +99,8 @@ return packer.startup(function(use)--}}}
   use { "nvim-telescope/telescope.nvim", config = "require 'tony.plug-conf.telescope'" }
 
   -- Visual buffer tabs
-  -- use { "akinsho/bufferline.nvim", requires = { 'kyazdani42/nvim-web-devicons' }, event = "BufWinEnter",
-    -- config = "require 'tony.plug-conf.bufferline'" }
+  use { "akinsho/bufferline.nvim", requires = { 'kyazdani42/nvim-web-devicons' }, event = "BufWinEnter",
+    config = "require 'tony.plug-conf.bufferline'" }
 
   -- Close buffers
   -- use { "moll/vim-bbye" }
