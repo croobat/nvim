@@ -37,7 +37,7 @@ keymap("", "<leader>q", "<Nop>", opts)
 
 -- Lexplorer
 -- keymap("n", "<leader>e", ":Lex 30<cr>", opts)
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+-- keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 --faster scrolling
 keymap("n", "<C-j>", "5j", opts)

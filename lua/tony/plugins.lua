@@ -103,7 +103,7 @@ return packer.startup(function(use)--}}}
     config = "require 'tony.plug-conf.bufferline'" }
 
   -- Close buffers
-  -- use { "moll/vim-bbye" }
+  use { "moll/vim-bbye" }
 
   -- Project manager
   -- use { "ahmedkhalf/project.nvim", config = "require 'tony.plug-conf.project'" }
@@ -216,7 +216,7 @@ return packer.startup(function(use)--}}}
   -- Zen mode
   -- use { "folke/zen-mode.nvim", cmd = { 'ZenMode' } }
   -- Keymap reminder
-  -- use { "folke/which-key.nvim", config = "require 'keys.whichkey'" }
+  use { "folke/which-key.nvim", config = "require 'tony.plug-conf.whichkey'" }
   -- Vim wiki
   use { "vimwiki/vimwiki", config = "require 'tony.plug-conf.vimwiki'" }
 
