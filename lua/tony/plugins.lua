@@ -150,9 +150,6 @@ return packer.startup(function(use)--}}}
   -- Start page
   -- use { "goolord/alpha-nvim", config = "require 'tony.plug-conf.alpha'" }
 
-  -- Fix lsp doc highlight
-  -- use "antoinemadec/FixCursorHold.nvim"
-
   -- Visual hex colors
   -- use { "norcalli/nvim-colorizer.lua", config = "require'colorizer'.setup()" }
 
@@ -163,32 +160,32 @@ return packer.startup(function(use)--}}}
   -- use { "lukas-reineke/indent-blankline.nvim", config = "require 'tony.plug-conf.indentline'", event = "BufRead" } --indent lines
 
   -- Extra icons
-  -- use 'kyazdani42/nvim-web-devicons' --extra icons
+  use 'kyazdani42/nvim-web-devicons' --extra icons
 
 
   -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━┓
   -- ┃    ## Vanilla (<10ms) ## ┃
   -- ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛
   -- Motions
-  -- use "tpope/vim-surround" -- Surround
-  -- use "tpope/vim-commentary" -- Comment
-  -- use "tpope/vim-repeat" -- Repeat
+  use "tpope/vim-surround" -- Surround
+  use "tpope/vim-repeat" -- Repeat
+  use { "sQVe/sort.nvim", cmd = { 'Sort' } }
+
   --(Replace without overlap) gr motion
-  -- use "vim-scripts/ReplaceWithRegister"
+  use "vim-scripts/ReplaceWithRegister"
 
   -- Targets
-  -- use "kana/vim-textobj-user" -- custom text objects
-  -- use "michaeljsmith/vim-indent-object" -- indent (ai, ii)
-  -- use "kana/vim-textobj-entire" -- entire (ae, ie)
-  -- use "kana/vim-textobj-line" -- significant line
-  -- use "wellle/targets.vim"
+  use "kana/vim-textobj-user" -- custom text objects
+  use "michaeljsmith/vim-indent-object" -- indent (ai, ii)
+  use "kana/vim-textobj-entire" -- entire (ae, ie)
+  use "kana/vim-textobj-line" -- significant line
+  use "wellle/targets.vim"
 
   -- Inserters
   -- use { "windwp/nvim-autopairs", config = "require 'tony.plug-conf.autopairs'" }
   use { "rstacruz/vim-closer" }
-  -- use { "windwp/nvim-ts-autotag", event = "InsertEnter" } --autoclose tags
-  -- use { "johmsalas/text-case.nvim", config = function() require('textcase').setup {} end }
--- 
+  use { "windwp/nvim-ts-autotag", event = "InsertEnter" } --autoclose tags
+
   -- Comments
   use { "LudoPinelli/comment-box.nvim", config = "require 'tony.plug-conf.comment-box'" }
   use { "numToStr/Comment.nvim", config = "require 'tony.plug-conf.comment'" }
@@ -202,7 +199,6 @@ return packer.startup(function(use)--}}}
   --  cmd = { 'MarkdownPreview' } })
   -- Latex
   -- use { "lervag/vimtex", ft = { "tex" }, config = "require 'tony.plug-conf.vimtex'" }
-
   -- Codi real time completion
   -- use { 'metakirby5/codi.vim' }
 
@@ -210,11 +206,9 @@ return packer.startup(function(use)--}}}
   -- ┃   ## Miscellaneous (10ms) ## ┃
   -- ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
   -- Toggle terminal
-  -- use { "akinsho/toggleterm.nvim", config = "require 'tony.plug-conf.toggleterm'" }
-  -- Sort selection
-  -- use { "sQVe/sort.nvim", cmd = { 'Sort' } }
+  use { "akinsho/toggleterm.nvim", config = "require 'tony.plug-conf.toggleterm'" }
   -- Zen mode
-  -- use { "folke/zen-mode.nvim", cmd = { 'ZenMode' } }
+  use { "folke/zen-mode.nvim", cmd = { 'ZenMode' } }
   -- Keymap reminder
   use { "folke/which-key.nvim", config = "require 'tony.plug-conf.whichkey'" }
   -- Vim wiki
