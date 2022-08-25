@@ -137,8 +137,8 @@ return packer.startup(function(use)--}}}
   use { "p00f/nvim-ts-rainbow", requires = "nvim-treesitter/nvim-treesitter" }
 
   -- Contextual comments
-  -- use { "JoosepAlviste/nvim-ts-context-commentstring", config = "require 'tony.plug-conf.comment'",
-    -- after = "nvim-treesitter" }
+  use { "JoosepAlviste/nvim-ts-context-commentstring", config = "require 'tony.plug-conf.comment'",
+    after = "nvim-treesitter" }
 
 -- ╭─────────────────╮
 -- │   Miscellaneous │
