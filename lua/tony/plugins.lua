@@ -182,8 +182,8 @@ return packer.startup(function(use)--}}}
   use "wellle/targets.vim"
 
   -- Inserters
-  -- use { "windwp/nvim-autopairs", config = "require 'tony.plug-conf.autopairs'" }
-  use { "rstacruz/vim-closer" }
+  use { "windwp/nvim-autopairs", config = "require 'tony.plug-conf.autopairs'" }
+  -- use { "rstacruz/vim-closer" }
   use { "windwp/nvim-ts-autotag", event = "InsertEnter" } --autoclose tags
 
   -- Comments
