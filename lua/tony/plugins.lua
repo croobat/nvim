@@ -109,7 +109,7 @@ return packer.startup(function(use)--}}}
   -- use { "ahmedkhalf/project.nvim", config = "require 'tony.plug-conf.project'" }
 
   -- Better t and f
-  -- use { "unblevable/quick-scope", config = "require 'tony.plug-conf.quickscope'" }
+  use { "unblevable/quick-scope", config = "require 'tony.plug-conf.quickscope'" }
 
 
   -- ┏━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -151,7 +151,7 @@ return packer.startup(function(use)--}}}
   -- use { "goolord/alpha-nvim", config = "require 'tony.plug-conf.alpha'" }
 
   -- Visual hex colors
-  -- use { "norcalli/nvim-colorizer.lua", config = "require'colorizer'.setup()" }
+  use { "norcalli/nvim-colorizer.lua", config = "require'colorizer'.setup()" }
 
   -- Git symbols
   -- use { "lewis6991/gitsigns.nvim", config = "require 'tony.plug-conf.gitsigns'" }
