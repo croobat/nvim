@@ -102,6 +102,7 @@ local mappings = {
   ["q"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },      --Close buffer
   -- t = telescope
   ["w"] = { "<cmd>w!<CR>", "Save" },                    --Save
+  ["W"] = { "<cmd>SudaWrite<CR>", "Save (sudo)" },      --Save
   ["x"] = { "I* [ ] <esc>", "Insert checkbox" },
   ["z"] = { "<cmd>:ZenMode<cr>", "Zen mode" },
 

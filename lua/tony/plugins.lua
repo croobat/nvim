@@ -213,6 +213,8 @@ return packer.startup(function(use)--}}}
   use { "folke/which-key.nvim", config = "require 'tony.plug-conf.whichkey'" }
   -- Vim wiki
   use { "vimwiki/vimwiki", config = "require 'tony.plug-conf.vimwiki'" }
+  -- Sudo privileges
+  use { "lambdalisue/suda.vim" }
 
   --## EOF ## {{{
   -- Automatically set up your configuration after cloning packer.nvim
