@@ -106,7 +106,7 @@ return packer.startup(function(use)--}}}
   use { "moll/vim-bbye" }
 
   -- Project manager
-  -- use { "ahmedkhalf/project.nvim", config = "require 'tony.plug-conf.project'" }
+  use { "ahmedkhalf/project.nvim", config = "require 'tony.plug-conf.project'" }
 
   -- Better t and f
   use { "unblevable/quick-scope", config = "require 'tony.plug-conf.quickscope'" }
@@ -148,16 +148,16 @@ return packer.startup(function(use)--}}}
     config = "require 'tony.plug-conf.lualine'" }
 
   -- Start page
-  -- use { "goolord/alpha-nvim", config = "require 'tony.plug-conf.alpha'" }
+  use { "goolord/alpha-nvim", config = "require 'tony.plug-conf.alpha'" }
 
   -- Visual hex colors
   use { "norcalli/nvim-colorizer.lua", config = "require'colorizer'.setup()" }
 
   -- Git symbols
-  -- use { "lewis6991/gitsigns.nvim", config = "require 'tony.plug-conf.gitsigns'" }
+  use { "lewis6991/gitsigns.nvim", config = "require 'tony.plug-conf.gitsigns'" }
 
   -- Indented visual lines
-  -- use { "lukas-reineke/indent-blankline.nvim", config = "require 'tony.plug-conf.indentline'", event = "BufRead" } --indent lines
+  use { "lukas-reineke/indent-blankline.nvim", config = "require 'tony.plug-conf.indentline'", event = "BufRead" } --indent lines
 
   -- Extra icons
   use 'kyazdani42/nvim-web-devicons' --extra icons
