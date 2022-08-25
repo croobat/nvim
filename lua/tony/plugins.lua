@@ -144,8 +144,8 @@ return packer.startup(function(use)--}}}
 -- │   Miscellaneous │
 -- ╰─────────────────╯
   -- Info line
-  -- use { "nvim-lualine/lualine.nvim", requires = { 'kyazdani42/nvim-web-devicons', opt = true }, event = "BufWinEnter",
-    -- config = "require 'tony.plug-conf.lualine'" }
+  use { "nvim-lualine/lualine.nvim", requires = { 'kyazdani42/nvim-web-devicons', opt = true }, event = "BufWinEnter",
+    config = "require 'tony.plug-conf.lualine'" }
 
   -- Start page
   -- use { "goolord/alpha-nvim", config = "require 'tony.plug-conf.alpha'" }
