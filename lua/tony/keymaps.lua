@@ -42,8 +42,8 @@ keymap("", "<leader>q", "<Nop>", opts)
 --faster scrolling
 keymap("n", "<C-j>", "5j", opts)
 keymap("n", "<C-k>", "5k", opts)
-keymap("n", "<C-h>", "3h", opts)
-keymap("n", "<C-l>", "3l", opts)
+keymap("n", "<C-h>", "5h", opts)
+keymap("n", "<C-l>", "5l", opts)
 
 -- Better window navigation
 keymap("n", "<A-h>", "<C-w>h", opts)

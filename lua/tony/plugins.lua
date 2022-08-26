@@ -111,6 +111,9 @@ return packer.startup(function(use)--}}}
   -- Better t and f
   use { "unblevable/quick-scope", config = "require 'tony.plug-conf.quickscope'" }
 
+  -- Hop
+  use { "phaazon/hop.nvim", branch = 'v2', config = "require 'tony.plug-conf.hop'" }
+
 
   -- ┏━━━━━━━━━━━━━━━━━━━━━━━━┓
   -- ┃   ## Visuals (40ms) ## ┃
