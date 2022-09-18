@@ -122,12 +122,12 @@ return packer.startup(function(use)--}}}
 -- ╭────────────────╮
 -- │    Colorscheme │
 -- ╰────────────────╯
-  -- use "lunarvim/colorschemes" 
+  -- use "lunarvim/colorschemes"
   use { "Mofiqul/dracula.nvim" }
   use { 'folke/tokyonight.nvim' }
-  -- use "lunarvim/darkplus.nvim" 
+  -- use "lunarvim/darkplus.nvim"
   -- use "navarasu/onedark.nvim"
-  -- use "ellisonleao/gruvbox.nvim" 
+  -- use "ellisonleao/gruvbox.nvim"
   -- use "shaunsingh/nord.nvim"
 
 -- ╭───────────────╮

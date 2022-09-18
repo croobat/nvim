@@ -163,6 +163,8 @@ local mappings = {
   C = { "<cmd>lua vim.cmd'setlocal formatoptions-=cro'<cr>", "Auto-comment off" },
   i = { "<cmd>lua vim.cmd'setlocal autoindent'<cr>", "Auto-indent on" },
   I = { "<cmd>lua vim.cmd'setlocal noautoindent'<cr>", "Auto-indent off" },
+  l = { "<cmd>lua vim.cmd'set colorcolumn=80'<cr>", "Color column on" },
+  L = { "<cmd>lua vim.cmd'set colorcolumn=0'<cr>", "Color column off" },
   h = { "<cmd>lua vim.opt.hlsearch = true<CR>", "Highlight on" },      --Enable hl search
   H = { "<cmd>nohlsearch<CR>", "Highlight off" },    --Disable hl search
   x = { "<cmd>ColorizerToggle<cr>", "Hex colors toggle" },    --Explorer
