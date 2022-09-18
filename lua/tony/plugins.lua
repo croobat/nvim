@@ -41,6 +41,7 @@ packer.init {
 
 return packer.startup(function(use)--}}}
 
+
   --                                  ╔═════════╗
   --                                  ║ PLUGINS ║
   --                                  ╚═════════╝
@@ -138,6 +139,7 @@ return packer.startup(function(use)--}}}
 
   -- Rainbow parens
   use { "p00f/nvim-ts-rainbow", requires = "nvim-treesitter/nvim-treesitter" }
+  -- use { "p00f/nvim-ts-rainbow" }
 
   -- Contextual comments
   use { "JoosepAlviste/nvim-ts-context-commentstring", config = "require 'tony.plug-conf.comment'",
@@ -186,7 +188,6 @@ return packer.startup(function(use)--}}}
 
   -- Inserters
   use { "windwp/nvim-autopairs", config = "require 'tony.plug-conf.autopairs'" }
-  -- use { "rstacruz/vim-closer" }
   use { "windwp/nvim-ts-autotag", event = "InsertEnter" } --autoclose tags
 
   -- Comments

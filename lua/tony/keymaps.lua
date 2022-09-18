@@ -31,8 +31,6 @@ keymap("", "<leader>q", "<Nop>", opts)
 --   term_mode = "t",
 --   command_mode = "c",
 
--- ## Global ## --{{{
-
 -- ## Normal ## -- {{{
 
 -- Lexplorer

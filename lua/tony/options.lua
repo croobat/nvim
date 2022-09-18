@@ -47,7 +47,7 @@ for k, v in pairs(options) do               -- abreviando vim.opt.x con local op
   o[k] = v
 end
 
-o.shm:append "TIc"				        -- Disable start screen, truncate long msg, dont give ins-completion menu
+o.shm:append "TIc"                          -- Disable start screen, truncate long msg, dont give ins-completion menu
 o.list.lcs = "tab:|"
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
