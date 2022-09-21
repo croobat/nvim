@@ -31,7 +31,7 @@ local options = {
   tabstop = 2,                              -- insert 2 spaces for a tab
   cursorline = true,                        -- highlight the current line
   number = true,                            -- set numbered lines
-  relativenumber = true,                   -- set relative numbered lines
+  relativenumber = false,                   -- set relative numbered lines
   numberwidth = 2,                          -- set number column width to 2 {default 4}
   signcolumn = "yes",                       -- always show the sign colum
   wrap = false,                             -- display lines as one long line
@@ -55,4 +55,3 @@ vim.cmd [[set iskeyword+=-]]
 
 vim.cmd("autocmd BufEnter * set formatoptions-=cro") -- Disable auto command new line
 vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
-
