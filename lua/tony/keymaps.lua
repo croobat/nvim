@@ -69,7 +69,7 @@ keymap("n", ",", "za", opts)
 -- Insert things
 -- Line
 keymap("n", "<enter>", "o<esc>", opts)
-keymap("n", "<A-enter>", "O<esc>", opts)
+keymap("n", "<A-enter>", "i<CR><esc>", opts)
 
 -- Word Wrap
 keymap("n", "<A-z>", ":set wrap!<CR>", opts)
