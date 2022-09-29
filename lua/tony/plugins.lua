@@ -167,6 +167,9 @@ return packer.startup(function(use)--}}}
   -- Extra icons
   use 'kyazdani42/nvim-web-devicons' --extra icons
 
+  -- CSV highlighting
+  use 'mechatroner/rainbow_csv'
+
 
   -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━┓
   -- ┃    ## Vanilla (<10ms) ## ┃
@@ -201,6 +204,8 @@ return packer.startup(function(use)--}}}
   --use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install",
   --  setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" },
   --  cmd = { 'MarkdownPreview' } })
+  -- CSV preview
+  use { 'Nguyen-Hoang-Nam/nvim-preview-csv', config = "require 'tony.plug-conf.nvim-preview'" }
   -- Latex
   -- use { "lervag/vimtex", ft = { "tex" }, config = "require 'tony.plug-conf.vimtex'" }
   -- Codi real time completion

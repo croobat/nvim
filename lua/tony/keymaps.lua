@@ -75,10 +75,13 @@ keymap("n", "<A-enter>", "i<CR><esc>", opts)
 keymap("n", "<A-z>", ":set wrap!<CR>", opts)
 
 -- Better pasting
-keymap("n", "<c-p>", "pg;h", opts)
+keymap("n", "<A-p>", "pg;h", opts)
 
 -- Close buffer
 keymap("n", "QQ", ":bdelete<cr>", opts)
+
+-- Tab to indent
+keymap("n", "<Tab>", "ddko", opts)
 
 --}}}
 
@@ -104,6 +107,10 @@ keymap("i", "<M-d>", "<ESC>ciw", opts)
 --}}}
 
 --## Visual ## {{{
+-- Multiline segments
+keymap("v", "j", "gj", opts)
+keymap("v", "k", "gk", opts)
+
 
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)

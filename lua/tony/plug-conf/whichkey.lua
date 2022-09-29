@@ -223,6 +223,11 @@ local mappings = {
     S = { "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", "Workspace Symbols", },
   },--}}}
 
+  p = {
+    name = "Preview",--{{{
+    c = { "<cmd>lua require('nvim-preview-csv').preview()<cr>", "Preview CSV" },
+  },
+
   t = {
     name = "Telescope",--{{{
     M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
