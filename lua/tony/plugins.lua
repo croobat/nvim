@@ -177,6 +177,7 @@ return packer.startup(function(use)--}}}
   -- Motions
   use "tpope/vim-surround" -- Surround
   use "tpope/vim-repeat" -- Repeat
+  use "chaoren/vim-wordmotion"
   use { "sQVe/sort.nvim", cmd = { 'Sort' } }
 
   --(Replace without overlap) gr motion
