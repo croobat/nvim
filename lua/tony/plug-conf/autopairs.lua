@@ -66,9 +66,9 @@ npairs.add_rules {
       :use_key(']'),
 
   -- Arrow function (js)
-  Rule('%(.*%)%s*%=>$', ' {  }', { 'typescript', 'typescriptreact', 'javascript', 'javascriptreact' })
-        :use_regex(true)
-        :set_end_pair_length(2),
+  -- Rule('%(.*%)%s*%=>$', ' {  }', { 'typescript', 'typescriptreact', 'javascript', 'javascriptreact' })
+  --       :use_regex(true)
+  --       :set_end_pair_length(2),
 
   -- space on equal
   -- Rule('=', '')
