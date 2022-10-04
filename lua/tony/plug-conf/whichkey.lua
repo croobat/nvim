@@ -207,7 +207,7 @@ local mappings = {
     c = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
     d = { "<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics", },
     w = { "<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics", },
-    f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
+    f = { "<cmd>lua vim.lsp.buf.format { async = true }<cr>", "Format" },
     gi = { "<cmd>lua vim.lsp.buf.implementation()<cr>", "List implementations" },
     gd = { "<cmd>lua vim.lsp.buf.type_definition()<cr>", "List definitions" },
     gr = { "<cmd>lua vim.lsp.buf.references()<cr>", "List references" },
