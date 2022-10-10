@@ -108,33 +108,33 @@ local mappings = {
 
   L = {
     name = "Latex",--{{{
-    i = {"", "Info"},
     I = {"", "Info full"},
-    x = {"", "Reload"},
     X = {"", "Reload state"},
-    s = {"", "Toggle main"},
-    q = {"", "Log"},
     a = {"", "Context menu"},
+    i = {"", "Info"},
+    q = {"", "Log"},
+    s = {"", "Toggle main"},
+    x = {"", "Reload"},
 
-    L = {"", "Compile"},
-    o = {"", "Compile output"},
-    l = {"", "Compile selected"},
-    k = {"", "Stop"},
-    K = {"", "Stop all"},
-    e = {"", "Show errors"},
-    c = {"", "Clean auxiliary files"},
     C = {"", "Clean full"},
-    g = {"", "Status"},
     G = {"", "Status all"},
+    K = {"", "Stop all"},
+    L = {"", "Compile"},
+    c = {"", "Clean auxiliary files"},
+    e = {"", "Show errors"},
+    g = {"", "Status"},
+    k = {"", "Stop"},
+    l = {"", "Compile selected"},
+    o = {"", "Compile output"},
 
-    t = {"", "TOC open"},
     T = {"", "Toc toggle"},
-    v = {"", "View"},
-    r = {"", "Reverse search"},
     m = {"", "Imaps list"},
+    r = {"", "Reverse search"},
+    t = {"", "TOC open"},
+    v = {"", "View"},
 
-    wc = {"<cmd>VimtexCountWords", "Word count"},
     lc = {"<cmd>VimtexCountLetters", "Letter count"},
+    wc = {"<cmd>VimtexCountWords", "Word count"},
   },--}}}
 
   S = {
@@ -145,28 +145,28 @@ local mappings = {
 
   T = {
     name = "Terminal",--{{{
-    T = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
+    T = { "<cmd>ToggleTerm size=15 direction=horizontal<cr>", "Vterminal" },
+    t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
     f = { "<cmd>ToggleTerm direction=float<cr>", "Float terminal" },
     g = { "<cmd>lua _LAZYGIT_TOGGLE()<cr>", "Git" },
     h = { "<cmd>ToggleTerm size=15 direction=horizontal<cr>", "Hterminal" },
     l = { "<cmd>lua _LIVESERVER_TOGGLE()<cr>", "HTML server" },
     n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
     p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
-    t = { "<cmd>ToggleTerm size=15 direction=horizontal<cr>", "Vterminal" },
     u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
     v = { "<cmd>ToggleTerm size=60 direction=vertical<cr>", "Vertical" },
   },--}}}
 
   a = {
     name = "Auto-options",--{{{
-  c = { "<cmd>lua vim.cmd'setlocal formatoptions+=cro'<cr>", "Auto-comment on" },
   C = { "<cmd>lua vim.cmd'setlocal formatoptions-=cro'<cr>", "Auto-comment off" },
-  i = { "<cmd>lua vim.cmd'setlocal autoindent'<cr>", "Auto-indent on" },
-  I = { "<cmd>lua vim.cmd'setlocal noautoindent'<cr>", "Auto-indent off" },
-  l = { "<cmd>lua vim.cmd'set colorcolumn=80'<cr>", "Color column on" },
-  L = { "<cmd>lua vim.cmd'set colorcolumn=0'<cr>", "Color column off" },
-  h = { "<cmd>lua vim.opt.hlsearch = true<CR>", "Highlight on" },      --Enable hl search
   H = { "<cmd>nohlsearch<CR>", "Highlight off" },    --Disable hl search
+  I = { "<cmd>lua vim.cmd'setlocal noautoindent'<cr>", "Auto-indent off" },
+  L = { "<cmd>lua vim.cmd'set colorcolumn=0'<cr>", "Color column off" },
+  c = { "<cmd>lua vim.cmd'setlocal formatoptions+=cro'<cr>", "Auto-comment on" },
+  h = { "<cmd>lua vim.opt.hlsearch = true<CR>", "Highlight on" },      --Enable hl search
+  i = { "<cmd>lua vim.cmd'setlocal autoindent'<cr>", "Auto-indent on" },
+  l = { "<cmd>lua vim.cmd'set colorcolumn=80'<cr>", "Color column on" },
   x = { "<cmd>ColorizerToggle<cr>", "Hex colors toggle" },    --Explorer
 
   },--}}}
@@ -203,52 +203,46 @@ local mappings = {
 
   l = {
     name = "LSP",--{{{
+    I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
+    S = { "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", "Workspace Symbols", },
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
     c = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
     d = { "<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics", },
-    w = { "<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics", },
     f = { "<cmd>lua vim.lsp.buf.format { async = true }<cr>", "Format" },
-    gi = { "<cmd>lua vim.lsp.buf.implementation()<cr>", "List implementations" },
     gd = { "<cmd>lua vim.lsp.buf.type_definition()<cr>", "List definitions" },
+    gi = { "<cmd>lua vim.lsp.buf.implementation()<cr>", "List implementations" },
     gr = { "<cmd>lua vim.lsp.buf.references()<cr>", "List references" },
     gs = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "Signature help" },
     i = { "<cmd>LspInfo<cr>", "Info" },
-    l = { "<cmd>LspStart<cr>", "Start" },
-    I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
     j = { "<cmd>lua vim.diagnostic.goto_next()<CR>", "Next Diagnostic", },
     k = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", "Prev Diagnostic", },
+    l = { "<cmd>LspStart<cr>", "Start" },
     q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
     r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
     s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
-    S = { "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", "Workspace Symbols", },
+    w = { "<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics", },
   },--}}}
-
-  p = {
-    name = "Preview",--{{{
-    c = { "<cmd>lua require('nvim-preview-csv').preview()<cr>", "Preview CSV" },
-  },
 
   t = {
     name = "Telescope",--{{{
+    C = { "<cmd>Telescope git_bcommits<cr>", "Git commits current buffer" },
+    G = { "<cmd>Telescope diagnostics<cr>", "LSP diagnostics" },
+    H = { "<cmd>Telescope help_tags<cr>", "Help" },
     M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
     R = { "<cmd>Telescope registers<cr>", "Registers" },
-    b = { "<cmd>Telescope git_branches<cr>", "Git branch" },
-    H = { "<cmd>Telescope help_tags<cr>", "Help" },
-    k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
-    h = { "<cmd>Telescope oldfiles<cr>", "History files" },
     T = { "<cmd>Telescope live_grep<cr>", "Text" },
-    t = { "<cmd>Telescope resume<cr>", "Resume search" },
-    ct = { "<cmd>Telescope grep_string<cr>", "Text in cursor" },
-    g = { "<cmd>Telescope tags<cr>", "Tags" },
-    f = { "<cmd>Telescope find_files<cr>", "Files" },
+    b = { "<cmd>Telescope git_branches<cr>", "Git branch" },
     c = { "<cmd>Telescope git_commits<cr>", "Git commit" },
-    C = { "<cmd>Telescope git_bcommits<cr>", "Git commits current buffer" },
-    q = { "<cmd>Telescope quickfix<cr>", "LSP quickfix" },
-    r = { "<cmd>Telescope lsp_references<cr>", "LSP reference" },
     d = { "<cmd>Telescope lsp_definition<cr>", "LSP definition" },
-    G = { "<cmd>Telescope diagnostics<cr>", "LSP diagnostics" },
+    f = { "<cmd>Telescope find_files<cr>", "Files" },
+    g = { "<cmd>Telescope tags<cr>", "Tags" },
+    h = { "<cmd>Telescope oldfiles<cr>", "History files" },
+    k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     m = { "<cmd>Telescope marks<cr>", "Mark" },
     p = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
+    q = { "<cmd>Telescope quickfix<cr>", "LSP quickfix" },
+    r = { "<cmd>Telescope lsp_references<cr>", "LSP reference" },
+    t = { "<cmd>Telescope resume<cr>", "Resume search" },
   },--}}}
 
 }
