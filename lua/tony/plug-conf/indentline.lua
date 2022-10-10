@@ -14,9 +14,8 @@ vim.g.indent_blankline_filetype_exclude = {
 	"Trouble",
 }
 vim.g.indentLine_enabled = 1
--- vim.g.indent_blankline_char = "│"
-vim.g.indent_blankline_char = "▏"
--- vim.g.indent_blankline_char = "▎"
+vim.g.indent_blankline_char = "┆"
+vim.g.indent_blankline_context_char = "┆"
 vim.g.indent_blankline_show_trailing_blankline_indent = false
 vim.g.indent_blankline_show_first_indent_level = true
 vim.g.indent_blankline_use_treesitter = true
@@ -46,13 +45,6 @@ vim.g.indent_blankline_context_patterns = {
 -- HACK: work-around for https://github.com/lukas-reineke/indent-blankline.nvim/issues/59
 vim.wo.colorcolumn = "99999"
 
--- vim.cmd [[highlight IndentBlanklineContextChar guifg=#ababa7 gui=nocombine]]
--- vim.cmd [[highlight IndentBlanklineIndent1     guifg=#ff5555 gui=nocombine]]
--- vim.cmd [[highlight IndentBlanklineIndent2     guifg=#ffb86c gui=nocombine]]
--- vim.cmd [[highlight IndentBlanklineIndent3     guifg=#50fa7b gui=nocombine]]
--- vim.cmd [[highlight IndentBlanklineIndent4     guifg=#bd93f9 gui=nocombine]]
--- vim.cmd [[highlight IndentBlanklineIndent5     guifg=#8be9fd gui=nocombine]]
--- vim.cmd [[highlight IndentBlanklineIndent6     guifg=#ff79c6 gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineContextChar guifg=#f8f8f2 gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent1     guifg=#8466ad gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent2     guifg=#b3558b gui=nocombine]]
@@ -69,7 +61,7 @@ indent_blankline.setup({
 	-- show_end_of_line = true,
 	space_char_blankline = " ",
 	show_current_context_start_on_current_line = true,
-	-- show_current_context_start = false,
+  show_current_context_start = true,
 	char_highlight_list = {
 	  "IndentBlanklineIndent1",
 	  "IndentBlanklineIndent2",

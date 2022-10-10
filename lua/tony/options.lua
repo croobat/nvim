@@ -21,7 +21,7 @@ local options = {
   splitbelow = true,                        -- horizontal splits to go below current window
   splitright = true,                        -- vertical splits to go to the right of current window
   swapfile = false,                         -- creates a swapfile
-  termguicolors = true,                     -- set term gui colors (most terminals support this)
+  termguicolors = true,                     -- set term gui colors
   timeoutlen = 200,                         -- time to wait for a mapped sequence to complete
   undofile = true,                          -- disable persistent undo
   updatetime = 200,                         -- faster completion (4000ms default)
@@ -50,8 +50,7 @@ end
 o.shm:append "TIc"                          -- Disable start screen, truncate long msg, dont give ins-completion menu
 o.list.lcs = "tab:|"
 
-vim.cmd "set whichwrap+=<,>,[,],h,l"
-vim.cmd [[set iskeyword+=-]]
+vim.cmd "set whichwrap+=<,>,[,],h,l"        -- Keys that move to next wrapped line
+vim.cmd [[set iskeyword+=-]]                -- Chars that set new word starts
 
 vim.cmd("autocmd BufEnter * set formatoptions-=cro") -- Disable auto command new line
-vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")

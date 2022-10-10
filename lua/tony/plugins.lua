@@ -53,22 +53,20 @@ return packer.startup(function(use) --}}}
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used by a lot of plugins}}}
 
-
   -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
   -- ┃   ## Completion (30ms) ## ┃
   -- ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-
-  -- ╭────────╮
-  -- │    LSP │
-  -- ╰────────╯
+  --  ╭───────╮
+  --  │   LSP │
+  --  ╰───────╯
   -- Language Server Installer
   use "williamboman/nvim-lsp-installer"
   -- Configuration helper
   use { "neovim/nvim-lspconfig" }
 
-  -- ╭────────╮
-  -- │    CMP │
-  -- ╰────────╯
+  --  ╭───────╮
+  --  │   CMP │
+  --  ╰───────╯
   -- Main plugin
   use { "hrsh7th/nvim-cmp", config = "require 'tony.plug-conf.cmp'" }
 
@@ -85,9 +83,6 @@ return packer.startup(function(use) --}}}
   use { "L3MON4D3/LuaSnip", }
   -- A bunch of snippets
   use { "rafamadriz/friendly-snippets" }
-
-  -- Main Null-ls plugin
-  -- use "jose-elias-alvarez/null-ls.nvim" -- External formatters and linters
 
   -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
   -- ┃   ## Navigation (10ms) ## ┃
@@ -115,21 +110,9 @@ return packer.startup(function(use) --}}}
   -- Hop
   use { "phaazon/hop.nvim", branch = 'v2', config = "require 'tony.plug-conf.hop'" }
 
-
   -- ┏━━━━━━━━━━━━━━━━━━━━━━━━┓
   -- ┃   ## Visuals (40ms) ## ┃
   -- ┗━━━━━━━━━━━━━━━━━━━━━━━━┛
-  -- ╭────────────────╮
-  -- │    Colorscheme │
-  -- ╰────────────────╯
-  -- use "lunarvim/colorschemes"
-  use { "Mofiqul/dracula.nvim" }
-  use { 'folke/tokyonight.nvim' }
-  -- use "lunarvim/darkplus.nvim"
-  -- use "navarasu/onedark.nvim"
-  -- use "ellisonleao/gruvbox.nvim"
-  -- use "shaunsingh/nord.nvim"
-
   -- ╭───────────────╮
   -- │    Treesitter │
   -- ╰───────────────╯
@@ -139,15 +122,30 @@ return packer.startup(function(use) --}}}
 
   -- Rainbow parens
   use { "p00f/nvim-ts-rainbow", requires = "nvim-treesitter/nvim-treesitter" }
-  -- use { "p00f/nvim-ts-rainbow" }
 
   -- Contextual comments
   use { "JoosepAlviste/nvim-ts-context-commentstring", config = "require 'tony.plug-conf.comment'",
     after = "nvim-treesitter" }
 
-  -- ╭─────────────────╮
-  -- │   Miscellaneous │
-  -- ╰─────────────────╯
+  --  ╭──────────╮
+  --  │   Colors │
+  --  ╰──────────╯
+  -- Colorscheme
+  use { 'folke/tokyonight.nvim' }
+  -- CSV highlighting
+  use 'mechatroner/rainbow_csv'
+  -- Visual hex colors
+  use { "norcalli/nvim-colorizer.lua", config = "require'colorizer'.setup()" }
+
+  --  ╭─────────╮
+  --  │   Icons │
+  --  ╰─────────╯
+  -- Extra icons
+  use 'kyazdani42/nvim-web-devicons' --extra icons
+
+  --  ╭────────────╮
+  --  │   Cosmetic │
+  --  ╰────────────╯
   -- Info line
   use { "nvim-lualine/lualine.nvim", requires = { 'kyazdani42/nvim-web-devicons', opt = true }, event = "BufWinEnter",
     config = "require 'tony.plug-conf.lualine'" }
@@ -155,21 +153,11 @@ return packer.startup(function(use) --}}}
   -- Start page
   use { "goolord/alpha-nvim", config = "require 'tony.plug-conf.alpha'" }
 
-  -- Visual hex colors
-  use { "norcalli/nvim-colorizer.lua", config = "require'colorizer'.setup()" }
-
   -- Git symbols
   use { "lewis6991/gitsigns.nvim", config = "require 'tony.plug-conf.gitsigns'" }
 
   -- Indented visual lines
   use { "lukas-reineke/indent-blankline.nvim", config = "require 'tony.plug-conf.indentline'", event = "BufRead" } --indent lines
-
-  -- Extra icons
-  use 'kyazdani42/nvim-web-devicons' --extra icons
-
-  -- CSV highlighting
-  use 'mechatroner/rainbow_csv'
-
 
   -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━┓
   -- ┃    ## Vanilla (<10ms) ## ┃
@@ -197,20 +185,6 @@ return packer.startup(function(use) --}}}
   -- Comments
   use { "LudoPinelli/comment-box.nvim", config = "require 'tony.plug-conf.comment-box'" }
   use { "numToStr/Comment.nvim", config = "require 'tony.plug-conf.comment'" }
-
-  -- ┏━━━━━━━━━━━━━━━━━┓
-  -- ┃   ## Compile ## ┃
-  -- ┗━━━━━━━━━━━━━━━━━┛
-  ---- Markdown preview
-  --use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install",
-  --  setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" },
-  --  cmd = { 'MarkdownPreview' } })
-  -- CSV preview
-  use { 'Nguyen-Hoang-Nam/nvim-preview-csv', config = "require 'tony.plug-conf.nvim-preview'" }
-  -- Latex
-  -- use { "lervag/vimtex", ft = { "tex" }, config = "require 'tony.plug-conf.vimtex'" }
-  -- Codi real time completion
-  -- use { 'metakirby5/codi.vim' }
 
   -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
   -- ┃   ## Miscellaneous (10ms) ## ┃
