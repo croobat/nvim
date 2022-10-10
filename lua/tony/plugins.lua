@@ -93,6 +93,10 @@ return packer.startup(function(use) --}}}
 
   -- Fuzzy finder
   use { "nvim-telescope/telescope.nvim", config = "require 'tony.plug-conf.telescope'" }
+  -- Faster telescope
+  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+  -- Telescope symbols
+  use { 'nvim-telescope/telescope-symbols.nvim' }
 
   -- Visual buffer tabs
   use { "akinsho/bufferline.nvim", requires = { 'kyazdani42/nvim-web-devicons' }, event = "BufWinEnter",
