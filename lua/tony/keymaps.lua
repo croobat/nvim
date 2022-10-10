@@ -38,8 +38,8 @@ keymap("", "<leader>q", "<Nop>", opts)
 -- keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 --faster scrolling
-keymap("n", "<C-j>", "5j", opts)
-keymap("n", "<C-k>", "5k", opts)
+keymap("n", "<C-j>", "5gj", opts)
+keymap("n", "<C-k>", "5gk", opts)
 keymap("n", "<C-h>", "5h", opts)
 keymap("n", "<C-l>", "5l", opts)
 
@@ -122,8 +122,8 @@ keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
 
 --faster scrolling
-keymap("v", "<C-j>", "5j", opts)
-keymap("v", "<C-k>", "5k", opts)
+keymap("v", "<C-j>", "5gj", opts)
+keymap("v", "<C-k>", "5gk", opts)
 keymap("v", "<C-h>", "3h", opts)
 keymap("v", "<C-l>", "3l", opts)
 
@@ -138,8 +138,8 @@ keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 --faster scrolling
-keymap("x", "<C-j>", "5j", opts)
-keymap("x", "<C-k>", "5k", opts)
+keymap("x", "<C-j>", "5gj", opts)
+keymap("x", "<C-k>", "5gk", opts)
 keymap("x", "<C-h>", "3h", opts)
 keymap("x", "<C-l>", "3l", opts)
 
