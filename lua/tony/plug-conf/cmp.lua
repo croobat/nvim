@@ -62,7 +62,7 @@ cmp.setup {
     ["<c-l>"] = cmp.mapping(
       cmp.mapping.confirm {
         behavior = cmp.ConfirmBehavior.Insert,
-        select = true,
+        select = false,
       },
       { "i", "c" }
     ),
@@ -73,7 +73,7 @@ cmp.setup {
         _ --[[fallback]]
       )
         if cmp.visible() then
-          if not cmp.confirm { select = true } then
+          if not cmp.confirm { select = false } then
             return
           end
         else
@@ -95,11 +95,12 @@ cmp.setup {
       "i",
       "s",
     }),
+    -- ['<c-n>'] = cmp.mapping.confirm({ select = true }),
 
     -- Testing
     ["<c-q>"] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Replace,
-      select = true,
+      select = false,
     },--}}}
   },
 
