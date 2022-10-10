@@ -39,7 +39,7 @@ packer.init {
   },
 }
 
-return packer.startup(function(use)--}}}
+return packer.startup(function(use) --}}}
 
 
   --                                  ╔═════════╗
@@ -119,9 +119,9 @@ return packer.startup(function(use)--}}}
   -- ┏━━━━━━━━━━━━━━━━━━━━━━━━┓
   -- ┃   ## Visuals (40ms) ## ┃
   -- ┗━━━━━━━━━━━━━━━━━━━━━━━━┛
--- ╭────────────────╮
--- │    Colorscheme │
--- ╰────────────────╯
+  -- ╭────────────────╮
+  -- │    Colorscheme │
+  -- ╰────────────────╯
   -- use "lunarvim/colorschemes"
   use { "Mofiqul/dracula.nvim" }
   use { 'folke/tokyonight.nvim' }
@@ -130,9 +130,9 @@ return packer.startup(function(use)--}}}
   -- use "ellisonleao/gruvbox.nvim"
   -- use "shaunsingh/nord.nvim"
 
--- ╭───────────────╮
--- │    Treesitter │
--- ╰───────────────╯
+  -- ╭───────────────╮
+  -- │    Treesitter │
+  -- ╰───────────────╯
   -- Main plugin
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", event = "BufWinEnter",
     config = "require 'tony.plug-conf.treesitter'" }
@@ -145,9 +145,9 @@ return packer.startup(function(use)--}}}
   use { "JoosepAlviste/nvim-ts-context-commentstring", config = "require 'tony.plug-conf.comment'",
     after = "nvim-treesitter" }
 
--- ╭─────────────────╮
--- │   Miscellaneous │
--- ╰─────────────────╯
+  -- ╭─────────────────╮
+  -- │   Miscellaneous │
+  -- ╰─────────────────╯
   -- Info line
   use { "nvim-lualine/lualine.nvim", requires = { 'kyazdani42/nvim-web-devicons', opt = true }, event = "BufWinEnter",
     config = "require 'tony.plug-conf.lualine'" }
