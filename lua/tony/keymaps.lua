@@ -43,6 +43,13 @@ keymap("n", "<C-k>", "5gk", opts)
 keymap("n", "<C-h>", "5h", opts)
 keymap("n", "<C-l>", "5l", opts)
 
+--Quickfix
+keymap("n", "<C-n>", ":cnext<CR>", opts)
+keymap("n", "<C-p>", ":cprevious<CR>", opts)
+keymap("n", "<C-q>", ":copen<CR>", opts)
+keymap("n", "<C-A-q>", ":cclose<CR>", opts)
+
+
 -- Better window navigation
 keymap("n", "<A-h>", "<C-w>h", opts)
 keymap("n", "<A-j>", "<C-w>j", opts)
