@@ -48,10 +48,10 @@ return packer.startup(function(use) --}}}
   -- ┏━━━━━━━━━━━━━━━━━━━━┓
   -- ┃    ## Mandatory ## ┃
   -- ┗━━━━━━━━━━━━━━━━━━━━┛
-  use { "lewis6991/impatient.nvim" } -- Faster startup{{{
+  use { "lewis6991/impatient.nvim" } -- Faster startup
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used by a lot of plugins}}}
+  use "nvim-lua/plenary.nvim" -- Useful lua functions used by a lot of plugins
 
   -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
   -- ┃   ## Completion (30ms) ## ┃
@@ -202,6 +202,11 @@ return packer.startup(function(use) --}}}
   use { "vimwiki/vimwiki", config = "require 'tony.plug-conf.vimwiki'" }
   -- Sudo privileges
   use { "lambdalisue/suda.vim" }
+
+--  ┏━━━━━━━━━━━━━━━┓
+--  ┃   ## Local ## ┃
+--  ┗━━━━━━━━━━━━━━━┛
+  use "/home/tony/Development/low-dev/stack_map.nvim"
 
   --## EOF ## {{{
   -- Automatically set up your configuration after cloning packer.nvim
