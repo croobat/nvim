@@ -80,7 +80,7 @@ return packer.startup(function(use) --}}}
   use { "hrsh7th/cmp-cmdline" } -- cmdline
 
   -- Snippets engine
-  use { "L3MON4D3/LuaSnip", }
+  use { "L3MON4D3/LuaSnip", config = "require 'tony.plug-conf.luasnip'" }
   -- A bunch of snippets
   use { "rafamadriz/friendly-snippets" }
 

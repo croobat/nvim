@@ -100,6 +100,7 @@ local mappings = {
   -- g = git
   -- l = lsp
   ["q"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },      --Close buffer
+  ["s"] = { "<cmd>source ~/.config/nvim/after/plugin/luasnip.lua<CR>", "Resource snippets" },      --Resource snippets
   -- t = telescope
   ["w"] = { "<cmd>w!<CR>", "Save" },                    --Save
   ["W"] = { "<cmd>SudaWrite<CR>", "Save (sudo)" },      --Save
