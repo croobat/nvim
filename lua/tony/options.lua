@@ -40,7 +40,8 @@ local options = {
   sidescrolloff = 8,
   guifont = "JetBrainsMono Nerd Font:h13",  -- the font used in graphical neovim applications
   fdm = "marker",                           -- Marker fold method {{{}}}
-  wildmode = "longest,full"                 -- Better tab completion
+  wildmode = "longest,full",                -- Better tab completion
+  textwidth = 80                            -- text width
 }
 
 for k, v in pairs(options) do               -- abreviando vim.opt.x con local options y o
@@ -51,6 +52,5 @@ o.shm:append "TIc"                          -- Disable start screen, truncate lo
 o.list.lcs = "tab:|"
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"        -- Keys that move to next wrapped line
-vim.cmd [[set iskeyword+=-]]                -- Chars that set new word starts
-
-vim.cmd("autocmd BufEnter * set formatoptions-=cro") -- Disable auto command new line
+vim.cmd "set iskeyword+=^-,^_"              -- New word delimitators
+vim.cmd "autocmd BufEnter * set formatoptions-=o" -- Disable auto comment new line
