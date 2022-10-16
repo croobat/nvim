@@ -82,20 +82,26 @@ cmp.setup {
       end,
     },
 
-    --["<tab>"] = cmp.config.disable,
+    ["<c-h>"] = cmp.mapping(function(fallback)
+      if luasnip.choice_active() then
+        luasnip.change_choice(1)
+      end
+    end, {"i", "s",}
+    ),
+
     ["<c-n>"] = cmp.mapping(function(fallback)
       if luasnip.expand_or_jumpable() then
         luasnip.expand_or_jump()
-      elseif check_backspace() then
-        fallback()
-      else
-        fallback()
       end
-    end, {
-      "i",
-      "s",
-    }),
-    -- ['<c-n>'] = cmp.mapping.confirm({ select = true }),
+    end, {"i", "s",}
+    ),
+
+    ["<c-p>"] = cmp.mapping(function(fallback)
+      if luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+      end
+    end, {"i", "s",}
+    ),
 
     -- Testing
     ["<c-q>"] = cmp.mapping.confirm {
