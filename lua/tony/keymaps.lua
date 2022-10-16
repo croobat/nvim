@@ -18,7 +18,7 @@ vim.g.maplocalleader = " "
 
 --Disable Ex maps
 keymap("", ":q", "<Nop>", opts)
-keymap("n", "Q", "<Nop>", opts)
+-- keymap("n", "Q", "<Nop>", opts)
 keymap("", "<leader>q", "<Nop>", opts)
 
 --}}}
@@ -83,9 +83,6 @@ keymap("n", "<A-z>", ":set wrap!<CR>", opts)
 
 -- Better pasting
 keymap("n", "<A-p>", "pg;h", opts)
-
--- Close buffer
-keymap("n", "QQ", ":bdelete<cr>", opts)
 
 -- Tab to indent
 keymap("n", "<Tab>", "ddko", opts)
