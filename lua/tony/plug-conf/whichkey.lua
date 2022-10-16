@@ -205,29 +205,26 @@ local mappings = {
 
   l = {
     name = "LSP",--{{{
-    I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
-    S = { "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", "Workspace Symbols", },
+    R = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
+    S = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
     c = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
-    d = { "<cmd>Telescope lsp_document_diagnostics<cr>", "Document Diagnostics", },
+    d = { "<cmd>lua vim.lsp.buf.type_definition()<cr>", "List definitions" },
     f = { "<cmd>lua vim.lsp.buf.format { async = true }<cr>", "Format" },
-    gd = { "<cmd>lua vim.lsp.buf.type_definition()<cr>", "List definitions" },
-    gi = { "<cmd>lua vim.lsp.buf.implementation()<cr>", "List implementations" },
-    gr = { "<cmd>lua vim.lsp.buf.references()<cr>", "List references" },
-    gs = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "Signature help" },
-    i = { "<cmd>LspInfo<cr>", "Info" },
+    i = { "<cmd>lua vim.lsp.buf.implementation()<cr>", "List implementations" },
     j = { "<cmd>lua vim.diagnostic.goto_next()<CR>", "Next Diagnostic", },
     k = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", "Prev Diagnostic", },
     l = { "<cmd>LspStart<cr>", "Start" },
     q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
-    r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
-    s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
+    r = { "<cmd>lua vim.lsp.buf.references()<cr>", "List references" },
+    s = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "Signature help" },
     w = { "<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics", },
   },--}}}
 
   t = {
     name = "Telescope",--{{{
     C = { "<cmd>Telescope git_bcommits<cr>", "Git commits current buffer" },
+    D = { "<cmd>Telescope diagnostics<cr>", "Document Diagnostics", },
     G = { "<cmd>Telescope diagnostics<cr>", "LSP diagnostics" },
     H = { "<cmd>Telescope help_tags<cr>", "Help" },
     M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
