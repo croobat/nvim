@@ -62,7 +62,7 @@ return packer.startup(function(use) --}}}
   -- Language Server Installer
   use "williamboman/nvim-lsp-installer"
   -- Configuration helper
-  use { "neovim/nvim-lspconfig" }
+  use "neovim/nvim-lspconfig"
 
   --  ╭───────╮
   --  │   CMP │
