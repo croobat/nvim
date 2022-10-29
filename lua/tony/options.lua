@@ -39,7 +39,7 @@ local options = {
   scrolloff = 8,                            -- minimum distance cursor-border
   sidescrolloff = 8,
   guifont = "JetBrainsMono Nerd Font:h13",  -- the font used in graphical neovim applications
-  fdm = "marker",                           -- Marker fold method {}
+  foldmethod = "marker",                           -- Marker fold method {}
   wildmode = "longest,full",                -- Better tab completion
   textwidth = 80                            -- text width
 }

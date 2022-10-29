@@ -2,7 +2,6 @@
   augroup _general_settings
     autocmd!
     autocmd VimResized * tabdo wincmd =
-    autocmd BufWritePre * %s/\s\+$//e
   augroup end
 
   augroup _man_settings
@@ -44,5 +43,3 @@
     autocmd Filetype csv set textwidth=0
   augroup end
 ]]
--- augroup _vimwiki
--- autocmd BufWritePre *.wiki %global/\%>85v/normal! gqq
