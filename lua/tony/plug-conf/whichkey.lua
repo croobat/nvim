@@ -165,14 +165,14 @@ local mappings = {
   H = { "<cmd>nohlsearch<CR>", "Highlight off" },    --Disable hl search
   I = { "<cmd>lua vim.cmd'setlocal noautoindent'<cr>", "Auto-indent off" },
   L = { "<cmd>lua vim.cmd'set colorcolumn=0'<cr>", "Color column off" },
-  T = { "<cmd>lua vim.cmd'set shiftwidth=2 tabstop=2'<cr>", "Indent 2 spaces" },
+  T = { "<cmd>lua vim.cmd'set shiftwidth=4 tabstop=4'<cr>", "Indent 4 spaces" },
   c = { "<cmd>lua vim.cmd'setlocal formatoptions+=cro'<cr>", "Auto-comment on" },
   f = { "<cmd>lua vim.cmd'set foldmethod=indent'<cr>", "Fold indent" },
   h = { "<cmd>lua vim.opt.hlsearch = true<CR>", "Highlight on" },      --Enable hl search
   i = { "<cmd>lua vim.cmd'setlocal autoindent'<cr>", "Auto-indent on" },
   l = { "<cmd>lua vim.cmd'set colorcolumn=80'<cr>", "Color column on" },
   s = { "<cmd>%s/\\s\\+$//e<cr>", "Remove traling spaces" },
-  t = { "<cmd>lua vim.cmd'set shiftwidth=4 tabstop=4'<cr>", "Indent 4 spaces" },
+  t = { "<cmd>lua vim.cmd'set shiftwidth=2 tabstop=2'<cr>", "Indent 2 spaces" },
   x = { "<cmd>ColorizerToggle<cr>", "Hex colors toggle" },    --Explorer
 
   },--}}}

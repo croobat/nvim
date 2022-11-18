@@ -17,24 +17,24 @@
 
   augroup _git
     autocmd!
-    autocmd FileType gitcommit setlocal wrap
+    " autocmd FileType gitcommit setlocal wrap
   augroup end
 
   augroup _markdown
     autocmd!
-    autocmd FileType markdown setlocal wrap
+    " autocmd FileType markdown setlocal wrap
   augroup end
 
   augroup _vimwiki
     autocmd!
     autocmd Filetype wiki TSBufDisable indent
-    autocmd Filetype wiki set wrap
+    " autocmd Filetype wiki set wrap
     autocmd Filetype wiki set linebreak
   augroup end
 
   augroup _tex
     autocmd!
-    autocmd Filetype tex set wrap
+    " autocmd Filetype tex set wrap
     autocmd Filetype tex set linebreak
   augroup end
 

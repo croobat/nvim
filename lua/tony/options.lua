@@ -26,9 +26,9 @@ local options = {
   undofile = true,                          -- disable persistent undo
   updatetime = 200,                         -- faster completion (4000ms default)
   writebackup = false,                      -- if a file is being edited it cant be edited at same time
-  expandtab = true,                         -- convert tabs to spaces
-  shiftwidth = 2,                           -- the number of spaces inserted for each indentation
-  tabstop = 2,                              -- insert 2 spaces for a tab
+  expandtab = false,                         -- convert tabs to spaces
+  shiftwidth = 4,                           -- the number of spaces inserted for each indentation
+  tabstop = 4,                              -- insert 2 spaces for a tab
   cursorline = true,                        -- highlight the current line
   number = true,                            -- set numbered lines
   relativenumber = false,                   -- set relative numbered lines
@@ -41,7 +41,7 @@ local options = {
   guifont = "JetBrainsMono Nerd Font:h13",  -- the font used in graphical neovim applications
   foldmethod = "marker",                           -- Marker fold method {}
   wildmode = "longest,full",                -- Better tab completion
-  textwidth = 80                            -- text width
+  textwidth = 0                             -- text width
 }
 
 for k, v in pairs(options) do               -- abreviando vim.opt.x con local options y o

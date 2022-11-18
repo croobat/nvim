@@ -85,7 +85,7 @@ keymap("n", "<A-z>", ":set wrap!<CR>", opts)
 keymap("n", "<A-p>", "pg;h", opts)
 
 -- Tab to indent
-keymap("n", "<Tab>", "ddko", opts)
+-- keymap("n", "<Tab>", "ddko", opts)
 
 --}}}
 

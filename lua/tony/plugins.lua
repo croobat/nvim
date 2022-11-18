@@ -206,7 +206,7 @@ return packer.startup(function(use) --}}}
 --  ┏━━━━━━━━━━━━━━━┓
 --  ┃   ## Local ## ┃
 --  ┗━━━━━━━━━━━━━━━┛
-  use "/home/tony/Development/low-dev/stack_map.nvim"
+  -- use "/home/tony/Development/low-dev/stack_map.nvim"
 
   --## EOF ## {{{
   -- Automatically set up your configuration after cloning packer.nvim
