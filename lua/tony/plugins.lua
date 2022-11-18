@@ -189,6 +189,9 @@ return packer.startup(function(use) --}}}
   use { "LudoPinelli/comment-box.nvim", config = "require 'tony.plug-conf.comment-box'" }
   use { "numToStr/Comment.nvim", config = "require 'tony.plug-conf.comment'" }
 
+	-- Versioning
+	use { "tpope/vim-fugitive" }
+
   -- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
   -- ┃   ## Miscellaneous (10ms) ## ┃
   -- ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
