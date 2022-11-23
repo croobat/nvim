@@ -42,4 +42,9 @@
     autocmd!
     autocmd Filetype csv set textwidth=0
   augroup end
+
+  augroup _txt
+    autocmd!
+    autocmd Filetype text set nonumber
+  augroup end
 ]]

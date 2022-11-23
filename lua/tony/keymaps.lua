@@ -93,7 +93,7 @@ keymap("n", "<A-p>", "pg;h", opts)
 
 -- Insert --
 -- Press jk fast to enter
-keymap("i", "jk", "<ESC>", opts)
+-- keymap("i", "jk", "<ESC>", opts)
 
 -- Better insert navigation
 keymap("i", "<A-l>", "<ESC>la", opts)
