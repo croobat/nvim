@@ -97,6 +97,7 @@ local mappings = {
   -- a = auto-options
   -- c = comment box
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },    --Explorer
+  ["f"] = { "<cmd>lua vim.lsp.buf.format { async = true }<cr>", "Format file" },
   -- g = git
   -- l = lsp
   ["q"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },      --Close buffer
@@ -222,7 +223,7 @@ local mappings = {
     q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
     r = { "<cmd>lua vim.lsp.buf.references()<cr>", "List references" },
     s = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "Signature help" },
-    w = { "<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics", },
+    w = { "<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics" },
   },--}}}
 
   t = {

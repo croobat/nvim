@@ -103,17 +103,3 @@ telescope.setup {
 --telescope.load_extension('media_files')
 
 require("telescope").load_extension('fzf')
-
---## Setup keybindings ## {{{
-
-local opts = { noremap = true, silent = true }
-
-local term_opts = { silent = true }
-
--- Shorten function name
-local keymap = vim.api.nvim_set_keymap
-
---}}}
-
---better search
-keymap("n", "<C-_>", ":Telescope current_buffer_fuzzy_find sorting_strategy=ascending<CR>", opts)

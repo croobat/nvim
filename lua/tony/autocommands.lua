@@ -47,4 +47,9 @@
     autocmd!
     autocmd Filetype text set nonumber
   augroup end
+
+  augroup _sql
+    autocmd!
+    autocmd Filetype sql set textwidth=0
+  augroup end
 ]]

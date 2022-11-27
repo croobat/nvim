@@ -1,26 +1,18 @@
 --## Setup ## {{{
 
 local opts = { noremap = true, silent = true }
-
 local term_opts = { silent = true }
-
--- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
 --}}}
 
 --## Disable mappings ## {{{
-
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
---Disable Ex maps
-keymap("", ":q", "<Nop>", opts)
--- keymap("n", "Q", "<Nop>", opts)
 keymap("", "<leader>q", "<Nop>", opts)
-
 --}}}
 
 -- Modes
@@ -32,7 +24,6 @@ keymap("", "<leader>q", "<Nop>", opts)
 --   command_mode = "c",
 
 -- ## Normal ## -- {{{
-
 -- Lexplorer
 -- keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 -- keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
@@ -83,18 +74,9 @@ keymap("n", "<A-z>", ":set wrap!<CR>", opts)
 
 -- Better pasting
 keymap("n", "<A-p>", "pg;h", opts)
-
--- Tab to indent
--- keymap("n", "<Tab>", "ddko", opts)
-
 --}}}
 
 --## Insert ## {{{
-
--- Insert --
--- Press jk fast to enter
--- keymap("i", "jk", "<ESC>", opts)
-
 -- Better insert navigation
 keymap("i", "<A-l>", "<ESC>la", opts)
 keymap("i", "<A-h>", "<ESC>i", opts)
@@ -107,7 +89,6 @@ keymap("i", "<C-e>", "<ESC>A", opts)
 keymap("i", "<M-f>", "<ESC><Space>Wi", opts)
 keymap("i", "<M-b>", "<ESC>Bi", opts)
 keymap("i", "<M-d>", "<ESC>ciw", opts)
-
 --}}}
 
 --## Visual ## {{{
@@ -130,11 +111,9 @@ keymap("v", "<C-j>", "5gj", opts)
 keymap("v", "<C-k>", "5gk", opts)
 keymap("v", "<C-h>", "3h", opts)
 keymap("v", "<C-l>", "3l", opts)
-
 --}}}
 
 --## Visual Block ## {{{
-
 -- Move text up and down
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
@@ -146,15 +125,12 @@ keymap("x", "<C-j>", "5gj", opts)
 keymap("x", "<C-k>", "5gk", opts)
 keymap("x", "<C-h>", "3h", opts)
 keymap("x", "<C-l>", "3l", opts)
-
 --}}}
 
 --## Terminal ## {{{
-
 -- Better terminal navigation
 keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
-
 --}}}
