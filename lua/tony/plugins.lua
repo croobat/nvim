@@ -92,10 +92,13 @@ return packer.startup(function(use) --}}}
 	--  ╰───────────╯
 	-- use { 'mfussenegger/nvim-dap' }
 	use { 'puremourning/vimspector', config = "require 'tony.plug-conf.vimspector'" }
+	use { "mfussenegger/nvim-dap" }
+
 	--  ╭────────╮
 	--  │   Rust │
 	--  ╰────────╯
 	use { "rust-lang/rust.vim" }
+	use { "simrat39/rust-tools.nvim", config = "require 'tony.plug-conf.rust-tools'" }
 
 
 	-- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -120,10 +123,10 @@ return packer.startup(function(use) --}}}
 	use { "moll/vim-bbye" }
 
 	-- Project manager
-	use { "ahmedkhalf/project.nvim", config = "require 'tony.plug-conf.project'" }
+	-- use { "ahmedkhalf/project.nvim", config = "require 'tony.plug-conf.project'" }
 
 	-- Better t and f
-	use { "unblevable/quick-scope", config = "require 'tony.plug-conf.quickscope'" }
+	-- use { "unblevable/quick-scope", config = "require 'tony.plug-conf.quickscope'" }
 
 	-- Hop
 	use { "phaazon/hop.nvim", branch = 'v2', config = "require 'tony.plug-conf.hop'" }
@@ -169,7 +172,7 @@ return packer.startup(function(use) --}}}
 		config = "require 'tony.plug-conf.lualine'" }
 
 	-- Start page
-	use { "goolord/alpha-nvim", config = "require 'tony.plug-conf.alpha'" }
+	-- use { "goolord/alpha-nvim", config = "require 'tony.plug-conf.alpha'" }
 
 	-- Git symbols
 	use { "lewis6991/gitsigns.nvim", config = "require 'tony.plug-conf.gitsigns'" }
@@ -205,6 +208,8 @@ return packer.startup(function(use) --}}}
 
 	-- Versioning
 	use { "tpope/vim-fugitive" }
+
+	use { "NMAC427/guess-indent.nvim", config = "require 'tony.plug-conf.guess-indent'"}
 
 	-- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 	-- ┃   ## Miscellaneous (10ms) ## ┃

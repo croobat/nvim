@@ -43,3 +43,8 @@ require('Comment').setup {
     ---Function to call after (un)comment
     post_hook = nil,
 }
+
+local keymap = vim.api.nvim_set_keymap
+
+keymap("n", "<C-_>", "gcc", {})
+keymap("v", "<C-_>", "gc", {})
