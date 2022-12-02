@@ -41,7 +41,9 @@ packer.init {
 
 return packer.startup(function(use) --}}}
 
-use { "folke/tokyonight.nvim" }
+    use { "wbthomason/packer.nvim" }
+    use { "folke/tokyonight.nvim" }
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
 	--## EOF ## {{{
 	-- Automatically set up your configuration after cloning packer.nvim
@@ -51,3 +53,4 @@ use { "folke/tokyonight.nvim" }
 	end
 end)
 --}}}
+
