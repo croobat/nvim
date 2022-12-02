@@ -41,7 +41,7 @@ keymap("x", "<C-l>", "3l", opts)
 
 -- ## Normal ## -- 
 -- Lexplorer
-keymap("n", "<leader>e", ":Lex 30<cr>", opts)
+-- keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 
 --Quickfix
 keymap("n", "<C-n>", ":cnext<CR>", opts)

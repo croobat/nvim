@@ -41,9 +41,10 @@ packer.init {
 
 return packer.startup(function(use) --}}}
 
-    use { "wbthomason/packer.nvim" }
-    use { "folke/tokyonight.nvim" }
+    use { 'wbthomason/packer.nvim' }
+    use { 'folke/tokyonight.nvim' }
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+    use { 'nvim-tree/nvim-tree.lua', requires = { 'nvim-tree/nvim-web-devicons' }, config = "require 'tony.config-plug.nvim-tree'" }
 
 	--## EOF ## {{{
 	-- Automatically set up your configuration after cloning packer.nvim
