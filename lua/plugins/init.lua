@@ -19,7 +19,9 @@ return packer.startup(function(use) --}}}
 
 
     use { 'folke/tokyonight.nvim' }
-    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate',
+        config = "require 'plugins.config.treesitter'"
+    }
 
     use { 'nvim-tree/nvim-tree.lua',
         requires = { 'nvim-tree/nvim-web-devicons' },

@@ -44,7 +44,7 @@ local options = {
     signcolumn = "yes",         -- When to show sign columns
 
     -- Visuals
-    showbreak = '.. ',          -- Shown when line breaks
+    showbreak = ' .. ',          -- Shown when line breaks
     guifont = jetbrains,        -- Font in graphical applications
     conceallevel = 0,           -- Don't hide special text (ie json "")
     showmode = false,           -- -- INSERT --
