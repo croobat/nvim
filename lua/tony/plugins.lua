@@ -78,6 +78,7 @@ return packer.startup(function(use) --}}}
 	use { "hrsh7th/cmp-calc" } --calculator
 	use { "hrsh7th/cmp-path" } -- path
 	use { "hrsh7th/cmp-cmdline" } -- cmdline
+	use { "petertriho/cmp-git" } -- git
 
 	-- Snippets engine
 	use { "L3MON4D3/LuaSnip", config = "require 'tony.plug-conf.luasnip'" }
@@ -91,8 +92,8 @@ return packer.startup(function(use) --}}}
 	--  │ Debugging │
 	--  ╰───────────╯
 	-- use { 'mfussenegger/nvim-dap' }
-	use { 'puremourning/vimspector', config = "require 'tony.plug-conf.vimspector'" }
-	use { "mfussenegger/nvim-dap" }
+	-- use { 'puremourning/vimspector', config = "require 'tony.plug-conf.vimspector'" }
+	-- use { "mfussenegger/nvim-dap" }
 
 	--  ╭────────╮
 	--  │   Rust │
