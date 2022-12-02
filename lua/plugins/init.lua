@@ -34,6 +34,7 @@ return packer.startup(function(use) --}}}
 	use { "akinsho/toggleterm.nvim", 
         config = "require 'plugins.config.toggleterm'" }
 	use { "NMAC427/guess-indent.nvim", config = "require('guess-indent').setup{}"}
+	use { "folke/which-key.nvim", config = "require 'plugins.config.whichkey'" }
 
 	--## EOF ## {{{
 	-- Automatically set up your configuration after cloning packer.nvim

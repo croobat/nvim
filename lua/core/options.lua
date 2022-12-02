@@ -61,7 +61,7 @@ local options = {
         "menuone",              -- Show completion menu despite only one result
         "noselect",             -- Don't auto select completion result
     },
-    timeoutlen = 500,           -- ms to wait for mapped sequence
+    timeoutlen = 300,           -- ms to wait for mapped sequence
     updatetime = 300,           -- faster completion
     wildmode = bashcomp,        -- Tab completion behaviour
 }
