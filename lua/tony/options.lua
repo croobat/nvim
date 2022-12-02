@@ -82,6 +82,3 @@ vim.cmd("set whichwrap+=<,>,[,],h,l")
 
 -- New word delimitators
 -- vim.cmd("set iskeyword+=^-,^_")
-
--- Disable automatic comments for new line
-vim.cmd("autocmd BufEnter * set formatoptions-=o")
