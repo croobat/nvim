@@ -1,10 +1,10 @@
-require "tony.options"
-require "tony.keymaps"
+-- require "impatient"
 
-require "tony.plugins"
+require "core.options"
+require "core.keymaps"
+require "core.autocommands"
+require "plugins"
 
-require "tony.autocommands"
-
-require "tony.color.tokyonight"
+require "color.tokyonight"
 
 vim.api.nvim_set_keymap("n", "<leader>e", ":NvimTreeToggle<cr>", { noremap = true, silent = true })
