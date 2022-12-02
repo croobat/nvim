@@ -29,6 +29,8 @@ return packer.startup(function(use) --}}}
         config = "require 'plugins.config.telescope'" }
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
     use { 'nvim-telescope/telescope-symbols.nvim' }
+	use { "akinsho/toggleterm.nvim", 
+        config = "require 'plugins.config.toggleterm'" }
 
 	--## EOF ## {{{
 	-- Automatically set up your configuration after cloning packer.nvim
