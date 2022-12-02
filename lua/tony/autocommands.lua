@@ -27,9 +27,10 @@
 
   augroup _vimwiki
     autocmd!
-    autocmd Filetype wiki TSBufDisable indent
+    " autocmd Filetype vimwiki TSBufDisable indent
     " autocmd Filetype wiki set wrap
-    autocmd Filetype wiki set linebreak
+    autocmd Filetype vimwiki set linebreak
+    autocmd Filetype vimwiki set textwidth=0
   augroup end
 
   augroup _tex
