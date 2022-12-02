@@ -13,18 +13,15 @@ vim.cmd [[
 
     augroup _markdown
         autocmd!
-        " autocmd FileType markdown setlocal wrap
     augroup end
 
     augroup _vimwiki
         autocmd!
-        autocmd Filetype vimwiki set linebreak
         autocmd Filetype vimwiki set textwidth=0
     augroup end
 
     augroup _tex
         autocmd!
-        autocmd Filetype tex set linebreak
     augroup end
 
     augroup _csv
@@ -39,6 +36,10 @@ vim.cmd [[
 
     augroup _sql
         autocmd!
-        autocmd Filetype sql set textwidth=0
+        autocmd Filetype csv set textwidth=0
+    augroup end
+
+    augroup _lua
+        autocmd!
     augroup end
 ]]

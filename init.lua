@@ -1,8 +1,8 @@
--- require "impatient"
+require "impatient"
 
 require "core.options"
 require "core.keymaps"
---require "core.autocommands"
+require "core.autocommands"
 require "plugins"
 
 require "color.tokyonight"
