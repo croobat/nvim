@@ -33,6 +33,7 @@ return packer.startup(function(use) --}}}
     use { 'nvim-telescope/telescope-symbols.nvim' }
 	use { "akinsho/toggleterm.nvim", 
         config = "require 'plugins.config.toggleterm'" }
+	use { "NMAC427/guess-indent.nvim", config = "require('guess-indent').setup{}"}
 
 	--## EOF ## {{{
 	-- Automatically set up your configuration after cloning packer.nvim
