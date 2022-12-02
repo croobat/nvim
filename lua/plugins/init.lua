@@ -12,11 +12,23 @@ packer.init {
 
 return packer.startup(function(use) --}}}
 
+    use { "lewis6991/impatient.nvim" }
+    use { "wbthomason/packer.nvim" }
+    use { "nvim-lua/popup.nvim" }
+    use { "nvim-lua/plenary.nvim" }
 
-    use { 'wbthomason/packer.nvim' }
+
     use { 'folke/tokyonight.nvim' }
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-    use { 'nvim-tree/nvim-tree.lua', requires = { 'nvim-tree/nvim-web-devicons' }, config = "require 'config.nvim-tree'" }
+
+    use { 'nvim-tree/nvim-tree.lua',
+        requires = { 'nvim-tree/nvim-web-devicons' },
+        config = "require 'plugins.config.nvim-tree'" }
+
+    use { "nvim-telescope/telescope.nvim",
+        config = "require 'plugins.config.telescope'" }
+    use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+    use { 'nvim-telescope/telescope-symbols.nvim' }
 
 	--## EOF ## {{{
 	-- Automatically set up your configuration after cloning packer.nvim

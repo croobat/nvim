@@ -1,6 +1,6 @@
-nvim_tree = require("nvim-tree")
-nvim_web_devicons = require("nvim-web-devicons")
-nvim_tree_config = require("nvim-tree.config")
+local nvim_tree = require("nvim-tree")
+local nvim_web_devicons = require("nvim-web-devicons")
+local nvim_tree_config = require("nvim-tree.config")
 
 -- disable netrw
 vim.g.loaded_netrw = 1
@@ -89,3 +89,6 @@ nvim_web_devicons.setup {
 };
  default = true; -- globally enable default icons
 }
+
+
+vim.api.nvim_set_keymap("n", "<leader>e", ":NvimTreeToggle<cr>", { noremap = true, silent = true })
