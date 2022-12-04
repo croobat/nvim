@@ -61,6 +61,7 @@ return packer.startup(function(use) --}}}
     use { "lewis6991/gitsigns.nvim", config = "require 'plugins.gitsigns'" }
     use { "norcalli/nvim-colorizer.lua", config = "require'colorizer'.setup()" }
 	use { "p00f/nvim-ts-rainbow", requires = "nvim-treesitter/nvim-treesitter" }
+	use { "lukas-reineke/indent-blankline.nvim", config = "require 'plugins.indentline'" }
 
     -- Vanilla
     use { "moll/vim-bbye" }

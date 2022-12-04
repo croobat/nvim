@@ -1,6 +1,6 @@
 -- Set options
 font = "Recursive Mono Linear Static:h8"
-bashcomp =  "list:longest,full"
+bashcomp =  "longest,full"
 
 local options = {
     -- System
@@ -74,7 +74,12 @@ vim.opt.shm:append "Ic"         -- Disable start screen and certain warnings
 
 -- Vim commands
 -- Special chars for nbsp, tab and trailing space
-vim.cmd("set listchars=tab:..,trail:_,extends:>,precedes:<,nbsp:~")
+vim.opt.listchars = {
+  tab = '│·',
+  extends = '⟩',
+  precedes = '⟨',
+  trail = '·'
+}
 
 -- Keys that move to next wrapped line
 vim.cmd("set whichwrap+=<,>,[,],h,l")
