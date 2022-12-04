@@ -35,10 +35,10 @@ return packer.startup(function(use) --}}}
     use { "windwp/nvim-autopairs", config = "require 'plugins.autopairs'" }
 
     -- Comments
-	use { "LudoPinelli/comment-box.nvim", config = "require 'plugins.comment-box'" }
-	use { "numToStr/Comment.nvim", config = "require 'plugins.comment'" }
-	use { "JoosepAlviste/nvim-ts-context-commentstring", config = "require 'plugins.comment'",
-		after = "nvim-treesitter" }
+    use { "LudoPinelli/comment-box.nvim", config = "require 'plugins.comment-box'" }
+    use { "numToStr/Comment.nvim", config = "require 'plugins.comment'" }
+    use { "JoosepAlviste/nvim-ts-context-commentstring", config = "require 'plugins.comment'",
+        after = "nvim-treesitter" }
 
     -- Navigation
     use { 'nvim-tree/nvim-tree.lua',
@@ -59,8 +59,16 @@ return packer.startup(function(use) --}}}
     use {'ojroques/nvim-hardline',
         config = "require 'plugins.hardline'" }
     use { "lewis6991/gitsigns.nvim", config = "require 'plugins.gitsigns'" }
+    use { "norcalli/nvim-colorizer.lua", config = "require'colorizer'.setup()" }
+	use { "p00f/nvim-ts-rainbow", requires = "nvim-treesitter/nvim-treesitter" }
 
     -- Vanilla
+    use { "moll/vim-bbye" }
+    use "tpope/vim-surround"
+    use "tpope/vim-repeat"
+    use { "tpope/vim-fugitive" }
+    use { "folke/zen-mode.nvim", cmd = { 'ZenMode' } }
+    use { "lambdalisue/suda.vim" }
 
     -- Miscellaneous
     use { "vimwiki/vimwiki", config = "require 'plugins.vimwiki'" }
