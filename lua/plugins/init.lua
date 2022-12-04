@@ -34,6 +34,12 @@ return packer.startup(function(use) --}}}
     use { "NMAC427/guess-indent.nvim", config = "require('guess-indent').setup{}"}
     use { "windwp/nvim-autopairs", config = "require 'plugins.autopairs'" }
 
+    -- Comments
+	use { "LudoPinelli/comment-box.nvim", config = "require 'plugins.comment-box'" }
+	use { "numToStr/Comment.nvim", config = "require 'plugins.comment'" }
+	use { "JoosepAlviste/nvim-ts-context-commentstring", config = "require 'plugins.comment'",
+		after = "nvim-treesitter" }
+
     -- Navigation
     use { 'nvim-tree/nvim-tree.lua',
         requires = { 'nvim-tree/nvim-web-devicons' },
