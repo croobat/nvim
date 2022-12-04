@@ -64,7 +64,7 @@ return packer.startup(function(use) --}}}
 	use { "lukas-reineke/indent-blankline.nvim", config = "require 'plugins.indentline'" }
 
     -- Vanilla
-    use { "moll/vim-bbye" }
+    use { "qiushihe/vim-bbye" }
     use "tpope/vim-surround"
     use "tpope/vim-repeat"
     use { "tpope/vim-fugitive" }

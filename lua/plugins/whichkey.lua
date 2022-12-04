@@ -91,7 +91,7 @@ local mappings = {
     ["<leader>"] = { "i <esc>l", "Insert space" },
 
     -- L = latex
-    ["Q"] = { "<cmd>:Bdeleteexcept<CR>", "Close Other Buffers" },
+    ["Q"] = { "<cmd>:Bdeleteexcept<CR><cmd>NvimTreeToggle<CR><cmd>NvimTreeToggle<CR>", "Close Other Buffers" },
 
     -- a = auto-options
     -- c = comment box

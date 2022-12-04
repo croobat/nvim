@@ -10,8 +10,8 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-keymap("", "<leader>q", "<Nop>", opts)
-keymap("", "q:", "<Nop>", opts)
+keymap("n", "<leader>q", "<Nop>", opts)
+-- keymap("", "q:", "<Nop>", opts)
 --}}}
 
 --faster scrolling {{{
