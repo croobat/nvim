@@ -1,6 +1,5 @@
 -- Set options
-jetbrains = "JetBrains Mono Nerd Font:h7"
-tabtrailchar = "tab:..|trail:_,extends:>,precedes:<,nbsp:~"
+font = "Recursive Mono Linear Static:h8"
 bashcomp =  "list:longest,full"
 
 local options = {
@@ -45,7 +44,7 @@ local options = {
 
     -- Visuals
     showbreak = ' .. ',         -- Shown when line breaks
-    guifont = jetbrains,        -- Font in graphical applications
+    guifont = font,             -- Font in graphical applications
     conceallevel = 0,           -- Don't hide special text (ie json "")
     showmode = false,           -- -- INSERT --
     termguicolors = true,       -- 24-bit RGB color
