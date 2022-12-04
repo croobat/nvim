@@ -31,7 +31,7 @@ local setup = {
         -- override the label used to display some keys. It doesn't effect WK in any other way.
         -- For example:
         -- ["<space>"] = "SPC",
-        -- ["<cr>"] = "RET",
+        -- ["<CR>"] = "RET",
         -- ["<tab>"] = "TAB",
     },
     icons = {
@@ -86,8 +86,8 @@ local mappings = {
     ["."] = { "A.<esc>", "Insert dot" },
     [";"] = { "A;<esc>", "Insert semicolon" },
     ["="] = { "A = ", "Insert equal" },
-    ["/"] = { "<cmd>Telescope live_grep<cr>", "Find text" },
-    ["?"] = { "<cmd>Telescope find_files<cr>", "Find Files" },
+    ["/"] = { "<cmd>Telescope live_grep<CR>", "Find text" },
+    ["?"] = { "<cmd>Telescope find_files<CR>", "Find Files" },
     ["<leader>"] = { "i <esc>l", "Insert space" },
 
     -- L = latex
@@ -95,8 +95,9 @@ local mappings = {
 
     -- a = auto-options
     -- c = comment box
-    ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-    ["f"] = { "<cmd>lua vim.lsp.buf.format { async = true }<cr>", "Format file" },
+    ["e"] = { "<cmd>NvimTreeToggle<CR>", "Explorer" },
+    ["f"] = { "<cmd>lua vim.lsp.buf.format { async = true }<CR>", "Format file" },
+    ["F"] = { "<cmd>%s/\\s\\+$//e<CR>", "Trailing spaces" },
     -- g = git
     -- l = lsp
     ["q"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
@@ -105,7 +106,7 @@ local mappings = {
     ["w"] = { "<cmd>w!<CR>", "Save" },
     ["W"] = { "<cmd>SudaWrite<CR>", "Save (sudo)" },
     ["x"] = { "I* [ ] <esc>", "Insert checkbox" },
-    ["z"] = { "<cmd>:ZenMode<cr>", "Zen mode" },
+    ["z"] = { "<cmd>:ZenMode<CR>", "Zen mode" },
 
     --[[
     L = {
@@ -142,91 +143,91 @@ local mappings = {
 
     a = {
         name = "Auto-options",--{{{
-    C = { "<cmd>setlocal formatoptions-=cro<cr>", "Auto-comment off" },
-    F = { "<cmd>set foldmethod=marker<cr>", "Fold mark" },
+    C = { "<cmd>setlocal formatoptions-=cro<CR>", "Auto-comment off" },
+    F = { "<cmd>set foldmethod=marker<CR>", "Fold mark" },
     H = { "<cmd>nohlsearch<CR>", "Highlight off" },
-    I = { "<cmd>setlocal noautoindent<cr>", "Auto-indent off" },
-    L = { "<cmd>set colorcolumn=0<cr>", "Color column off" },
-    T = { "<cmd>set shiftwidth=4 tabstop=4<cr>", "Indent 4 spaces" },
-    c = { "<cmd>setlocal formatoptions+=cro<cr>", "Auto-comment on" },
-    f = { "<cmd>set foldmethod=indent<cr>", "Fold indent" },
+    I = { "<cmd>setlocal noautoindent<CR>", "Auto-indent off" },
+    L = { "<cmd>set colorcolumn=0<CR>", "Color column off" },
+    T = { "<cmd>set shiftwidth=4 tabstop=4<CR>", "Indent 4 spaces" },
+    c = { "<cmd>setlocal formatoptions+=cro<CR>", "Auto-comment on" },
+    f = { "<cmd>set foldmethod=indent<CR>", "Fold indent" },
     h = { "<cmd>lua vim.opt.hlsearch = true<CR>", "Highlight on" },
-    i = { "<cmd>setlocal autoindent<cr>", "Auto-indent on" },
-    l = { "<cmd>set colorcolumn=79<cr>", "Color column on" },
-    s = { "<cmd>%s/\\s\\+$//e<cr>", "Remove traling spaces" },
-    t = { "<cmd>set shiftwidth=2 tabstop=2<cr>", "Indent 2 spaces" },
-    x = { "<cmd>ColorizerToggle<cr>", "Hex colors toggle" },
+    i = { "<cmd>setlocal autoindent<CR>", "Auto-indent on" },
+    l = { "<cmd>set colorcolumn=79<CR>", "Color column on" },
+    s = { "<cmd>%s/\\s\\+$//e<CR>", "Remove traling spaces" },
+    t = { "<cmd>set shiftwidth=2 tabstop=2<CR>", "Indent 2 spaces" },
+    x = { "<cmd>ColorizerToggle<CR>", "Hex colors toggle" },
     },--}}}
 
     c = {
         name = "Comment Box",--{{{
-        L = { "<cmd>lua require('comment-box').cline(3)<cr>", "heavy line" },
-        T = { "<cmd>lua require('comment-box').accbox(3)<cr>", "Title Heavy" },
-        a = { "<cmd>lua require('comment-box').albox(10)<cr>", "Classic ASCII" },
-        l = { "<cmd>lua require('comment-box').cline(10)<cr>", "ASCII line" },
-        c = { "<cmd>lua require('comment-box').albox(2)<cr>", "Classic" },
-        g = { "<cmd>lua require('comment-box').catalog()<cr>", "Box Catalog" },
-        h = { "<cmd>lua require('comment-box').albox(3)<cr>", "Heavy" },
-        L = { "<cmd>lua require('comment-box').cline(1)<cr>", "Simple line" },
-        t = { "<cmd>lua require('comment-box').accbox(7)<cr>", "Title" },
+        L = { "<cmd>lua require('comment-box').cline(3)<CR>", "heavy line" },
+        T = { "<cmd>lua require('comment-box').accbox(3)<CR>", "Title Heavy" },
+        a = { "<cmd>lua require('comment-box').albox(10)<CR>", "Classic ASCII" },
+        l = { "<cmd>lua require('comment-box').cline(10)<CR>", "ASCII line" },
+        c = { "<cmd>lua require('comment-box').albox(2)<CR>", "Classic" },
+        g = { "<cmd>lua require('comment-box').catalog()<CR>", "Box Catalog" },
+        h = { "<cmd>lua require('comment-box').albox(3)<CR>", "Heavy" },
+        L = { "<cmd>lua require('comment-box').cline(1)<CR>", "Simple line" },
+        t = { "<cmd>lua require('comment-box').accbox(7)<CR>", "Title" },
     },--}}}
 
     g = {
         name = "Git",--{{{
-        R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
-        b = { "<cmd>Gitsigns toggle_current_line_blame<cr>", "Blame" },
-        B = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
-        c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
-        d = { "<cmd>Gitsigns diffthis HEAD<cr>", "Diff", },
-        j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
-        k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
-        l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
-        o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
-        p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
-        r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
-        s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
-        u = { "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", "Undo Stage Hunk", },
+        R = { "<cmd>lua require 'gitsigns'.reset_buffer()<CR>", "Reset Buffer" },
+        b = { "<cmd>Gitsigns toggle_current_line_blame<CR>", "Blame" },
+        B = { "<cmd>Telescope git_branches<CR>", "Checkout branch" },
+        c = { "<cmd>Telescope git_commits<CR>", "Checkout commit" },
+        d = { "<cmd>Gitsigns diffthis HEAD<CR>", "Diff", },
+        j = { "<cmd>lua require 'gitsigns'.next_hunk()<CR>", "Next Hunk" },
+        k = { "<cmd>lua require 'gitsigns'.prev_hunk()<CR>", "Prev Hunk" },
+        l = { "<cmd>lua require 'gitsigns'.blame_line()<CR>", "Blame" },
+        o = { "<cmd>Telescope git_status<CR>", "Open changed file" },
+        p = { "<cmd>lua require 'gitsigns'.preview_hunk()<CR>", "Preview Hunk" },
+        r = { "<cmd>lua require 'gitsigns'.reset_hunk()<CR>", "Reset Hunk" },
+        s = { "<cmd>lua require 'gitsigns'.stage_hunk()<CR>", "Stage Hunk" },
+        u = { "<cmd>lua require 'gitsigns'.undo_stage_hunk()<CR>", "Undo Stage Hunk", },
     },--}}}
 
     l = {
         name = "LSP",--{{{
-        R = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
-        S = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
-        a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
-        c = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
-        d = { "<cmd>lua vim.lsp.buf.type_definition()<cr>", "List definitions" },
-        f = { "<cmd>lua vim.lsp.buf.format { async = true }<cr>", "Format" },
-        i = { "<cmd>lua vim.lsp.buf.implementation()<cr>", "List implementations" },
+        R = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename" },
+        S = { "<cmd>Telescope lsp_document_symbols<CR>", "Document Symbols" },
+        a = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Code Action" },
+        c = { "<cmd>lua vim.lsp.codelens.run()<CR>", "CodeLens Action" },
+        d = { "<cmd>lua vim.lsp.buf.type_definition()<CR>", "List definitions" },
+        f = { "<cmd>lua vim.lsp.buf.format { async = true }<CR>", "Format" },
+        i = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "List implementations" },
         j = { "<cmd>lua vim.diagnostic.goto_next()<CR>", "Next Diagnostic", },
-        k = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", "Prev Diagnostic", },
-        l = { "<cmd>LspStart<cr>", "Start" },
-        q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
-        r = { "<cmd>lua vim.lsp.buf.references()<cr>", "List references" },
-        s = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "Signature help" },
-        w = { "<cmd>Telescope lsp_workspace_diagnostics<cr>", "Workspace Diagnostics" },
+        k = { "<cmd>lua vim.diagnostic.goto_prev()<CR>", "Prev Diagnostic", },
+        l = { "<cmd>LspStart<CR>", "Start" },
+        q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", "Quickfix" },
+        r = { "<cmd>lua vim.lsp.buf.references()<CR>", "List references" },
+        s = { "<cmd>lua vim.lsp.buf.signature_help()<CR>", "Signature help" },
+        w = { "<cmd>Telescope lsp_workspace_diagnostics<CR>", "Workspace Diagnostics" },
     },--}}}
 
     t = {
         name = "Telescope",--{{{
-        C = { "<cmd>Telescope git_bcommits<cr>", "Git commits current buffer" },
-        D = { "<cmd>Telescope diagnostics<cr>", "Document Diagnostics", },
-        G = { "<cmd>Telescope diagnostics<cr>", "LSP diagnostics" },
-        H = { "<cmd>Telescope help_tags<cr>", "Help" },
-        M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
-        R = { "<cmd>Telescope registers<cr>", "Registers" },
-        T = { "<cmd>Telescope live_grep<cr>", "Text" },
-        b = { "<cmd>Telescope git_branches<cr>", "Git branch" },
-        c = { "<cmd>Telescope git_commits<cr>", "Git commit" },
-        d = { "<cmd>Telescope lsp_definition<cr>", "LSP definition" },
-        f = { "<cmd>Telescope find_files<cr>", "Files" },
-        g = { "<cmd>Telescope tags<cr>", "Tags" },
-        h = { "<cmd>Telescope oldfiles<cr>", "History files" },
-        k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
-        m = { "<cmd>Telescope marks<cr>", "Mark" },
-        p = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
-        q = { "<cmd>Telescope quickfix<cr>", "LSP quickfix" },
-        r = { "<cmd>Telescope lsp_references<cr>", "LSP reference" },
-        t = { "<cmd>Telescope resume<cr>", "Resume search" },
+        C = { "<cmd>Telescope git_bcommits<CR>", "Git commits current buffer" },
+        D = { "<cmd>Telescope diagnostics<CR>", "Document Diagnostics", },
+        G = { "<cmd>Telescope diagnostics<CR>", "LSP diagnostics" },
+        H = { "<cmd>Telescope help_tags<CR>", "Help" },
+        M = { "<cmd>Telescope man_pages<CR>", "Man Pages" },
+        R = { "<cmd>Telescope registers<CR>", "Registers" },
+        T = { "<cmd>Telescope live_grep<CR>", "Text" },
+        b = { "<cmd>Telescope git_branches<CR>", "Git branch" },
+        c = { "<cmd>Telescope git_commits<CR>", "Git commit" },
+        d = { "<cmd>Telescope lsp_definition<CR>", "LSP definition" },
+        f = { "<cmd>Telescope find_files<CR>", "Files" },
+        g = { "<cmd>Telescope tags<CR>", "Tags" },
+        h = { "<cmd>Telescope oldfiles<CR>", "History files" },
+        k = { "<cmd>Telescope keymaps<CR>", "Keymaps" },
+        m = { "<cmd>Telescope marks<CR>", "Mark" },
+        p = { "<cmd>lua require('telescope').extensions.projects.projects()<CR>", "Projects" },
+        q = { "<cmd>Telescope quickfix<CR>", "LSP quickfix" },
+        r = { "<cmd>Telescope lsp_references<CR>", "LSP reference" },
+        t = { "<cmd>Telescope resume<CR>", "Resume search" },
     },--}}}
 
 }

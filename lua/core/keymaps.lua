@@ -39,7 +39,7 @@ keymap("x", "<C-l>", "3l", opts)
 --   term_mode = "t",
 --   command_mode = "c",
 
--- ## Normal ## -- 
+-- ## Normal ## --
 -- Lexplorer
 -- keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 
@@ -84,7 +84,7 @@ keymap("n", "<A-z>", ":set wrap!<CR>", opts)
 keymap("n", "<A-p>", "pg;h", opts)
 
 
---## Insert ## 
+--## Insert ##
 -- Better insert navigation
 keymap("i", "<A-l>", "<ESC>la", opts)
 keymap("i", "<A-h>", "<ESC>i", opts)
@@ -99,7 +99,7 @@ keymap("i", "<M-b>", "<ESC>Bi", opts)
 keymap("i", "<M-d>", "<ESC>ciw", opts)
 
 
---## Visual ## 
+--## Visual ##
 -- Multiline segments
 keymap("v", "j", "gj", opts)
 keymap("v", "k", "gk", opts)
@@ -112,10 +112,8 @@ keymap("v", ">", ">gv", opts)
 -- Move text up and down
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
-keymap("v", "p", '"_dP', opts)
 
-
---## Visual Block ## 
+--## Visual Block ##
 -- Move text up and down
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
@@ -123,7 +121,7 @@ keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 
---## Terminal ## 
+--## Terminal ##
 -- Better terminal navigation
 keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
