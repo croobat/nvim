@@ -75,10 +75,10 @@ vim.opt.shm:append "Ic"         -- Disable start screen and certain warnings
 -- Vim commands
 -- Special chars for nbsp, tab and trailing space
 vim.opt.listchars = {
-  tab = '│·',
-  extends = '⟩',
-  precedes = '⟨',
-  trail = '·'
+  tab = '│ ',
+  extends = '>',
+  precedes = '<',
+  trail = '█'
 }
 
 -- Keys that move to next wrapped line
