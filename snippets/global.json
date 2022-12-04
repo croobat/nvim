@@ -1,0 +1,7 @@
+{
+    "test": {
+        "prefix": "test",
+        "body": ["Hola Me llamo ${0:Nombre}"],
+        "description": "Escribo mi nombre para un test"
+    }
+}
