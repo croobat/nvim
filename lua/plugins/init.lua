@@ -22,8 +22,16 @@ return packer.startup(function(use) --}}}
     use { "nvim-lua/plenary.nvim" }
 
     -- Completion
-        -- LSP
-        -- CMP
+    use { "hrsh7th/nvim-cmp", config = "require 'plugins.cmp'" }
+    use { "hrsh7th/cmp-buffer" }
+    use { "hrsh7th/cmp-path" }
+    use { "hrsh7th/cmp-nvim-lsp" }
+    use { "hrsh7th/cmp-cmdline" }
+    use { "petertriho/cmp-git" }
+
+    use { "L3MON4D3/LuaSnip", config = "require'plugins.luasnip'" }
+    use { "saadparwaiz1/cmp_luasnip" }
+    use { "rafamadriz/friendly-snippets" }
 
     use { "folke/which-key.nvim", config = "require 'plugins.whichkey'" }
 
