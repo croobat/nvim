@@ -28,12 +28,11 @@ return packer.startup(function(use) --}}}
     use { "hrsh7th/cmp-nvim-lsp" }
     use { "hrsh7th/cmp-cmdline" }
     use { "petertriho/cmp-git" }
+    use { "dcampos/cmp-emmet-vim", requires = "mattn/emmet-vim" }
 
-    use { "L3MON4D3/LuaSnip", config = "require'plugins.luasnip'" }
+    use { "L3MON4D3/LuaSnip", config = "require 'plugins.luasnip'" }
     use { "saadparwaiz1/cmp_luasnip" }
     use { "rafamadriz/friendly-snippets" }
-
-    use { "folke/which-key.nvim", config = "require 'plugins.whichkey'" }
 
     -- Syntax
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate',
@@ -81,6 +80,7 @@ return packer.startup(function(use) --}}}
 
     -- Miscellaneous
     use { "vimwiki/vimwiki", config = "require 'plugins.vimwiki'" }
+    use { "folke/which-key.nvim", config = "require 'plugins.whichkey'" }
 
     --## EOF ## {{{
     -- Automatically set up your configuration after cloning packer.nvim

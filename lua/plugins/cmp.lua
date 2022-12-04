@@ -56,6 +56,7 @@ cmp.setup({
         { name = 'cmp_git' },
         { name = 'luasnip' },
         { name = 'nvim_lsp' },
+        { name = 'emmet_vim' },
     }, {
         { name = 'path' },
         { name = 'buffer', keyword_length = 5 },
