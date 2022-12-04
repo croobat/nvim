@@ -57,6 +57,7 @@ return packer.startup(function(use) --}}}
     -- Vanilla
 
     -- Miscellaneous
+    use { "vimwiki/vimwiki", config = "require 'plugins.vimwiki'" }
 
     --## EOF ## {{{
     -- Automatically set up your configuration after cloning packer.nvim
