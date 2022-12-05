@@ -14,27 +14,27 @@ cmp.setup({
     },
 
     mapping = cmp.mapping.preset.insert({
-        ["<c-n>"] = cmp.mapping.select_next_item { behavior = cmp.SelectBehavior.Insert },
-        ["<c-p>"] = cmp.mapping.select_prev_item { behavior = cmp.SelectBehavior.Insert },
+        ["<C-n>"] = cmp.mapping.select_next_item { behavior = cmp.SelectBehavior.Insert },
+        ["<C-p>"] = cmp.mapping.select_prev_item { behavior = cmp.SelectBehavior.Insert },
         ["<C-Space>"] = cmp.mapping.complete(),
-        ["<c-d>"] = cmp.mapping.scroll_docs(-4),
-        ["<c-f>"] = cmp.mapping.scroll_docs(4),
-        ["<c-e>"] = cmp.mapping.abort(),
+        ["<C-d>"] = cmp.mapping.scroll_docs(-4),
+        ["<C-f>"] = cmp.mapping.scroll_docs(4),
+        ["<C-e>"] = cmp.mapping.abort(),
 
-        ["<c-l>"] = cmp.mapping( cmp.mapping.confirm { select = false, },
+        ["<C-l>"] = cmp.mapping(cmp.mapping.confirm { select = false, },
             { "i", "c" }
         ),
 
         ["<CR>"] = cmp.mapping.confirm({ select = false }),
 
-        ["<c-j>"] = cmp.mapping(function()
+        ["<C-j>"] = cmp.mapping(function()
             if luasnip.expand_or_jumpable() then
                 luasnip.expand_or_jump()
             end
         end, { "i", "s", }
         ),
 
-        ["<c-k>"] = cmp.mapping(function()
+        ["<C-k>"] = cmp.mapping(function()
             if luasnip.jumpable(-1) then
                 luasnip.jump(-1)
             end
