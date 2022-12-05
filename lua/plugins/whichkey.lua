@@ -161,8 +161,8 @@ local mappings = {
 
     c = {
         name = "Comment Box",--{{{
-        L = { "<cmd>lua require('comment-box').cline(3)<CR>", "heavy line" },
-        T = { "<cmd>lua require('comment-box').accbox(3)<CR>", "Title Heavy" },
+        TL = { "<cmd>lua require('comment-box').cline(3)<CR>", "heavy line" },
+        TT = { "<cmd>lua require('comment-box').accbox(3)<CR>", "Title Heavy" },
         a = { "<cmd>lua require('comment-box').albox(10)<CR>", "Classic ASCII" },
         l = { "<cmd>lua require('comment-box').cline(10)<CR>", "ASCII line" },
         c = { "<cmd>lua require('comment-box').albox(2)<CR>", "Classic" },
@@ -198,10 +198,8 @@ local mappings = {
         d = { "<cmd>lua vim.lsp.buf.type_definition()<CR>", "List definitions" },
         f = { "<cmd>lua vim.lsp.buf.format { async = true }<CR>", "Format" },
         i = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "List implementations" },
-        j = { "<cmd>lua vim.diagnostic.goto_next()<CR>", "Next Diagnostic", },
-        k = { "<cmd>lua vim.diagnostic.goto_prev()<CR>", "Prev Diagnostic", },
         l = { "<cmd>LspStart<CR>", "Start" },
-        q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", "Quickfix" },
+        q = { "<cmd>lua vim.diagnostic.setloclist<CR>", "Quickfix" },
         r = { "<cmd>lua vim.lsp.buf.references()<CR>", "List references" },
         s = { "<cmd>lua vim.lsp.buf.signature_help()<CR>", "Signature help" },
         w = { "<cmd>Telescope lsp_workspace_diagnostics<CR>", "Workspace Diagnostics" },

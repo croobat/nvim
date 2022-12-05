@@ -14,42 +14,32 @@ cmp.setup({
     },
 
     mapping = cmp.mapping.preset.insert({
-    ["<c-n>"] = cmp.mapping.select_next_item { behavior = cmp.SelectBehavior.Insert },
-    ["<c-p>"] = cmp.mapping.select_prev_item { behavior = cmp.SelectBehavior.Insert },
-    ["<C-Space>"] = cmp.mapping.complete(),
-    ["<c-d>"] = cmp.mapping.scroll_docs(-4),
-    ["<c-f>"] = cmp.mapping.scroll_docs(4),
-    ["<c-e>"] = cmp.mapping.abort(),
+        ["<c-n>"] = cmp.mapping.select_next_item { behavior = cmp.SelectBehavior.Insert },
+        ["<c-p>"] = cmp.mapping.select_prev_item { behavior = cmp.SelectBehavior.Insert },
+        ["<C-Space>"] = cmp.mapping.complete(),
+        ["<c-d>"] = cmp.mapping.scroll_docs(-4),
+        ["<c-f>"] = cmp.mapping.scroll_docs(4),
+        ["<c-e>"] = cmp.mapping.abort(),
 
-    ["<c-l>"] = cmp.mapping(
-      cmp.mapping.confirm {
-        behavior = cmp.ConfirmBehavior.Insert,
-        select = false,
-      },
-      { "i", "c" }
-    ),
+        ["<c-l>"] = cmp.mapping( cmp.mapping.confirm { select = false, },
+            { "i", "c" }
+        ),
 
-    ["<CR>"] = cmp.mapping(
-      cmp.mapping.confirm {
-        behavior = cmp.ConfirmBehavior.Insert,
-        select = false,
-      },
-      { "i", "c" }
-    ),
+        ["<CR>"] = cmp.mapping.confirm({ select = false }),
 
-    ["<c-j>"] = cmp.mapping(function(fallback)
-      if luasnip.expand_or_jumpable() then
-        luasnip.expand_or_jump()
-      end
-    end, {"i", "s",}
-    ),
+        ["<c-j>"] = cmp.mapping(function(fallback)
+            if luasnip.expand_or_jumpable() then
+                luasnip.expand_or_jump()
+            end
+        end, { "i", "s", }
+        ),
 
-    ["<c-k>"] = cmp.mapping(function(fallback)
-      if luasnip.jumpable(-1) then
-        luasnip.jump(-1)
-      end
-    end, {"i", "s",}
-    ),
+        ["<c-k>"] = cmp.mapping(function(fallback)
+            if luasnip.jumpable(-1) then
+                luasnip.jump(-1)
+            end
+        end, { "i", "s", }
+        ),
     }),
 
     sources = cmp.config.sources({
@@ -65,12 +55,12 @@ cmp.setup({
     formatting = {
         fields = { "kind", "abbr", "menu" },
         format = function(entry, vim_item)
-                vim_item.menu = ({
-                    luasnip = "[Snip]",
-                    nvim_lsp = "[LSP]",
-                    buffer = "[Buff]",
-                    path = "[Path]",
-                })[entry.source.name]
+            vim_item.menu = ({
+                luasnip = "[Snip]",
+                nvim_lsp = "[LSP]",
+                buffer = "[Buff]",
+                path = "[Path]",
+            })[entry.source.name]
             return vim_item
         end,
     },
@@ -106,10 +96,3 @@ cmp.setup.cmdline(':', {
         { name = 'cmdline' }
     })
 })
-
--- Set up lspconfig.
--- local capabilities = require('cmp_nvim_lsp').default_capabilities()
--- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
--- require('lspconfig')['<YOUR_LSP_SERVER>'].setup {
---     capabilities = capabilities
--- }
