@@ -39,6 +39,11 @@ vim.cmd [[
         autocmd Filetype csv set textwidth=0
     augroup end
 
+    augroup _tmux
+        autocmd!
+        autocmd Filetype tmux set textwidth=0
+    augroup end
+
     augroup _lua
         autocmd!
     augroup end
