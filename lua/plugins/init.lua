@@ -33,7 +33,6 @@ return packer.startup(function(use) --}}}
     use { "hrsh7th/cmp-nvim-lsp" }
     use { "hrsh7th/cmp-cmdline" }
     use { "petertriho/cmp-git" }
-    use { "dcampos/cmp-emmet-vim", requires = "mattn/emmet-vim" }
     -- Luasnip
     use { "L3MON4D3/LuaSnip", config = "require 'plugins.luasnip'" }
     use { "saadparwaiz1/cmp_luasnip" }
@@ -81,7 +80,6 @@ return packer.startup(function(use) --}}}
     use { "qiushihe/vim-bbye" }
     use "tpope/vim-surround"
     use "tpope/vim-repeat"
-    use { "tpope/vim-fugitive" }
     use { "folke/zen-mode.nvim", cmd = { 'ZenMode' } }
     use { "lambdalisue/suda.vim" }
 
