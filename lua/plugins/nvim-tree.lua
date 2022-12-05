@@ -61,11 +61,11 @@ nvim_tree.setup({
         icons = {
             glyphs = {
                 git = {
-                  unstaged = "",
-                  staged = "S",
-                  untracked = "U",
-                  deleted = "",
-                  ignored = "◌",
+                    unstaged = "",
+                    staged = "S",
+                    untracked = "U",
+                    deleted = "",
+                    ignored = "◌",
                 },
             },
             show = {
@@ -76,18 +76,26 @@ nvim_tree.setup({
             }
         },
     },
-})
-
-nvim_web_devicons.setup {
- override = {
-    zsh = {
-        icon = "",
-        color = "#428850",
-        cterm_color = "65",
-        name = "Zsh"
+    diagnostics = {
+        enable = true,
+        icons = {
+            hint = "i",
+            info = "?",
+            warning = "w",
+            error = "x",
+        }
     }
-};
- default = true; -- globally enable default icons
+})
+nvim_web_devicons.setup {
+    override = {
+        zsh = {
+            icon = "",
+            color = "#428850",
+            cterm_color = "65",
+            name = "Zsh"
+        }
+    };
+    default = true; -- globally enable default icons
 }
 
 
