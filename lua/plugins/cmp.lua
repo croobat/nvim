@@ -27,14 +27,14 @@ cmp.setup({
 
         ["<CR>"] = cmp.mapping.confirm({ select = false }),
 
-        ["<c-j>"] = cmp.mapping(function(fallback)
+        ["<c-j>"] = cmp.mapping(function()
             if luasnip.expand_or_jumpable() then
                 luasnip.expand_or_jump()
             end
         end, { "i", "s", }
         ),
 
-        ["<c-k>"] = cmp.mapping(function(fallback)
+        ["<c-k>"] = cmp.mapping(function()
             if luasnip.jumpable(-1) then
                 luasnip.jump(-1)
             end
@@ -43,7 +43,6 @@ cmp.setup({
     }),
 
     sources = cmp.config.sources({
-        { name = 'cmp_git' },
         { name = 'luasnip' },
         { name = 'nvim_lsp' },
         { name = 'emmet_vim' },
@@ -71,13 +70,13 @@ cmp.setup({
 })
 
 -- Git files
-cmp.setup.filetype('gitcommit', {
-    sources = cmp.config.sources({
-        { name = 'cmp_git' },
-    }, {
-        { name = 'buffer', keyword_length = 5 },
-    })
-})
+-- cmp.setup.filetype('gitcommit', {
+--     sources = cmp.config.sources({
+--         { name = 'cmp_git' },
+--     }, {
+--         { name = 'buffer', keyword_length = 5 },
+--     })
+-- })
 
 -- Search
 cmp.setup.cmdline({ '/', '?' }, {
