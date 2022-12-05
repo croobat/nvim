@@ -45,6 +45,8 @@ return packer.startup(function(use) --}}}
     }
     use { "NMAC427/guess-indent.nvim", config = "require('guess-indent').setup{}"}
     use { "windwp/nvim-autopairs", config = "require 'plugins.autopairs'" }
+    use { "neoclide/vim-jsx-improve", ft = {'javascript', 'javascriptreact'} }
+    use { "joshua7v/vim-tsx-improve", ft = {'typescript', 'typescriptreact'} }
 
     -- Comments
     use { "LudoPinelli/comment-box.nvim", config = "require 'plugins.comment-box'" }
@@ -84,6 +86,7 @@ return packer.startup(function(use) --}}}
     use { "lambdalisue/suda.vim" }
 
     -- Miscellaneous
-    use { "vimwiki/vimwiki", config = "require 'plugins.vimwiki'" }
+    use { "vimwiki/vimwiki", config = "require 'plugins.vimwiki'", ft = {'vimwiki'} }
     use { "folke/which-key.nvim", config = "require 'plugins.whichkey'" }
+    use { "dstein64/vim-startuptime" }
 end)
