@@ -84,7 +84,7 @@ return packer.startup(function(use) --}}}
     use { "lambdalisue/suda.vim" }
 
     -- Miscellaneous
-    use { "vimwiki/vimwiki", config = "require 'plugins.vimwiki'", ft = {'vimwiki'} }
+    use { "vimwiki/vimwiki", config = "require 'plugins.vimwiki'", ft = {'vimwiki', 'markdown'} }
     use { "folke/which-key.nvim", config = "require 'plugins.whichkey'" }
     use { "dstein64/vim-startuptime" }
 end)
