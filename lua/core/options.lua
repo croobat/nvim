@@ -89,3 +89,6 @@ vim.cmd("set whichwrap+=<,>,[,],h,l")
 
 -- Recursive finds
 vim.cmd("set path+=**")
+
+-- New commands
+vim.cmd("command! MakeTags !ctags -R .")
