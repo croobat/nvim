@@ -80,18 +80,23 @@ cmp.setup.cmdline({ '/', '?' }, {
 -- Git files
 -- cmp.setup.filetype('gitcommit', {
 --     sources = cmp.config.sources({
---         { name = 'cmp_git' },
 --     }, {
---         { name = 'buffer', keyword_length = 5 },
+--         { name = 'cmp_git' },
+--         { name = 'buffer' },
 --     })
 -- })
 
 -- Command line
--- cmp.setup.cmdline(':', {
---     mapping = cmp.mapping.preset.cmdline(),
---     sources = cmp.config.sources({
---         { name = 'path' }
---     }, {
---         { name = 'cmdline' }
---     })
--- })
+cmp.setup.cmdline(':', {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = cmp.config.sources({
+        { name = 'path' }
+    }, {
+        {
+            name = 'cmdline',
+            option = {
+                ignore_cmds = { 'Man', '!', 'find' }
+            }
+        }
+    })
+})
