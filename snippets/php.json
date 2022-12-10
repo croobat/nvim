@@ -1,7 +1,7 @@
 {
     "pre": {
         "prefix": "pre",
-        "body": ["print '<pre>';\nprint_r($${0});\nprint '</pre>';"],
+        "body": ["print '<pre>';\nprint_r([$${0}]);\nprint '</pre>';"],
         "description": "Print_r() con pre tag"
     },
     "test": {

@@ -3,8 +3,8 @@ local nvim_web_devicons = require("nvim-web-devicons")
 local nvim_tree_config = require("nvim-tree.config")
 
 -- disable netrw
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+-- vim.g.loaded_netrw = 1
+-- vim.g.loaded_netrwPlugin = 1
 
 -- Auto close if only buffer
 local tree_cb = nvim_tree_config.nvim_tree_callback

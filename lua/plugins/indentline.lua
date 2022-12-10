@@ -1,7 +1,4 @@
-local status_ok, indent_blankline = pcall(require, "indent_blankline")
-if not status_ok then
-    return
-end
+local indent_blankline = require("indent_blankline")
 
 vim.g.indent_blankline_buftype_exclude = { "terminal", "nofile" }
 vim.g.indent_blankline_filetype_exclude = {
@@ -21,6 +18,7 @@ vim.g.indent_blankline_show_trailing_blankline_indent = false
 vim.g.indent_blankline_show_first_indent_level = true
 vim.g.indent_blankline_use_treesitter = true
 vim.g.indent_blankline_show_current_context = false
+vim.g.indent_blankline_max_indent_increase = 1
 vim.g.indent_blankline_context_patterns = {
     "class",
     "return",
@@ -53,13 +51,14 @@ vim.cmd [[highlight IndentBlanklineIndent3     guifg=#37ad55 gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent4     guifg=#61a2b0 gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent5     guifg=#b3814c gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent6     guifg=#b33b3b gui=nocombine]]
+vim.cmd [[let g:indent_blankline_max_indent_increase = 1]]
 vim.opt.list = true
 
 indent_blankline.setup({
     -- show_end_of_line = true,
     space_char_blankline = " ",
-    show_current_context_start_on_current_line = true,
-    show_current_context_start = true,
+    show_current_context_start_on_current_line = false,
+    show_current_context_start = false,
     char_highlight_list = {
         "IndentBlanklineIndent1",
         "IndentBlanklineIndent2",
