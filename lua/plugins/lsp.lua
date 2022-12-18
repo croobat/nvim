@@ -78,7 +78,7 @@ local lsp_flags = {
 local def_capabilities = vim.lsp.protocol.make_client_capabilities()
 local capabilities = require('cmp_nvim_lsp').default_capabilities(def_capabilities)
 
-require('lspconfig')['pyright'].setup {
+require('lspconfig').pyright.setup {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
@@ -91,13 +91,7 @@ require('lspconfig')['pyright'].setup {
     },
 }
 
-require('lspconfig')['tsserver'].setup {
-    on_attach = on_attach,
-    flags = lsp_flags,
-    capabilities = capabilities,
-}
-
-require('lspconfig')['rust_analyzer'].setup {
+require('lspconfig').rust_analyzer.setup {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
@@ -107,7 +101,7 @@ require('lspconfig')['rust_analyzer'].setup {
     }
 }
 
-require('lspconfig')['sumneko_lua'].setup {
+require('lspconfig').sumneko_lua.setup {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
@@ -126,7 +120,7 @@ require('lspconfig')['sumneko_lua'].setup {
     },
 }
 
-require('lspconfig')['tsserver'].setup {
+require('lspconfig').tsserver.setup {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
@@ -142,7 +136,25 @@ require('lspconfig')['tsserver'].setup {
     }
 }
 
-require('lspconfig')['intelephense'].setup {
+require('lspconfig').intelephense.setup {
+    on_attach = on_attach,
+    flags = lsp_flags,
+    capabilities = capabilities,
+}
+
+require('lspconfig').html.setup {
+    on_attach = on_attach,
+    flags = lsp_flags,
+    capabilities = capabilities,
+}
+
+require('lspconfig').emmet_ls.setup {
+    on_attach = on_attach,
+    flags = lsp_flags,
+    capabilities = capabilities,
+}
+
+require('lspconfig').cssls.setup {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
