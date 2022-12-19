@@ -38,20 +38,23 @@ return packer.startup(function(use) --}}}
     use { "saadparwaiz1/cmp_luasnip" }
     use { "rafamadriz/friendly-snippets" }
 
-    -- Syntax
+    -- Treesitter
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate',
         config = "require 'plugins.treesitter'"
     }
-    use { "NMAC427/guess-indent.nvim", config = "require('guess-indent').setup{}"}
+    use { "JoosepAlviste/nvim-ts-context-commentstring", config = "require 'plugins.comment'", after = "nvim-treesitter" }
+    use { "p00f/nvim-ts-rainbow" }
+    use { "nvim-treesitter/nvim-treesitter-context" }
+
+    -- Syntax
+    use { "NMAC427/guess-indent.nvim", config = "require('guess-indent').setup{}" }
     use { "windwp/nvim-autopairs", config = "require 'plugins.autopairs'" }
-    use { "neoclide/vim-jsx-improve", ft = {'javascript', 'javascriptreact'} }
-    use { "joshua7v/vim-tsx-improve", ft = {'typescript', 'typescriptreact'} }
+    use { "neoclide/vim-jsx-improve", ft = { 'javascript', 'javascriptreact' } }
+    use { "joshua7v/vim-tsx-improve", ft = { 'typescript', 'typescriptreact' } }
 
     -- Comments
     use { "LudoPinelli/comment-box.nvim", config = "require 'plugins.comment-box'" }
     use { "numToStr/Comment.nvim", config = "require 'plugins.comment'" }
-    use { "JoosepAlviste/nvim-ts-context-commentstring", config = "require 'plugins.comment'",
-        after = "nvim-treesitter" }
 
     -- Navigation
     use { 'nvim-tree/nvim-tree.lua',
@@ -60,8 +63,8 @@ return packer.startup(function(use) --}}}
 
     use { "nvim-telescope/telescope.nvim",
         config = "require 'plugins.telescope'" }
-    use {'nvim-telescope/telescope-fzf-native.nvim',
-    run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+    use { 'nvim-telescope/telescope-fzf-native.nvim',
+        run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
     use { 'nvim-telescope/telescope-symbols.nvim' }
 
     -- Debugging
@@ -69,11 +72,10 @@ return packer.startup(function(use) --}}}
         config = "require 'plugins.toggleterm'" }
 
     -- Visuals
-    use {'ojroques/nvim-hardline',
+    use { 'ojroques/nvim-hardline',
         config = "require 'plugins.hardline'" }
     use { "lewis6991/gitsigns.nvim", config = "require 'plugins.gitsigns'" }
     use { "norcalli/nvim-colorizer.lua", config = "require'colorizer'.setup()" }
-    use { "p00f/nvim-ts-rainbow", requires = "nvim-treesitter/nvim-treesitter" }
     use { "lukas-reineke/indent-blankline.nvim", config = "require 'plugins.indentline'" }
 
     -- Vanilla
@@ -84,7 +86,7 @@ return packer.startup(function(use) --}}}
     use { "lambdalisue/suda.vim" }
 
     -- Miscellaneous
-    use { "vimwiki/vimwiki", config = "require 'plugins.vimwiki'", ft = {'vimwiki', 'markdown'} }
+    use { "vimwiki/vimwiki", config = "require 'plugins.vimwiki'", ft = { 'vimwiki', 'markdown' } }
     use { "folke/which-key.nvim", config = "require 'plugins.whichkey'" }
     use { "dstein64/vim-startuptime" }
 end)
