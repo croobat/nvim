@@ -42,13 +42,14 @@ return packer.startup(function(use) --}}}
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate',
         config = "require 'plugins.treesitter'"
     }
+    use { "nvim-treesitter/nvim-treesitter-context" }
     use { "JoosepAlviste/nvim-ts-context-commentstring", config = "require 'plugins.comment'", after = "nvim-treesitter" }
     use { "p00f/nvim-ts-rainbow" }
-    use { "nvim-treesitter/nvim-treesitter-context" }
+    use { "windwp/nvim-autopairs", config = "require 'plugins.autopairs'" }
+    use { "windwp/nvim-ts-autotag" }
 
     -- Syntax
     use { "NMAC427/guess-indent.nvim", config = "require('guess-indent').setup{}" }
-    use { "windwp/nvim-autopairs", config = "require 'plugins.autopairs'" }
     use { "neoclide/vim-jsx-improve", ft = { 'javascript', 'javascriptreact' } }
     use { "joshua7v/vim-tsx-improve", ft = { 'typescript', 'typescriptreact' } }
 
