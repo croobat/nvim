@@ -73,11 +73,13 @@ return packer.startup(function(use) --}}}
         config = "require 'plugins.toggleterm'" }
 
     -- Visuals
-    use { 'ojroques/nvim-hardline',
-        config = "require 'plugins.hardline'" }
-    use { "lewis6991/gitsigns.nvim", config = "require 'plugins.gitsigns'" }
+    use { 'ojroques/nvim-hardline', config = "require 'plugins.hardline'" }
     use { "norcalli/nvim-colorizer.lua", config = "require'colorizer'.setup()" }
     use { "lukas-reineke/indent-blankline.nvim", config = "require 'plugins.indentline'" }
+
+    -- Git
+    use { "lewis6991/gitsigns.nvim", config = "require 'plugins.gitsigns'" }
+    use { "dinhhuy258/git.nvim", config = "require 'plugins.git'" }
 
     -- Vanilla
     use { "qiushihe/vim-bbye" }
