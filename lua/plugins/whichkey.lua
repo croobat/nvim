@@ -201,6 +201,8 @@ local mappings = {
         q = { "<cmd>lua vim.diagnostic.setloclist<CR>", "Quickfix" },
         r = { "<cmd>lua vim.lsp.buf.references()<CR>", "List references" },
         s = { "<cmd>lua vim.lsp.buf.signature_help()<CR>", "Signature help" },
+        u = { "<cmd>lua vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with( vim.lsp.diagnostic.on_publish_diagnostics, {underline = true})<CR>", "enable underline" },
+        U = { "<cmd>lua vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with( vim.lsp.diagnostic.on_publish_diagnostics, {underline = false})<CR>", "disable underline" },
         w = { "<cmd>Telescope lsp_workspace_diagnostics<CR>", "Workspace Diagnostics" },
     },--}}}
 
