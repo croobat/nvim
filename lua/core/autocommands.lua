@@ -47,4 +47,10 @@ vim.cmd [[
     augroup _lua
         autocmd!
     augroup end
+
+    augroup _cron
+        autocmd!
+        autocmd Filetype crontab set textwidth=0
+    augroup end
+
 ]]
