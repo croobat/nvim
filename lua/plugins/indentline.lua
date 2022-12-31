@@ -51,7 +51,6 @@ vim.cmd [[highlight IndentBlanklineIndent3     guifg=#37ad55 gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent4     guifg=#61a2b0 gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent5     guifg=#b3814c gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent6     guifg=#b33b3b gui=nocombine]]
-vim.cmd [[let g:indent_blankline_max_indent_increase = 1]]
 vim.opt.list = true
 
 indent_blankline.setup({
