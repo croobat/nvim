@@ -68,10 +68,10 @@ local setup = {
         i = { "j", "k" },
         v = { "j", "k" },
     },
-}--}}}
+} --}}}
 
 
-local opts = {--{{{
+local opts = { --{{{
     -- Leader keys
     mode = "n", -- NORMAL mode
     prefix = "<leader>",
@@ -79,7 +79,7 @@ local opts = {--{{{
     silent = true, -- use `silent` when creating keymaps
     noremap = true, -- use `noremap` when creating keymaps
     nowait = true, -- use `nowait` when creating keymaps
-}--}}}
+} --}}}
 
 local mappings = {
     [","] = { "A,<esc>", "Insert comma" },
@@ -101,7 +101,6 @@ local mappings = {
     -- g = git
     -- l = lsp
     ["q"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
-    ["s"] = { "<cmd>source ~/.config/nvim/after/plugin/luasnip.lua<CR>", "Resource snippets" },
     -- t = telescope
     ["w"] = { "<cmd>w!<CR>", "Save" },
     ["W"] = { "<cmd>SudaWrite<CR>", "Save (sudo)" },
@@ -139,28 +138,28 @@ local mappings = {
         lc = {"<cmd>VimtexCountLetters", "Letter count"},
         wc = {"<cmd>VimtexCountWords", "Word count"},
     },--}}}
-    ]]--
+    ]] --
 
     a = {
-        name = "Auto-options",--{{{
-    C = { "<cmd>setlocal formatoptions-=cro<CR>", "Auto-comment off" },
-    F = { "<cmd>set foldmethod=marker<CR>", "Fold mark" },
-    H = { "<cmd>nohlsearch<CR>", "Highlight off" },
-    I = { "<cmd>setlocal noautoindent<CR>", "Auto-indent off" },
-    L = { "<cmd>set colorcolumn=0<CR>", "Color column off" },
-    T = { "<cmd>set shiftwidth=4 tabstop=4<CR>", "Indent 4 spaces" },
-    c = { "<cmd>setlocal formatoptions+=cro<CR>", "Auto-comment on" },
-    f = { "<cmd>set foldmethod=indent<CR>", "Fold indent" },
-    h = { "<cmd>lua vim.opt.hlsearch = true<CR>", "Highlight on" },
-    i = { "<cmd>setlocal autoindent<CR>", "Auto-indent on" },
-    l = { "<cmd>set colorcolumn=79<CR>", "Color column on" },
-    s = { "<cmd>%s/\\s\\+$//e<CR>", "Remove traling spaces" },
-    t = { "<cmd>set shiftwidth=2 tabstop=2<CR>", "Indent 2 spaces" },
-    x = { "<cmd>ColorizerToggle<CR>", "Hex colors toggle" },
-    },--}}}
+        name = "Auto-options", --{{{
+        C = { "<cmd>setlocal formatoptions-=cro<CR>", "Auto-comment off" },
+        F = { "<cmd>set foldmethod=marker<CR>", "Fold mark" },
+        H = { "<cmd>nohlsearch<CR>", "Highlight off" },
+        I = { "<cmd>setlocal noautoindent<CR>", "Auto-indent off" },
+        L = { "<cmd>set colorcolumn=0<CR>", "Color column off" },
+        T = { "<cmd>set shiftwidth=4 tabstop=4<CR>", "Indent 4 spaces" },
+        c = { "<cmd>setlocal formatoptions+=cro<CR>", "Auto-comment on" },
+        f = { "<cmd>set foldmethod=indent<CR>", "Fold indent" },
+        h = { "<cmd>lua vim.opt.hlsearch = true<CR>", "Highlight on" },
+        i = { "<cmd>setlocal autoindent<CR>", "Auto-indent on" },
+        l = { "<cmd>set colorcolumn=79<CR>", "Color column on" },
+        s = { "<cmd>%s/\\s\\+$//e<CR>", "Remove traling spaces" },
+        t = { "<cmd>set shiftwidth=2 tabstop=2<CR>", "Indent 2 spaces" },
+        x = { "<cmd>ColorizerToggle<CR>", "Hex colors toggle" },
+    }, --}}}
 
     c = {
-        name = "Comment Box",--{{{
+        name = "Comment Box", --{{{
         TL = { "<cmd>lua require('comment-box').cline(3)<CR>", "heavy line" },
         TT = { "<cmd>lua require('comment-box').accbox(3)<CR>", "Title Heavy" },
         a = { "<cmd>lua require('comment-box').albox(10)<CR>", "Classic ASCII" },
@@ -170,10 +169,10 @@ local mappings = {
         h = { "<cmd>lua require('comment-box').albox(3)<CR>", "Heavy" },
         L = { "<cmd>lua require('comment-box').cline(1)<CR>", "Simple line" },
         t = { "<cmd>lua require('comment-box').accbox(7)<CR>", "Title" },
-    },--}}}
+    }, --}}}
 
     g = {
-        name = "Git",--{{{
+        name = "Git", --{{{
         R = { "<cmd>lua require 'gitsigns'.reset_buffer()<CR>", "Reset Buffer" },
         b = { "<cmd>Gitsigns toggle_current_line_blame<CR>", "Blame" },
         B = { "<cmd>Telescope git_branches<CR>", "Checkout branch" },
@@ -186,10 +185,10 @@ local mappings = {
         r = { "<cmd>lua require 'gitsigns'.reset_hunk()<CR>", "Reset Hunk" },
         s = { "<cmd>lua require 'gitsigns'.stage_hunk()<CR>", "Stage Hunk" },
         u = { "<cmd>lua require 'gitsigns'.undo_stage_hunk()<CR>", "Undo Stage Hunk", },
-    },--}}}
+    }, --}}}
 
     l = {
-        name = "LSP",--{{{
+        name = "LSP", --{{{
         R = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename" },
         S = { "<cmd>Telescope lsp_document_symbols<CR>", "Document Symbols" },
         a = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Code Action" },
@@ -201,13 +200,15 @@ local mappings = {
         q = { "<cmd>lua vim.diagnostic.setloclist<CR>", "Quickfix" },
         r = { "<cmd>lua vim.lsp.buf.references()<CR>", "List references" },
         s = { "<cmd>lua vim.lsp.buf.signature_help()<CR>", "Signature help" },
-        u = { "<cmd>lua vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with( vim.lsp.diagnostic.on_publish_diagnostics, {underline = true})<CR>", "enable underline" },
-        U = { "<cmd>lua vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with( vim.lsp.diagnostic.on_publish_diagnostics, {underline = false})<CR>", "disable underline" },
+        u = { "<cmd>lua vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with( vim.lsp.diagnostic.on_publish_diagnostics, {underline = true})<CR>",
+            "enable underline" },
+        U = { "<cmd>lua vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with( vim.lsp.diagnostic.on_publish_diagnostics, {underline = false})<CR>",
+            "disable underline" },
         w = { "<cmd>Telescope lsp_workspace_diagnostics<CR>", "Workspace Diagnostics" },
-    },--}}}
+    }, --}}}
 
     t = {
-        name = "Telescope",--{{{
+        name = "Telescope", --{{{
         C = { "<cmd>Telescope git_bcommits<CR>", "Git commits current buffer" },
         D = { "<cmd>Telescope diagnostics<CR>", "Document Diagnostics", },
         G = { "<cmd>Telescope diagnostics<CR>", "LSP diagnostics" },
@@ -227,7 +228,7 @@ local mappings = {
         q = { "<cmd>Telescope quickfix<CR>", "LSP quickfix" },
         r = { "<cmd>Telescope lsp_references<CR>", "LSP reference" },
         t = { "<cmd>Telescope resume<CR>", "Resume search" },
-    },--}}}
+    }, --}}}
 
 }
 
