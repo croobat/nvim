@@ -26,6 +26,7 @@ return packer.startup(function(use) --}}}
     use { "williamboman/mason.nvim", config = "require 'plugins.mason'" }
     use { "williamboman/mason-lspconfig.nvim" }
     use { "neovim/nvim-lspconfig", config = "require 'plugins.lsp'" }
+    use { "jose-elias-alvarez/null-ls.nvim", config = "require 'plugins.null'" }
     -- CMP
     use { "hrsh7th/nvim-cmp", config = "require 'plugins.cmp'" }
     use { "hrsh7th/cmp-buffer" }
@@ -38,6 +39,11 @@ return packer.startup(function(use) --}}}
     use { "saadparwaiz1/cmp_luasnip" }
     use { "rafamadriz/friendly-snippets" }
 
+    -- Syntax
+    use { "NMAC427/guess-indent.nvim", config = "require('guess-indent').setup{}" }
+    use { "neoclide/vim-jsx-improve", ft = { 'javascript', 'javascriptreact' } }
+    use { "joshua7v/vim-tsx-improve", ft = { 'typescript', 'typescriptreact' } }
+    use { "MunifTanjim/prettier.nvim", config = "require 'plugins.prettier'" }
     -- Treesitter
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate',
         config = "require 'plugins.treesitter'"
@@ -47,11 +53,6 @@ return packer.startup(function(use) --}}}
     use { "p00f/nvim-ts-rainbow" }
     use { "windwp/nvim-autopairs", config = "require 'plugins.autopairs'" }
     use { "windwp/nvim-ts-autotag" }
-
-    -- Syntax
-    use { "NMAC427/guess-indent.nvim", config = "require('guess-indent').setup{}" }
-    use { "neoclide/vim-jsx-improve", ft = { 'javascript', 'javascriptreact' } }
-    use { "joshua7v/vim-tsx-improve", ft = { 'typescript', 'typescriptreact' } }
 
     -- Comments
     use { "LudoPinelli/comment-box.nvim", config = "require 'plugins.comment-box'" }

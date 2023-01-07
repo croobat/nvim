@@ -100,6 +100,7 @@ local mappings = {
     ["F"] = { "<cmd>%s/\\s\\+$//e<CR>", "Trailing spaces" },
     -- g = git
     -- l = lsp
+    ["p"] = { "<cmd>Prettier<CR>", "Prettier file" },
     ["q"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
     -- t = telescope
     ["w"] = { "<cmd>w!<CR>", "Save" },

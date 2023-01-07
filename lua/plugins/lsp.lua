@@ -126,7 +126,7 @@ lspconfig.tsserver.setup {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
-    filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less', 'vue' },
+    -- filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less', 'vue' },
     init_options = {
         html = {
             options = {
@@ -175,6 +175,12 @@ lspconfig.jqls.setup {
 }
 
 lspconfig.sqlls.setup {
+    on_attach = on_attach,
+    flags = lsp_flags,
+    capabilities = capabilities,
+}
+
+lspconfig.volar.setup {
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
