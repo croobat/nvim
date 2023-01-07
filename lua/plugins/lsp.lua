@@ -167,3 +167,15 @@ lspconfig.bashls.setup {
     flags = lsp_flags,
     capabilities = capabilities,
 }
+
+lspconfig.jqls.setup {
+    on_attach = on_attach,
+    flags = lsp_flags,
+    capabilities = capabilities,
+}
+
+lspconfig.sqlls.setup {
+    on_attach = on_attach,
+    flags = lsp_flags,
+    capabilities = capabilities,
+}
