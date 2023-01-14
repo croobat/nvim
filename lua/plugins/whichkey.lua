@@ -96,11 +96,11 @@ local mappings = {
     -- a = auto-options
     -- c = comment box
     ["e"] = { "<cmd>NvimTreeToggle<CR>", "Explorer" },
-    ["f"] = { "<cmd>lua vim.lsp.buf.format { async = true }<CR>", "Format file" },
+    ["f"] = { "<cmd>lua vim.lsp.buf.format { async = true }<CR>", "LSP format" },
     ["F"] = { "<cmd>%s/\\s\\+$//e<CR>", "Trailing spaces" },
     -- g = git
     -- l = lsp
-    ["p"] = { "<cmd>Prettier<CR>", "Prettier file" },
+    ["p"] = { "<cmd>Prettier<CR>", "Prettier format" },
     ["q"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
     -- t = telescope
     ["w"] = { "<cmd>w!<CR>", "Save" },
