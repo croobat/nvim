@@ -1,6 +1,6 @@
 -- Set options
-font = "Recursive Mono Linear Static:h8"
-bashcomp =  "longest,full"
+local font = "Recursive Mono Linear Static:h8"
+local bashcomp =  "longest,full"
 
 local options = {
     -- System

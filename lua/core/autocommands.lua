@@ -17,7 +17,7 @@ vim.cmd [[
 
     augroup _vimwiki
         autocmd!
-        autocmd Filetype vimwiki set textwidth=100
+        autocmd Filetype vimwiki set textwidth=0
     augroup end
 
     augroup _tex
