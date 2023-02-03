@@ -26,6 +26,11 @@ require("lazy").setup({
 	{ "nvim-lua/popup.nvim" },
 	{ "nvim-lua/plenary.nvim" },
 
+	-- Navigation
+	{ 'nvim-tree/nvim-tree.lua', config = function() require "plugins.nvim-tree" end,
+		dependencies = { 'nvim-tree/nvim-web-devicons' },
+	},
+
 	-- Vanilla
 	{ "qiushihe/vim-bbye" },
 	{ "tpope/vim-surround" },
