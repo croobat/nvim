@@ -25,4 +25,14 @@ require("lazy").setup({
 	{ "lewis6991/impatient.nvim" },
 	{ "nvim-lua/popup.nvim" },
 	{ "nvim-lua/plenary.nvim" },
+
+	-- Vanilla
+	{ "qiushihe/vim-bbye" },
+	{ "tpope/vim-surround" },
+	{ "tpope/vim-repeat" },
+	{ "folke/zen-mode.nvim", cmd = { 'ZenMode' } },
+	{ "lambdalisue/suda.vim" },
+	{ "godlygeek/tabular" },
+	{ "felipec/vim-sanegx", event = "BufRead" },
+	{ "wellle/targets.vim" },
 })
