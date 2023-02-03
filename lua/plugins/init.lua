@@ -18,7 +18,7 @@ require("lazy").setup({
 	-- Colorscheme
 	{ "folke/tokyonight.nvim", config = function() require "plugins.tokyonight" end,
 		lazy = false,
-		priority = 1000,
+		priority = 1000
 	},
 
 	-- Mandatory
@@ -26,21 +26,31 @@ require("lazy").setup({
 	{ "nvim-lua/popup.nvim" },
 	{ "nvim-lua/plenary.nvim" },
 
+	-- Treesitter
+	{ "nvim-treesitter/nvim-treesitter", config = function() require "plugins.treesitter" end,
+		run = ":TSUpdate"
+	},
+	{ "p00f/nvim-ts-rainbow" },
+	{ "windwp/nvim-ts-autotag", config = function() require("nvim-ts-autotag").setup() end },
+	{ "romgrk/nvim-treesitter-context", config = function() require "plugins.treesitter-context" end },
+	{ "JoosepAlviste/nvim-ts-context-commentstring", event = "BufRead" },
+	{ "nvim-treesitter/playground", event = "BufRead" },
+
 	-- Navigation
-	{ 'nvim-tree/nvim-tree.lua', config = function() require "plugins.nvim-tree" end,
-		dependencies = { 'nvim-tree/nvim-web-devicons' },
+	{ "nvim-tree/nvim-tree.lua", config = function() require "plugins.nvim-tree" end,
+		dependencies = { "nvim-tree/nvim-web-devicons" } 
 	},
 
 	-- Vanilla
 	{ "qiushihe/vim-bbye" },
 	{ "tpope/vim-surround" },
 	{ "tpope/vim-repeat" },
-	{ "folke/zen-mode.nvim", cmd = { 'ZenMode' } },
+	{ "folke/zen-mode.nvim", cmd = { "ZenMode" } },
 	{ "lambdalisue/suda.vim" },
 	{ "godlygeek/tabular" },
 	{ "felipec/vim-sanegx", event = "BufRead" },
 	{ "wellle/targets.vim" },
 
 	-- Miscellaneous
-	{ "folke/which-key.nvim", config = function() require "plugins.whichkey" end, }
+	{ "folke/which-key.nvim", config = function() require "plugins.whichkey" end }
 })
