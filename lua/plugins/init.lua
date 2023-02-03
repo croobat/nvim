@@ -1,3 +1,4 @@
+-- Setup {{{
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
@@ -9,16 +10,15 @@ if not vim.loop.fs_stat(lazypath) then
 		lazypath,
 	})
 end
-vim.opt.rtp:prepend(lazypath)
+vim.opt.rtp:prepend(lazypath) -- }}}
 
 vim.g.mapleader = " "
 
 require("lazy").setup({
 	-- Colorscheme
-	{ "folke/tokyonight.nvim",
+	{ "folke/tokyonight.nvim", config = function() require "plugins.tokyonight" end,
 		lazy = false,
 		priority = 1000,
-		config = function() require "plugins.tokyonight" end,
 	},
 
 	-- Mandatory
@@ -35,4 +35,7 @@ require("lazy").setup({
 	{ "godlygeek/tabular" },
 	{ "felipec/vim-sanegx", event = "BufRead" },
 	{ "wellle/targets.vim" },
+
+	-- Miscellaneous
+	{ "folke/which-key.nvim", config = function() require "plugins.whichkey" end, }
 })
