@@ -58,7 +58,7 @@ local options = {
 
     -- Completion
 	completeopt    = { 
-		"menuone", 
+		"menuone",
 		"noselect"
 	},
 	timeoutlen     = 300,            -- ms to wait for mapped sequence
