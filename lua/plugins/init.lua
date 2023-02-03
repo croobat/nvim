@@ -20,5 +20,9 @@ require("lazy").setup({
 		priority = 1000,
 		config = function() require "plugins.tokyonight" end,
 	},
-})
 
+	-- Mandatory
+	{ "lewis6991/impatient.nvim" },
+	{ "nvim-lua/popup.nvim" },
+	{ "nvim-lua/plenary.nvim" },
+})
