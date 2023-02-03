@@ -41,6 +41,9 @@ require("lazy").setup({
 		dependencies = { "nvim-tree/nvim-web-devicons" } 
 	},
 
+	-- Visuals
+	{ "RRethy/vim-illuminate" },
+
 	-- Vanilla
 	{ "qiushihe/vim-bbye" },
 	{ "tpope/vim-surround" },
