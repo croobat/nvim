@@ -301,6 +301,9 @@ local mappings = {
 		q = { "<cmd>Telescope quickfix<cr>", "LSP quickfix" },
 		r = { "<cmd>Telescope lsp_references<cr>", "LSP reference" },
 		t = { "<cmd>Telescope resume<cr>", "Resume search" },
+		["="] = {"<cmd>Tabularize /=<cr>", "Tabularize ="},
+		["-"] = {"<cmd>Tabularize /--<cr>", "Tabularize --"},
+		[":"] = {"<cmd>Tabularize /:<cr>", "Tabularize :"},
 	},
 }
 

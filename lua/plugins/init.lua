@@ -84,6 +84,7 @@ return packer.startup(function(use) --}}}
 	use { "tpope/vim-repeat" }
 	use { "folke/zen-mode.nvim", cmd = { 'ZenMode' } }
 	use { "lambdalisue/suda.vim" }
+	use { "godlygeek/tabular" }
 
 	-- Miscellaneous
 	use { "vimwiki/vimwiki", config = "require 'plugins.vimwiki'", ft = { 'vimwiki', 'markdown' } }
