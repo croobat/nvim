@@ -8,11 +8,6 @@ cmp.setup({
 		end,
 	},
 
-	window = {
-		-- completion = cmp.config.window.bordered(),
-		-- documentation = cmp.config.window.bordered(),
-	},
-
 	mapping = cmp.mapping.preset.insert({
 		["<C-n>"] = cmp.mapping.select_next_item { behavior = cmp.SelectBehavior.Insert },
 		["<C-p>"] = cmp.mapping.select_prev_item { behavior = cmp.SelectBehavior.Insert },
@@ -76,15 +71,6 @@ cmp.setup.cmdline({ '/', '?' }, {
 		{ name = 'buffer' }
 	}
 })
-
--- Git files
--- cmp.setup.filetype('gitcommit', {
---	 sources = cmp.config.sources({
---	 }, {
---		 { name = 'cmp_git' },
---		 { name = 'buffer' },
---	 })
--- })
 
 -- Command line
 cmp.setup.cmdline(':', {
