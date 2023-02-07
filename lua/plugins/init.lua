@@ -38,7 +38,7 @@ require("lazy").setup({
 
 	-- Navigation
 	{ "nvim-tree/nvim-tree.lua", config = function() require "plugins.nvim-tree" end,
-		dependencies = { "nvim-tree/nvim-web-devicons" } 
+		dependencies = { "nvim-tree/nvim-web-devicons" }
 	},
 	{ "nvim-telescope/telescope.nvim", config = function() require "plugins.telescope" end,
 		branch = "0.1.x",
@@ -56,7 +56,15 @@ require("lazy").setup({
 	{ "akinsho/toggleterm.nvim", config = function() require "plugins.toggleterm" end },
 
 	-- Visuals
-	{ "RRethy/vim-illuminate" },
+	{ "RRethy/vim-illuminate", config = function()
+		require('illuminate').configure({
+			delay = 500,
+		}) end
+	},
+	{ 'ojroques/nvim-hardline', config = function() require "plugins.hardline" end },
+	{ "lukas-reineke/indent-blankline.nvim", config = function() require "plugins.indentline" end },
+	{ "norcalli/nvim-colorizer.lua", config = function() require"colorizer".setup() end },
+	{ "lewis6991/gitsigns.nvim", config = function() require "plugins.gitsigns" end },
 
 	-- Vanilla
 	{ "qiushihe/vim-bbye" },
