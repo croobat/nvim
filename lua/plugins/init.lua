@@ -50,6 +50,10 @@ require("lazy").setup({
 		dependencies = { "nvim-tree/nvim-web-devicons" } 
 	},
 
+	-- Comments
+	{ "LudoPinelli/comment-box.nvim", config = function() require "plugins.comment-box" end },
+	{ "numToStr/Comment.nvim", config = function() require "plugins.comment" end },
+
 	-- Visuals
 	{ "RRethy/vim-illuminate" },
 
