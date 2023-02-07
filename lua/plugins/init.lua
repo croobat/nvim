@@ -36,7 +36,10 @@ require("lazy").setup({
 	{ "JoosepAlviste/nvim-ts-context-commentstring", event = "BufRead" },
 	{ "nvim-treesitter/playground", event = "BufRead" },
 
-	-- Telescope
+	-- Navigation
+	{ "nvim-tree/nvim-tree.lua", config = function() require "plugins.nvim-tree" end,
+		dependencies = { "nvim-tree/nvim-web-devicons" } 
+	},
 	{ "nvim-telescope/telescope.nvim", config = function() require "plugins.telescope" end,
 		branch = "0.1.x",
 		dependencies = { "telescope-fzf-native.nvim" },
@@ -44,11 +47,6 @@ require("lazy").setup({
 	},
 	{ "nvim-telescope/telescope-fzf-native.nvim", build = "make", lazy = true },
 	{ 'nvim-telescope/telescope-symbols.nvim' },
-
-	-- Navigation
-	{ "nvim-tree/nvim-tree.lua", config = function() require "plugins.nvim-tree" end,
-		dependencies = { "nvim-tree/nvim-web-devicons" } 
-	},
 
 	-- Comments
 	{ "LudoPinelli/comment-box.nvim", config = function() require "plugins.comment-box" end },
