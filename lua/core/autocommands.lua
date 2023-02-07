@@ -22,6 +22,17 @@ autocmd("BufEnter", {
 	end,
 })
 
+-- Keep hardline
+autocmd("BufEnter", {
+	callback = function()
+		local status_ok, hardline = pcall(require, "hardline")
+		if not status_ok then
+			return
+		end
+		hardline.setup()
+	end
+})
+
 -- Auto close nvim-tree if only buffer
 autocmd("BufEnter", {
 	nested = true,
