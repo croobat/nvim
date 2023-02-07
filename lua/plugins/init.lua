@@ -31,9 +31,11 @@ require("lazy").setup({
 		run = ":TSUpdate"
 	},
 	{ "p00f/nvim-ts-rainbow" },
-	{ "windwp/nvim-ts-autotag", config = function() require("nvim-ts-autotag").setup() end },
 	{ "romgrk/nvim-treesitter-context", config = function() require "plugins.treesitter-context" end },
 	{ "JoosepAlviste/nvim-ts-context-commentstring", event = "BufRead" },
+	{ "windwp/nvim-ts-autotag", config = function() require("nvim-ts-autotag").setup() end },
+	{ "p00f/nvim-ts-rainbow" },
+	{ "windwp/nvim-autopairs", config = function() require "plugins.autopairs" end },
 	{ "nvim-treesitter/playground", event = "BufRead" },
 
 	-- Navigation
