@@ -11,6 +11,7 @@ local options = {
 	mouse          = "a",            -- Enable mouse
 	undofile       = true,           -- Persistent undo upon exit
 	writebackup    = false,          -- Backup while editing file
+	title          = true,           -- custom title
 
     -- Tabs
 	expandtab      = false,          -- Turn tabs into spaces
