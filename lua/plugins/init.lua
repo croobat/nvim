@@ -52,6 +52,9 @@ require("lazy").setup({
 	{ "LudoPinelli/comment-box.nvim", config = function() require "plugins.comment-box" end },
 	{ "numToStr/Comment.nvim", config = function() require "plugins.comment" end },
 
+	-- Debugging
+	{ "akinsho/toggleterm.nvim", config = function() require "plugins.toggleterm" end },
+
 	-- Visuals
 	{ "RRethy/vim-illuminate" },
 
