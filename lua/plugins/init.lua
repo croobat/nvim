@@ -43,7 +43,7 @@ require("lazy").setup({
 	},
 	{ "p00f/nvim-ts-rainbow" },
 	{ "romgrk/nvim-treesitter-context", config = function() require "plugins.treesitter-context" end },
-	{ "JoosepAlviste/nvim-ts-context-commentstring", event = "BufRead" },
+	-- { "JoosepAlviste/nvim-ts-context-commentstring", event = "BufRead" },
 	{ "windwp/nvim-ts-autotag", config = function() require("nvim-ts-autotag").setup() end },
 	{ "p00f/nvim-ts-rainbow" },
 	{ "windwp/nvim-autopairs", config = function() require "plugins.autopairs" end },
@@ -90,5 +90,16 @@ require("lazy").setup({
 	{ "wellle/targets.vim" },
 
 	-- Miscellaneous
-	{ "folke/which-key.nvim", config = function() require "plugins.whichkey" end }
+	{ "folke/which-key.nvim", config = function() require "plugins.whichkey" end },
+	{ "vimwiki/vimwiki", ft = { "vimwiki", "markdown" }, }
 })
+
+-- Vimwiki global variables{{{
+vim.cmd("let g:vimwiki_list = [{'path': '~/Documents/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]")
+-- vim.cmd("let g:vimwiki_key_mappings = { 'global': 0, }")
+vim.cmd("hi VimwikiHeader2 guifg=#ffb86c gui=bold")
+vim.cmd("hi VimwikiHeader3 guifg=#ff79c6 gui=bold")
+vim.cmd("hi VimwikiHeader4 guifg=#50fa7b gui=bold")
+vim.cmd("hi VimwikiHeader5 guifg=#f1fa8c gui=italic")
+vim.cmd("hi VimwikiHeader6 guifg=#f1fa8c")
+vim.cmd("hi VimwikiLink    guifg=#8BE9FD gui=italic")-- }}}
