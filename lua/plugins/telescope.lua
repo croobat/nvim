@@ -11,7 +11,7 @@ telescope.setup {
 			}
 		},
 		file_ignore_patterns = {
-			".git/", "target/", "docs/",
+			".git/", "target/",
 			"vendor/*", "%.lock", "__pycache__/*",
 			"%.sqlite3", "%.ipynb", "node_modules/*",
 			-- "%.jpg", "%.jpeg", "%.png",
@@ -20,7 +20,7 @@ telescope.setup {
 			".gradle/", ".idea/", ".settings/",
 			".vscode/", "__pycache__/", "build/",
 			"env/", "gradle/", "node_modules/",
-			"%.pdb", "%.dll", "%.class",
+			"%.pdb", "%.dll",
 			"%.exe", "%.cache", "%.ico",
 			"%.pdf", "%.dylib", "%.jar",
 			"%.docx", "%.met", "smalljre_*/*",
