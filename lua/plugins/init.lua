@@ -79,6 +79,32 @@ require("lazy").setup({
 	{ "norcalli/nvim-colorizer.lua", config = function() require"colorizer".setup() end },
 	{ "lewis6991/gitsigns.nvim", config = function() require "plugins.gitsigns" end },
 
+	-- Markdown
+	{ "npxbr/glow.nvim", ft = { "markdown" } },
+
+	-- HTML/CSS/JS
+	{ "neoclide/vim-jsx-improve", ft = { "javascript", "javascriptreact" } },
+	{ "joshua7v/vim-tsx-improve", ft = { "typescript", "typescriptreact" } },
+	{
+		"turbio/bracey.vim",
+		cmd = { "Bracey", "BracyStop", "BraceyReload", "BraceyEval" },
+		build = "npm install --prefix server",
+	},
+
+	-- Rust
+	"simrat39/rust-tools.nvim",
+	{
+		"saecki/crates.nvim",
+		version = "v0.3.0",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require("crates").setup({
+				-- null_ls = { enabled = true, name = "crates.nvim" },
+				popup = { border = "rounded" },
+			})
+		end,
+	},
+
 	-- Vanilla
 	{ "qiushihe/vim-bbye" },
 	{ "tpope/vim-surround" },
