@@ -114,6 +114,7 @@ require("lazy").setup({
 	{ "godlygeek/tabular" },
 	{ "felipec/vim-sanegx", event = "BufRead" },
 	{ "wellle/targets.vim" },
+	{ "NMAC427/guess-indent.nvim", config = function() require('guess-indent').setup{} end },
 
 	-- Miscellaneous
 	{ "folke/which-key.nvim", config = function() require "plugins.whichkey" end },
