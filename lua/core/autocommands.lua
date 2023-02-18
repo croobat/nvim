@@ -101,6 +101,24 @@ autocmd("Filetype", {
 	end,
 })
 
+-- 100 char text width
+autocmd("Filetype", {
+	pattern = {
+		"vimwiki",
+	},
+	callback = function()
+		vim.opt_local.textwidth = 100
+	end,
+})
+
+-- Disable text-width
+autocmd("Filetype", {
+	pattern = { "csv, sql", "tmux", "crontab", "html" },
+	callback = function()
+		vim.opt_local.textwidth = 0
+	end,
+})
+
 -- Close help pages with q
 autocmd("Filetype", {
 	pattern = {
@@ -151,14 +169,6 @@ autocmd("Filetype", {
 		vim.cmd("hi DiffAdd guifg=#449dab guibg=NONE")
 		vim.cmd("hi DiffDelete guifg=#914c54 guibg=NONE")
 		vim.cmd("hi DiffChange guifg=#6183bb guibg=NONE")
-	end,
-})
-
--- Disable text-width
-autocmd("Filetype", {
-	pattern = { "csv, sql", "tmux", "crontab" },
-	callback = function()
-		vim.cmd("setlocal textwidth=0")
 	end,
 })
 
