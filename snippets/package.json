@@ -13,6 +13,14 @@
       {
         "language": "php",
         "path": "./php.json"
+      },
+      {
+        "language": "vimwiki",
+        "path": "./vimwiki.json"
+      },
+      {
+        "language": "markdown",
+        "path": "./markdown.json"
       }
     ]
   }
