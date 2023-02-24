@@ -1,6 +1,8 @@
 require "impatient"
 
-require "plugins"
 require "core.options"
 require "core.keymaps"
 require "core.autocommands"
+
+require "plugins"
+require "lsp"

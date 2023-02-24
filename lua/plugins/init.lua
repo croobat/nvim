@@ -26,9 +26,19 @@ require("lazy").setup({
 	{ "nvim-lua/popup.nvim" },
 	{ "nvim-lua/plenary.nvim" },
 
+	-- LSP
+	{ "neovim/nvim-lspconfig",
+		lazy = true,
+		dependencies = { "mason-lspconfig.nvim", "nlsp-settings.nvim" },
+	},
+	{ "williamboman/mason-lspconfig.nvim", lazy = true },
+	{ "tamago324/nlsp-settings.nvim", lazy = true },
+	{ "jose-elias-alvarez/null-ls.nvim", lazy = true },
+	{ "williamboman/mason.nvim", config = function() require "plugins.mason" end, },
+
 	-- Completion
-	{ "hrsh7th/nvim-cmp", config = function() require 'plugins.cmp' end },
-	{ "L3MON4D3/LuaSnip", config = function() require 'plugins.luasnip' end },
+	{ "hrsh7th/nvim-cmp", config = function() require "plugins.cmp" end },
+	{ "L3MON4D3/LuaSnip", config = function() require "plugins.luasnip" end },
 	{ "hrsh7th/cmp-buffer" },
 	{ "hrsh7th/cmp-path" },
 	{ "hrsh7th/cmp-nvim-lsp" },
@@ -59,7 +69,7 @@ require("lazy").setup({
 		cmd = "Telescope",
 	},
 	{ "nvim-telescope/telescope-fzf-native.nvim", build = "make", lazy = true },
-	{ 'nvim-telescope/telescope-symbols.nvim' },
+	{ "nvim-telescope/telescope-symbols.nvim" },
 
 	-- Comments
 	{ "LudoPinelli/comment-box.nvim", config = function() require "plugins.comment-box" end },
@@ -70,11 +80,11 @@ require("lazy").setup({
 
 	-- Visuals
 	{ "RRethy/vim-illuminate", config = function()
-		require('illuminate').configure({
+		require("illuminate").configure({
 			delay = 500,
 		}) end
 	},
-	{ 'ojroques/nvim-hardline', config = function() require "plugins.hardline" end },
+	{ "ojroques/nvim-hardline", config = function() require "plugins.hardline" end },
 	{ "lukas-reineke/indent-blankline.nvim", config = function() require "plugins.indentline" end },
 	{ "norcalli/nvim-colorizer.lua", config = function() require"colorizer".setup() end },
 	{ "lewis6991/gitsigns.nvim", config = function() require "plugins.gitsigns" end },
@@ -114,7 +124,7 @@ require("lazy").setup({
 	{ "godlygeek/tabular" },
 	{ "felipec/vim-sanegx", event = "BufRead" },
 	{ "wellle/targets.vim" },
-	{ "NMAC427/guess-indent.nvim", config = function() require('guess-indent').setup{} end },
+	{ "NMAC427/guess-indent.nvim", config = function() require("guess-indent").setup{} end },
 
 	-- Miscellaneous
 	{ "folke/which-key.nvim", config = function() require "plugins.whichkey" end },
