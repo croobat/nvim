@@ -34,14 +34,14 @@ autocmd("BufEnter", {
 })
 
 -- Auto close nvim-tree if only buffer
-autocmd("BufEnter", {
-	nested = true,
-	callback = function()
-		if #vim.api.nvim_list_wins() == 1 and vim.api.nvim_buf_get_name(0):match("NvimTree_") ~= nil then
-			vim.cmd("quit")
-		end
-	end,
-})
+-- autocmd("BufEnter", {
+-- 	nested = true,
+-- 	callback = function()
+-- 		if #vim.api.nvim_list_wins() == 1 and vim.api.nvim_buf_get_name(0):match("NvimTree_") ~= nil then
+-- 			vim.cmd("quit")
+-- 		end
+-- 	end,
+-- })
 
 -- Remove numbers and caps from spell-checking
 autocmd("BufEnter", {
@@ -135,8 +135,8 @@ autocmd("Filetype", {
 	},
 	callback = function()
 		vim.cmd([[
-		nnoremap <silent> <buffer> q :close<CR> 
-		nnoremap <silent> <buffer> <esc> :close<CR> 
+		nnoremap <silent> <buffer> q :close<CR>
+		nnoremap <silent> <buffer> <esc> :close<CR>
 		set nobuflisted ]])
 	end,
 })

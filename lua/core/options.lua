@@ -3,7 +3,7 @@ local font = "Recursive Mono Linear Static:h8"
 local bashcomp = "longest,full"
 
 local options = {
-    -- System
+	-- System
 	backup         = false,          -- System backups
 	swapfile       = false,          -- Swapfile for buffer files
 	clipboard      = "unnamedplus",  -- System clipboard
@@ -13,20 +13,20 @@ local options = {
 	writebackup    = false,          -- Backup while editing file
 	title          = true,           -- custom title
 
-    -- Tabs
+	-- Tabs
 	expandtab      = false,          -- Turn tabs into spaces
 	smarttab       = true,           -- Detect number of spaces per tab
 	tabstop        = 4,              -- Number of spaces a tab counts for
 	softtabstop    = 4,              -- Number of spaces a tab counts for (editing)
 	shiftwidth     = 4,              -- Number of spaces per auto indent
 
-    -- Indentation
+	-- Indentation
 	smartindent    = true,           -- Sensible indenting
 	autoindent     = true,           -- Tab when jump from indented line
 	lisp           = false,          -- Indent when line breaks
 	foldmethod     = "marker",       -- Folding with {{{}}}
 
-    -- Interface
+	-- Interface
 	cmdheight      = 1,              -- Space to show cmd messages
 	pumheight      = 10,             -- Pop-up menu height
 	showtabline    = 1,              -- Show tabs if more than 1
@@ -37,13 +37,13 @@ local options = {
 	scrolloff      = 8,              -- Min distance from top-down borders
 	sidescrolloff  = 0,              -- Min distance from left-right borders
 
-    -- Left column
+	-- Left column
 	number         = true,           -- Numbered lines
 	relativenumber = false,          -- Numbered line relative to cursor
 	numberwidth    = 2,              -- Column width
 	signcolumn     = "yes",          -- When to show sign columns
 
-    -- Visuals
+	-- Visuals
 	showbreak      = " .. ",         -- Shown when line breaks
 	guifont        = font,           -- Font in graphical applications
 	conceallevel   = 0,              -- Don't hide special text (ie json "")
@@ -52,13 +52,13 @@ local options = {
 	cursorline     = true,           -- Highlight current line
 	list           = true,           -- Enable listchars
 
-    -- Search
+	-- Search
 	hlsearch       = false,          -- Highlighting
 	ignorecase     = true,           -- Case insensitive patterns
 	smartcase      = true,           -- Case sensitive only if there are caps
 
-    -- Completion
-	completeopt    = { 
+	-- Completion
+	completeopt    = {
 		"menuone",
 		"noselect"
 	},

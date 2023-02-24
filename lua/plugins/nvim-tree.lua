@@ -10,7 +10,7 @@ vim.g.loaded_netrwPlugin = 1
 
 nvim_tree.setup({
 	hijack_cursor = true,
-	sync_root_with_cwd = true,
+	-- sync_root_with_cwd = true,
 	respect_buf_cwd = true,
 
 	view = {

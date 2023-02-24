@@ -1,8 +1,8 @@
 local configs = require("nvim-treesitter.configs")
 
 configs.setup {
-	ensure_installed = "all",
-	ignore_install = { "" },
+	-- ensure_installed = "all",
+	-- ignore_install = { "smali" },
 	autotag = {
 		enable = true,
 	},
