@@ -172,15 +172,15 @@ local mappings = {
 
 	c = {
 		name = "Comment Box",
-		TL = { "<cmd>lua require('comment-box').cline(3)<cr>", "heavy line" },
-		TT = { "<cmd>lua require('comment-box').accbox(3)<cr>", "Title Heavy" },
-		a = { "<cmd>lua require('comment-box').albox(10)<cr>", "Classic ASCII" },
-		l = { "<cmd>lua require('comment-box').cline(10)<cr>", "ASCII line" },
-		c = { "<cmd>lua require('comment-box').albox(2)<cr>", "Classic" },
-		g = { "<cmd>lua require('comment-box').catalog()<cr>", "Box Catalog" },
-		h = { "<cmd>lua require('comment-box').albox(3)<cr>", "Heavy" },
-		L = { "<cmd>lua require('comment-box').cline(1)<cr>", "Simple line" },
-		t = { "<cmd>lua require('comment-box').accbox(7)<cr>", "Title" },
+		TL = { "<cmd>lua require('comment-box.impl').cline(3)<cr>", "heavy line" },
+		TT = { "<cmd>lua require('comment-box.impl').accbox(3)<cr>", "Title Heavy" },
+		a = { "<cmd>lua require('comment-box.impl').albox(10)<cr>", "Classic ASCII" },
+		l = { "<cmd>lua require('comment-box.impl').cline(10)<cr>", "ASCII line" },
+		c = { "<cmd>lua require('comment-box.impl').albox(2)<cr>", "Classic" },
+		g = { "<cmd>lua require('comment-box.impl').catalog()<cr>", "Box Catalog" },
+		h = { "<cmd>lua require('comment-box.impl').albox(3)<cr>", "Heavy" },
+		L = { "<cmd>lua require('comment-box.impl').cline(1)<cr>", "Simple line" },
+		t = { "<cmd>lua require('comment-box.impl').accbox(7)<cr>", "Title" },
 	},
 
 	d = {

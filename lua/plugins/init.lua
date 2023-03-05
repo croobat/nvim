@@ -1,146 +1,160 @@
--- TODO: cambiar esta porqueria a packer
 -- Setup {{{
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-	vim.fn.system({
+local fn = vim.fn
+
+-- Automatically install packer
+local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
+if fn.empty(fn.glob(install_path)) > 0 then
+	PACKER_BOOTSTRAP = fn.system {
 		"git",
 		"clone",
-		"--filter=blob:none",
-		"https://github.com/folke/lazy.nvim.git",
-		"--branch=stable", -- latest stable release
-		lazypath,
-	})
+		"--depth",
+		"1",
+		"https://github.com/wbthomason/packer.nvim",
+		install_path,
+	}
+	print "Installing packer close and reopen Neovim..."
+	vim.cmd [[packadd packer.nvim]]
 end
-vim.opt.rtp:prepend(lazypath) -- }}}
 
-vim.g.mapleader = " "
+-- Autocommand that reloads neovim whenever you save the plugins file
+vim.cmd [[
+	augroup packer_user_config
+		autocmd!
+		autocmd BufWritePost /home/tony/.config/nvim/lua/plugins/init.lua source <afile> | PackerSync
+	augroup end
+]]
 
-require("lazy").setup({
-	-- Colorscheme
-	{ "folke/tokyonight.nvim", config = function() require "plugins.tokyonight" end,
-		lazy = false,
-		priority = 1000
-	},
+-- Use a protected call so we don't error out on first use
+local status_ok, packer = pcall(require, "packer")
+if not status_ok then
+	return
+end
 
-	-- Mandatory
-	{ "lewis6991/impatient.nvim" },
-	{ "nvim-lua/popup.nvim" },
-	{ "nvim-lua/plenary.nvim" },
-
-	-- LSP
-	{ "neovim/nvim-lspconfig",
-		lazy = true,
-		dependencies = { "mason-lspconfig.nvim", "nlsp-settings.nvim" },
-	},
-	{ "williamboman/mason-lspconfig.nvim", lazy = true },
-	{ "tamago324/nlsp-settings.nvim", lazy = true },
-	{ "jose-elias-alvarez/null-ls.nvim", lazy = true },
-	{ "williamboman/mason.nvim", config = function() require "plugins.mason" end, },
-
-	-- Completion
-	{ "hrsh7th/nvim-cmp", config = function() require "plugins.cmp" end },
-	{ "L3MON4D3/LuaSnip", config = function() require "plugins.luasnip" end },
-	{ "hrsh7th/cmp-buffer" },
-	{ "hrsh7th/cmp-path" },
-	{ "hrsh7th/cmp-nvim-lsp" },
-	{ "hrsh7th/cmp-cmdline" },
-	{ "petertriho/cmp-git" },
-	{ "saadparwaiz1/cmp_luasnip" },
-	{ "rafamadriz/friendly-snippets" },
-
-	-- Treesitter
-	{ "nvim-treesitter/nvim-treesitter", config = function() require "plugins.treesitter" end,
-		run = ":TSUpdate"
-	},
-	{ "p00f/nvim-ts-rainbow" },
-	{ "romgrk/nvim-treesitter-context", config = function() require "plugins.treesitter-context" end },
-	-- { "JoosepAlviste/nvim-ts-context-commentstring", event = "BufRead" },
-	{ "windwp/nvim-ts-autotag", config = function() require("nvim-ts-autotag").setup() end },
-	{ "p00f/nvim-ts-rainbow" },
-	{ "windwp/nvim-autopairs", config = function() require "plugins.autopairs" end },
-	{ "nvim-treesitter/playground", event = "BufRead" },
-
-	-- Navigation
-	{ "nvim-tree/nvim-tree.lua", config = function() require "plugins.nvim-tree" end,
-		dependencies = { "nvim-tree/nvim-web-devicons" }
-	},
-	{ "nvim-telescope/telescope.nvim", config = function() require "plugins.telescope" end,
-		branch = "0.1.x",
-		dependencies = { "telescope-fzf-native.nvim" },
-		cmd = "Telescope",
-	},
-	{ "nvim-telescope/telescope-fzf-native.nvim", build = "make", lazy = true },
-	{ "nvim-telescope/telescope-symbols.nvim" },
-
-	-- Comments
-	{ "LudoPinelli/comment-box.nvim", config = function() require "plugins.comment-box" end },
-	{ "numToStr/Comment.nvim", config = function() require "plugins.comment" end },
-
-	-- Debugging
-	{ "akinsho/toggleterm.nvim", config = function() require "plugins.toggleterm" end },
-
-	-- Visuals
-	{ "RRethy/vim-illuminate", config = function()
-		require("illuminate").configure({
-			delay = 500,
-		}) end
-	},
-	{ "ojroques/nvim-hardline", config = function() require "plugins.hardline" end },
-	{ "lukas-reineke/indent-blankline.nvim", config = function() require "plugins.indentline" end },
-	{ "norcalli/nvim-colorizer.lua", config = function() require"colorizer".setup() end },
-	{ "lewis6991/gitsigns.nvim", config = function() require "plugins.gitsigns" end },
-
-	-- Markdown
-	{ "npxbr/glow.nvim", ft = { "markdown" } },
-
-	-- HTML/CSS/JS
-	{ "neoclide/vim-jsx-improve", ft = { "javascript", "javascriptreact" } },
-	{ "joshua7v/vim-tsx-improve", ft = { "typescript", "typescriptreact" } },
-	{
-		"turbio/bracey.vim",
-		cmd = { "Bracey", "BracyStop", "BraceyReload", "BraceyEval" },
-		build = "npm install --prefix server",
-	},
-
-	-- Rust
-	"simrat39/rust-tools.nvim",
-	{
-		"saecki/crates.nvim",
-		version = "v0.3.0",
-		dependencies = { "nvim-lua/plenary.nvim" },
-		config = function()
-			require("crates").setup({
-				-- null_ls = { enabled = true, name = "crates.nvim" },
-				popup = { border = "rounded" },
-			})
+-- Have packer use a popup window
+packer.init {
+	display = {
+		open_fn = function()
+			return require("packer.util").float { border = "rounded" }
 		end,
 	},
+}
 
-	-- Vanilla
-	{ "qiushihe/vim-bbye" },
-	{ "tpope/vim-surround" },
-	{ "tpope/vim-repeat" },
-	{ "folke/zen-mode.nvim", cmd = { "ZenMode" } },
-	{ "lambdalisue/suda.vim" },
-	{ "godlygeek/tabular" },
-	{ "felipec/vim-sanegx", event = "BufRead" },
-	{ "wellle/targets.vim" },
-	{ "NMAC427/guess-indent.nvim", config = function() require("guess-indent").setup{} end },
+return packer.startup(function(use) --}}}
 
-	-- Miscellaneous
-	{ "folke/which-key.nvim", config = function() require "plugins.whichkey" end },
-	{ "vimwiki/vimwiki", ft = { "vimwiki", "markdown" }, },
-	{ "folke/todo-comments.nvim", config = function () require("todo-comments").setup ({}) end,
-		dependencies = "nvim-lua/plenary.nvim",
-	}
-})
+-- Mandatory
+use { "wbthomason/packer.nvim" }
+use { "lewis6991/impatient.nvim" }
+use { "nvim-lua/popup.nvim" }
+use { "nvim-lua/plenary.nvim" }
 
--- Vimwiki global variables{{{
-vim.cmd("let g:vimwiki_list = [{'path': '~/Documents/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]")
--- vim.cmd("let g:vimwiki_key_mappings = { 'global': 0, }")
-vim.cmd("hi VimwikiHeader2 guifg=#ffb86c gui=bold")
-vim.cmd("hi VimwikiHeader3 guifg=#ff79c6 gui=bold")
-vim.cmd("hi VimwikiHeader4 guifg=#50fa7b gui=bold")
-vim.cmd("hi VimwikiHeader5 guifg=#f1fa8c gui=italic")
-vim.cmd("hi VimwikiHeader6 guifg=#f1fa8c")
-vim.cmd("hi VimwikiLink    guifg=#8BE9FD gui=italic")-- }}}
+-- Colorscheme
+use { "folke/tokyonight.nvim", config = "require 'plugins.tokyonight'" }
+
+-- Completion
+use { "hrsh7th/nvim-cmp", config = "require 'plugins.cmp'" }
+use { "L3MON4D3/LuaSnip", config = "require 'plugins.luasnip'" }
+use { "hrsh7th/cmp-buffer" }
+use { "hrsh7th/cmp-path" }
+use { "hrsh7th/cmp-nvim-lsp" }
+use { "hrsh7th/cmp-cmdline" }
+use { "petertriho/cmp-git" }
+use { "saadparwaiz1/cmp_luasnip" }
+use { "rafamadriz/friendly-snippets" }
+
+-- Treesitter
+use { "nvim-treesitter/nvim-treesitter", config = "require 'plugins.treesitter'",
+	run = ":TSUpdate"
+}
+use { "p00f/nvim-ts-rainbow" }
+use { "romgrk/nvim-treesitter-context", config = "require 'plugins.treesitter-context'" }
+use { "JoosepAlviste/nvim-ts-context-commentstring", event = "BufRead" }
+use { "windwp/nvim-ts-autotag", config = "require('nvim-ts-autotag').setup()" }
+use { "windwp/nvim-autopairs", config = "require 'plugins.autopairs'" }
+use { "nvim-treesitter/playground", event = "BufRead" }
+
+-- Navigation
+use { "nvim-tree/nvim-tree.lua", config = "require 'plugins.nvim-tree'",
+	requires = { "nvim-tree/nvim-web-devicons" },
+	tag = "nightly"
+}
+use { "nvim-telescope/telescope.nvim", config = "require 'plugins.telescope'",
+	branch = "0.1.x",
+	requires = { "telescope-fzf-native.nvim" },
+	cmd = "Telescope",
+}
+use { "nvim-telescope/telescope-fzf-native.nvim", build = "make" }
+use { "nvim-telescope/telescope-symbols.nvim" }
+
+-- LSP
+use { "neovim/nvim-lspconfig",
+	requires = { "mason-lspconfig.nvim", "nlsp-settings.nvim" },
+}
+use { "williamboman/mason-lspconfig.nvim" }
+use { "tamago324/nlsp-settings.nvim" }
+use { "jose-elias-alvarez/null-ls.nvim" }
+use { "williamboman/mason.nvim", config = "require 'plugins.mason'" }
+
+-- Comments
+use { "LudoPinelli/comment-box.nvim", config = "require 'plugins.comment-box'" }
+use { "numToStr/Comment.nvim", config = "require 'plugins.comment'" }
+
+-- Debugging
+use { "akinsho/toggleterm.nvim", config = "require 'plugins.toggleterm'" }
+
+-- Visuals
+use { "RRethy/vim-illuminate", config = "require('illuminate').configure({ delay = 500, })" }
+use { "ojroques/nvim-hardline", config = "require 'plugins.hardline'" }
+use { "lukas-reineke/indent-blankline.nvim", config = "require 'plugins.indentline'" }
+use { "norcalli/nvim-colorizer.lua", config = "require 'colorizer'.setup()" }
+use { "lewis6991/gitsigns.nvim", config = "require 'plugins.gitsigns'" }
+
+-- Markdown
+use { "npxbr/glow.nvim", ft = { "markdown" } }
+
+-- HTML/CSS/JS
+use { "neoclide/vim-jsx-improve", ft = { "javascript", "javascriptreact" } }
+use { "joshua7v/vim-tsx-improve", ft = { "typescript", "typescriptreact" } }
+use { "turbio/bracey.vim",
+	cmd = { "Bracey", "BracyStop", "BraceyReload", "BraceyEval" },
+	build = "npm install --prefix server",
+}
+
+-- Rust
+use { "simrat39/rust-tools.nvim" }
+use { "saecki/crates.nvim", config = function()
+		require("crates").setup({
+			-- null_ls = { enabled = true, name = "crates.nvim" },
+			popup = { border = "rounded" },
+		})
+	end,
+	version = "v0.3.0",
+	requires = { "nvim-lua/plenary.nvim" },
+}
+
+-- Vanilla
+use { "qiushihe/vim-bbye" }
+use { "tpope/vim-surround" }
+use { "tpope/vim-repeat" }
+use { "folke/zen-mode.nvim", cmd = { "ZenMode" } }
+use { "lambdalisue/suda.vim" }
+use { "godlygeek/tabular" }
+use { "felipec/vim-sanegx", event = "BufRead" }
+use { "wellle/targets.vim" }
+use { "NMAC427/guess-indent.nvim", config = function() require("guess-indent").setup() end }
+
+-- Miscellaneous
+use { "folke/which-key.nvim", config = function() require "plugins.whichkey" end }
+use { "vimwiki/vimwiki", config = "require 'plugins.vimwiki'",
+	ft = { "vimwiki", "markdown" }
+}
+use { "folke/todo-comments.nvim", config = function () require("todo-comments").setup () end,
+	requires = "nvim-lua/plenary.nvim",
+}
+
+	-- Finish setup{{{
+	-- Automatically set up your configuration after cloning packer.nvim
+	-- Put this at the end after all plugins
+	if packer_bootstrap then
+		require('packer').sync()
+	end
+end)-- }}}
