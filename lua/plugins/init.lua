@@ -1,3 +1,4 @@
+-- TODO: cambiar esta porqueria a packer
 -- Setup {{{
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -128,7 +129,10 @@ require("lazy").setup({
 
 	-- Miscellaneous
 	{ "folke/which-key.nvim", config = function() require "plugins.whichkey" end },
-	{ "vimwiki/vimwiki", ft = { "vimwiki", "markdown" }, }
+	{ "vimwiki/vimwiki", ft = { "vimwiki", "markdown" }, },
+	{ "folke/todo-comments.nvim", config = function () require("todo-comments").setup ({}) end,
+		dependencies = "nvim-lua/plenary.nvim",
+	}
 })
 
 -- Vimwiki global variables{{{
