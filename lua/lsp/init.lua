@@ -15,9 +15,9 @@ vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.s
 -- Icons
 local signs = {
 	{ name = "DiagnosticSignError", text = "x" },
-	{ name = "DiagnosticSignWarn", text = "w" },
-	{ name = "DiagnosticSignHint", text = "i" },
-	{ name = "DiagnosticSignInfo", text = "?" },
+	{ name = "DiagnosticSignWarn",  text = "w" },
+	{ name = "DiagnosticSignHint",  text = "i" },
+	{ name = "DiagnosticSignInfo",  text = "?" },
 }
 for _, sign in ipairs(signs) do
 	vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
@@ -119,7 +119,7 @@ lspconfig.rust_analyzer.setup {
 	capabilities = capabilities,
 	-- Server-specific settings...
 	settings = {
-		["rust-analyzer"] = {}
+			["rust-analyzer"] = {}
 	}
 }
 
@@ -134,8 +134,8 @@ lspconfig.lua_ls.setup {
 			},
 			workspace = {
 				library = {
-					[vim.fn.expand("$VIMRUNTIME/lua")] = true,
-					[vim.fn.stdpath("config") .. "/lua"] = true,
+						[vim.fn.expand("$VIMRUNTIME/lua")] = true,
+						[vim.fn.stdpath("config") .. "/lua"] = true,
 				},
 			},
 		},
@@ -151,8 +151,8 @@ lspconfig.tsserver.setup {
 		html = {
 			options = {
 				-- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
-				["bem.enabled"] = true,
-				["output.format"] = true;
+					["bem.enabled"] = true,
+					["output.format"] = true,
 			},
 		},
 	}

@@ -12,34 +12,29 @@ nvim_tree.setup({
 	hijack_cursor = true,
 	-- sync_root_with_cwd = true,
 	respect_buf_cwd = true,
-
 	view = {
 		adaptive_size = true,
 		mappings = {
 			list = {
 				{ key = { "l", "<CR>", "o" }, action = "edit" },
-				{ key = "h", action = "close_node" },
-				{ key = "u", action = "dir_up" },
-				{ key = "v", action = "vsplit" },
+				{ key = "h",                  action = "close_node" },
+				{ key = "u",                  action = "dir_up" },
+				{ key = "v",                  action = "vsplit" },
 			},
 		},
 	},
-
 	update_focused_file = {
 		enable = true,
 		update_root = true,
 	},
-
 	git = {
 		ignore = false,
 	},
-
 	actions = {
 		open_file = {
 			quit_on_open = true,
 		},
 	},
-
 	renderer = {
 		highlight_git = true,
 		root_folder_label = ":t",
@@ -80,8 +75,8 @@ nvim_web_devicons.setup {
 			cterm_color = "65",
 			name = "Zsh"
 		}
-	};
-	default = true;
+	},
+	default = true,
 }
 
 

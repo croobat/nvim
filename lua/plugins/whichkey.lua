@@ -20,9 +20,9 @@ local setup = {
 			motions = false, -- adds help for motions
 			text_objects = false, -- help for text objects triggered after entering an operator
 			windows = true, -- default bindings on <c-w>
-			nav = true, -- misc bindings to work with windows
-			z = true, -- bindings for folds, spelling and others prefixed with z
-			g = true, -- bindings for prefixed with g
+			nav = true,  -- misc bindings to work with windows
+			z = true,    -- bindings for folds, spelling and others prefixed with z
+			g = true,    -- bindings for prefixed with g
 		},
 	},
 	-- add operators that will trigger motion and text object completion
@@ -52,15 +52,15 @@ local setup = {
 		winblend = 0,
 	},
 	layout = {
-		height = { min = 4, max = 25 }, -- min and max height of the columns
-		width = { min = 20, max = 50 }, -- min and max width of the columns
-		spacing = 3, -- spacing between columns
-		align = "left", -- align columns left, center or right
+		height = { min = 4, max = 25 },                                        -- min and max height of the columns
+		width = { min = 20, max = 50 },                                        -- min and max width of the columns
+		spacing = 3,                                                           -- spacing between columns
+		align = "left",                                                        -- align columns left, center or right
 	},
-	ignore_missing = true, -- enable this to hide mappings for which you didn't specify a label
+	ignore_missing = true,                                                     -- enable this to hide mappings for which you didn't specify a label
 	hidden = { "<silent>", "<cmd>", "<Cmd>", "<cr>", "call", "lua", "^:", "^ " }, -- hide mapping boilerplate
-	show_help = true, -- show help message on the command line when the popup is visible
-	triggers = "auto", -- automatically setup triggers
+	show_help = true,                                                          -- show help message on the command line when the popup is visible
+	triggers = "auto",                                                         -- automatically setup triggers
 	-- triggers = {"<leader>"} -- or specify a list manually
 	triggers_blacklist = {
 		-- list of mode / prefixes that should never be hooked by WhichKey
@@ -73,42 +73,39 @@ local setup = {
 
 local opts = {
 	-- Leader keys
-	mode = "n", -- NORMAL mode
+	mode = "n",  -- NORMAL mode
 	prefix = "<leader>",
 	buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
 	silent = true, -- use `silent` when creating keymaps
 	noremap = true, -- use `noremap` when creating keymaps
 	nowait = true, -- use `nowait` when creating keymaps
-} --}}}
+}                --}}}
 
 local mappings = {
-	[","] = { "A,<esc>", "Insert comma" },
-	["."] = { "A.<esc>", "Insert dot" },
-	[";"] = { "A;<esc>", "Insert semicolon" },
-	["="] = { "A = ", "Insert equal" },
-	["/"] = { "<cmd>Telescope live_grep<cr>", "Find text" },
-	["?"] = { "<cmd>Telescope find_files<cr>", "Find Files" },
-	["<leader>"] = { "i <esc>l", "Insert space" },
-
+		[","] = { "A,<esc>", "Insert comma" },
+		["."] = { "A.<esc>", "Insert dot" },
+		[";"] = { "A;<esc>", "Insert semicolon" },
+		["="] = { "A = ", "Insert equal" },
+		["/"] = { "<cmd>Telescope live_grep<cr>", "Find text" },
+		["?"] = { "<cmd>Telescope find_files<cr>", "Find Files" },
+		["<leader>"] = { "i <esc>l", "Insert space" },
 	-- L = latex
-	["Q"] = { "<cmd>:Bdeleteexcept<cr><cmd>NvimTreeToggle<cr><cmd>NvimTreeToggle<cr>", "Close Other Buffers" },
-
+		["Q"] = { "<cmd>:Bdeleteexcept<cr><cmd>NvimTreeToggle<cr><cmd>NvimTreeToggle<cr>", "Close Other Buffers" },
 	-- a = auto-options
 	-- c = comment box
 	-- d = debug
-	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-	["f"] = { "<cmd>lua vim.lsp.buf.format { async = true }<cr>", "LSP format" },
-	["F"] = { "<cmd>%s/\\s\\+$//e<cr>", "Trailing spaces" },
+		["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+		["f"] = { "<cmd>lua vim.lsp.buf.format { async = true }<cr>", "LSP format" },
+		["F"] = { "<cmd>%s/\\s\\+$//e<cr>", "Trailing spaces" },
 	-- g = git
 	-- l = lsp
 	-- p = python
-	["q"] = { "<cmd>Bdelete<cr>", "Close Buffer" },
+		["q"] = { "<cmd>Bdelete<cr>", "Close Buffer" },
 	-- t = telescope
-	["w"] = { "<cmd>w!<cr>", "Save" },
-	["W"] = { "<cmd>SudaWrite<cr>", "Save (sudo)" },
-	["x"] = { "I* [ ] <esc>", "Insert checkbox" },
-	["z"] = { "<cmd>:ZenMode<cr>", "Zen mode" },
-
+		["w"] = { "<cmd>w!<cr>", "Save" },
+		["W"] = { "<cmd>SudaWrite<cr>", "Save (sudo)" },
+		["x"] = { "I* [ ] <esc>", "Insert checkbox" },
+		["z"] = { "<cmd>:ZenMode<cr>", "Zen mode" },
 	L = {
 		name = "LaTeX",
 		m = { "<cmd>VimtexContextMenu<cr>", "Open Context Menu" },
@@ -151,7 +148,6 @@ local mappings = {
 			t = { "<cmd>VimtexTocToggle<cr>", "Toggle TOC" },
 		},
 	},
-
 	a = {
 		name = "Auto-options",
 		C = { "<cmd>setlocal formatoptions-=cro<cr>", "Auto-comment off" },
@@ -169,7 +165,6 @@ local mappings = {
 		t = { "<cmd>set shiftwidth=2 tabstop=2<cr>", "Indent 2 spaces" },
 		x = { "<cmd>ColorizerToggle<cr>", "Hex colors toggle" },
 	},
-
 	c = {
 		name = "Comment Box",
 		TL = { "<cmd>lua require('comment-box.impl').cline(3)<cr>", "heavy line" },
@@ -182,7 +177,6 @@ local mappings = {
 		L = { "<cmd>lua require('comment-box.impl').cline(1)<cr>", "Simple line" },
 		t = { "<cmd>lua require('comment-box.impl').accbox(7)<cr>", "Title" },
 	},
-
 	d = {
 		name = "Debug",
 		b = { "<cmd>lua require'dap'.step_back()<cr>", "Step Back" },
@@ -200,7 +194,6 @@ local mappings = {
 		u = { "<cmd>lua require'dap'.step_out()<cr>", "Step Out" },
 		U = { "<cmd>lua require'dapui'.toggle({reset = true})<cr>", "Toggle UI" },
 	},
-
 	g = {
 		name = "Git",
 		R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
@@ -216,7 +209,6 @@ local mappings = {
 		s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
 		u = { "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>", "Undo Stage Hunk" },
 	},
-
 	l = {
 		name = "LSP",
 		R = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
@@ -240,7 +232,6 @@ local mappings = {
 			"disable underline",
 		},
 	},
-
 	p = {
 		name = "Python",
 		i = { "<cmd>lua require('swenv.api').pick_venv()<cr>", "Pick Env" },
@@ -259,7 +250,6 @@ local mappings = {
 		r = { "<Cmd>MagmaReevaluateCell<cr>", "Re evaluate cell" },
 		s = { "<Cmd>MagmaShowOutput<cr>", "Show Output" },
 	},
-
 	r = {
 		name = "Rust",
 		r = { "<cmd>RustRunnables<cr>", "Runnables" },
@@ -281,7 +271,6 @@ local mappings = {
 		D = { "<cmd>lua require'crates'.show_dependencies_popup()<cr>", "[crates] show dependencies" },
 		x = { "<cmd>RustOpenExternalDocs<cr>", "External docs" },
 	},
-
 	t = {
 		name = "Telescope",
 		C = { "<cmd>Telescope git_bcommits<cr>", "Git commits current buffer" },
@@ -302,9 +291,9 @@ local mappings = {
 		q = { "<cmd>Telescope quickfix<cr>", "LSP quickfix" },
 		r = { "<cmd>Telescope lsp_references<cr>", "LSP reference" },
 		t = { "<cmd>Telescope resume<cr>", "Resume search" },
-		["="] = {"<cmd>Tabularize /=<cr>", "Tabularize ="},
-		["-"] = {"<cmd>Tabularize /--<cr>", "Tabularize --"},
-		[":"] = {"<cmd>Tabularize /:<cr>", "Tabularize :"},
+			["="] = { "<cmd>Tabularize /=<cr>", "Tabularize =" },
+			["-"] = { "<cmd>Tabularize /--<cr>", "Tabularize --" },
+			[":"] = { "<cmd>Tabularize /:<cr>", "Tabularize :" },
 	},
 }
 

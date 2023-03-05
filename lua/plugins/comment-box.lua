@@ -1,7 +1,8 @@
 require('comment-box.impl').setup({
 	doc_width = 79, -- width of the document
 	box_width = 40, -- width of the boxes
-	borders = { -- symbols used to draw a box
+	borders = {
+	             -- symbols used to draw a box
 		top = "─",
 		bottom = "─",
 		left = "│",
@@ -12,13 +13,14 @@ require('comment-box.impl').setup({
 		bottom_right = "╯",
 	},
 	line_width = 79, -- width of the lines
-	line = { -- symbols used to draw a line
+	line = {
+	              -- symbols used to draw a line
 		line = "─",
 		line_start = "─",
 		line_end = "─",
 	},
-	outer_blank_lines = false, -- insert a blank line above and below the box
-	inner_blank_lines = false, -- insert a blank line above and below the text
+	outer_blank_lines = false,  -- insert a blank line above and below the box
+	inner_blank_lines = false,  -- insert a blank line above and below the text
 	line_blank_line_above = false, -- insert a blank line above the line
 	line_blank_line_below = false, -- insert a blank line below the line
 })

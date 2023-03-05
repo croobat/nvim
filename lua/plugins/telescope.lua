@@ -7,7 +7,7 @@ telescope.setup {
 	defaults = {
 		mappings = {
 			i = {
-				["<C-h>"] = "which_key"
+					["<C-h>"] = "which_key"
 			}
 		},
 		file_ignore_patterns = {
@@ -58,10 +58,10 @@ telescope.setup {
 			initial_mode = "normal",
 			mappings = {
 				i = {
-					["<C-d>"] = actions.delete_buffer,
+						["<C-d>"] = actions.delete_buffer,
 				},
 				n = {
-					["dd"] = actions.delete_buffer,
+						["dd"] = actions.delete_buffer,
 				},
 			},
 		},
@@ -79,7 +79,7 @@ telescope.setup {
 	},
 
 	extensions = {
-	-- Your extension configuration goes here:
+		-- Your extension configuration goes here:
 		fzf = {
 			fuzzy = true,
 			override_generic_sorter = true,

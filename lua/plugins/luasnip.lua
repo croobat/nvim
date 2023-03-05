@@ -1,4 +1,4 @@
-local luasnip= require "luasnip"
+local luasnip = require "luasnip"
 local types = require "luasnip.util.types"
 
 luasnip.config.set_config {
@@ -15,7 +15,7 @@ luasnip.config.set_config {
 	-- #vid3
 	-- ext_opts = nil
 	ext_opts = {
-		[types.choiceNode] = {
+			[types.choiceNode] = {
 			active = {
 				virt_text = { { "<-", "Error" } }
 			},

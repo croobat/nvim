@@ -2,15 +2,7 @@ local indent_blankline = require("indent_blankline")
 
 vim.wo.colorcolumn = "99999"
 
--- vim.cmd [[highlight IndentBlanklineIndent1     guifg=#8466ad gui=nocombine]]
--- vim.cmd [[highlight IndentBlanklineIndent2     guifg=#b3558b gui=nocombine]]
--- vim.cmd [[highlight IndentBlanklineIndent3     guifg=#37ad55 gui=nocombine]]
--- vim.cmd [[highlight IndentBlanklineIndent4     guifg=#61a2b0 gui=nocombine]]
--- vim.cmd [[highlight IndentBlanklineIndent5     guifg=#b3814c gui=nocombine]]
--- vim.cmd [[highlight IndentBlanklineIndent6     guifg=#b33b3b gui=nocombine]]
-
 indent_blankline.setup({
-	-- char = "┆",
 	context_char = "┆",
 	show_current_context = true,
 	show_current_context_start = false,
@@ -28,13 +20,4 @@ indent_blankline.setup({
 		"if_statement", "else_clause", "jsx_element", "jsx_self_closing_element",
 		"try_statement", "catch_clause", "import_statement", "operation_type",
 	},
-	-- char_highlight_list = {
-	-- 	"IndentBlanklineIndent1",
-	-- 	"IndentBlanklineIndent2",
-	-- 	"IndentBlanklineIndent3",
-	-- 	"IndentBlanklineIndent4",
-	-- 	"IndentBlanklineIndent5",
-	-- 	"IndentBlanklineIndent6",
-	-- },
 })
-
