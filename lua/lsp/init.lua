@@ -146,8 +146,7 @@ lspconfig.tsserver.setup {
 	on_attach = on_attach,
 	flags = lsp_flags,
 	capabilities = capabilities,
-	filetypes = { 'html', 'javascript', 'typescript', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less',
-		'vue' },
+	filetypes = { 'javascript', 'typescript', 'typescriptreact', 'javascriptreact', 'vue' },
 	init_options = {
 		html = {
 			options = {
