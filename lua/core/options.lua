@@ -65,7 +65,6 @@ local options = {
 	timeoutlen     = 300,            -- ms to wait for mapped sequence
 	updatetime     = 300,            -- Faster completion
 	wildmode       = bashcomp,       -- Tab completion behaviour
-	stal           = 2,              -- Bug bufferline closes when saving
 	spell          = false,          -- Spelling check
 	spelllang      = "en,es",        -- Spelling check language
 }
