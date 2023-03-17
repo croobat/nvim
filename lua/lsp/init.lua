@@ -100,6 +100,20 @@ for _, server in ipairs(default_servers) do
 	}
 end
 
+vim.g.intelephense_format_concatenation_no_spaces = 1
+lspconfig.intelephense.setup {
+	on_attach = on_attach,
+	flags = lsp_flags,
+	capabilities = capabilities,
+	settings = {
+		intelephense = {
+			diagnostics = {
+				undefinedProperties = false,
+			},
+		},
+	},
+}
+
 lspconfig.pyright.setup {
 	on_attach = on_attach,
 	flags = lsp_flags,
