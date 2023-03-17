@@ -1,4 +1,4 @@
-require('comment-box.impl').setup({
+require('comment-box').setup({
 	doc_width = 79, -- width of the document
 	box_width = 40, -- width of the boxes
 	borders = {
