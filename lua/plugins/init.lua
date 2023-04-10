@@ -109,6 +109,7 @@ return packer.startup(function(use) --}}}
 
 	-- Markdown
 	use { "npxbr/glow.nvim", ft = { "markdown" } }
+	use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
 	-- HTML/CSS/JS
 	use { "neoclide/vim-jsx-improve", ft = { "javascript", "javascriptreact" } }
