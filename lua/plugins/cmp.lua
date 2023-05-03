@@ -36,7 +36,7 @@ cmp.setup({
 		{ name = 'emmet_vim' },
 	}, {
 		{ name = 'path' },
-		{ name = 'buffer', keyword_length = 5 },
+		{ name = 'buffer', keyword_length = 3 },
 	}),
 	formatting = {
 		fields = { "kind", "abbr", "menu" },
