@@ -9,7 +9,7 @@ luasnip.config.set_config {
 	updateevents = "TextChanged,TextChangedI",
 
 	-- Autosnippets:
-	enable_autosnidsfdsfppets = true,
+	enable_autosnippets = true,
 
 	--Cool highlights
 	-- #vid3
