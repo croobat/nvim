@@ -26,8 +26,6 @@ keymap("x", "<C-l>", "3l", opts)
 
 keymap("n", "j", "gj", opts)
 keymap("n", "k", "gk", opts)
-keymap("v", "j", "gj", opts)
-keymap("v", "k", "gk", opts)
 
 --Quickfix
 keymap("n", "<C-n>", ":cnext<CR>", opts)
