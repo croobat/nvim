@@ -61,9 +61,7 @@ return packer.startup(function(use) --}}}
 	use { "rafamadriz/friendly-snippets" }
 
 	-- Treesitter
-	use { "nvim-treesitter/nvim-treesitter", config = "require 'plugins.treesitter'",
-		run = ":TSUpdate"
-	}
+	use { "nvim-treesitter/nvim-treesitter", config = "require 'plugins.treesitter'", run = ":TSUpdate" }
 	use { "p00f/nvim-ts-rainbow" }
 	use { "romgrk/nvim-treesitter-context", config = "require 'plugins.treesitter-context'" }
 	use { "JoosepAlviste/nvim-ts-context-commentstring", event = "BufRead" }
@@ -78,10 +76,9 @@ return packer.startup(function(use) --}}}
 	}
 	use { "nvim-telescope/telescope.nvim", config = "require 'plugins.telescope'",
 		branch = "0.1.x",
-		requires = { "telescope-fzf-native.nvim" },
 		cmd = "Telescope",
 	}
-	use { "nvim-telescope/telescope-fzf-native.nvim", build = "make" }
+	use { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
 	use { "nvim-telescope/telescope-symbols.nvim" }
 
 	-- LSP
@@ -90,8 +87,10 @@ return packer.startup(function(use) --}}}
 	}
 	use { "williamboman/mason-lspconfig.nvim" }
 	use { "tamago324/nlsp-settings.nvim" }
-	use { "jose-elias-alvarez/null-ls.nvim" }
+	use { "jose-elias-alvarez/null-ls.nvim", config = "require 'plugins.null-ls'" }
 	use { "williamboman/mason.nvim", config = "require 'plugins.mason'" }
+	use { 'MunifTanjim/prettier.nvim' }
+	use { 'MunifTanjim/eslint.nvim' }
 
 	-- Comments
 	use { "LudoPinelli/comment-box.nvim", config = "require 'plugins.comment-box'" }
@@ -116,7 +115,7 @@ return packer.startup(function(use) --}}}
 	use { "joshua7v/vim-tsx-improve", ft = { "typescript", "typescriptreact" } }
 	use { "turbio/bracey.vim",
 		cmd = { "Bracey", "BracyStop", "BraceyReload", "BraceyEval" },
-		build = "npm install --prefix server",
+		run = "npm install --prefix server",
 	}
 
 	-- Rust
