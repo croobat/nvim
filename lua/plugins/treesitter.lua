@@ -1,18 +1,14 @@
 local configs = require("nvim-treesitter.configs")
 
 configs.setup {
-	-- ensure_installed = "all",
-	-- ignore_install = { "smali" },
-	autotag = {
-		enable = true,
-	},
 	autopairs = {
 		enable = true,
 	},
 	highlight = {
 		enable = true,
 		disable = { "" },
-		additional_vim_regex_highlighting = true,
+		additional_vim_regex_highlighting = false,
+		use_languagetree = false,
 	},
 	rainbow = {
 		enable = true,

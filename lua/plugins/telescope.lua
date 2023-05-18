@@ -7,7 +7,7 @@ telescope.setup {
 	defaults = {
 		mappings = {
 			i = {
-					["<C-h>"] = "which_key"
+				["<C-h>"] = "which_key"
 			}
 		},
 		file_ignore_patterns = {
