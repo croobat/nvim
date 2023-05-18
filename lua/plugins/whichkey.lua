@@ -90,6 +90,7 @@ local mappings = {
 		["?"] = { "<cmd>Telescope find_files<cr>", "Find Files" },
 		["<leader>"] = { "i <esc>l", "Insert space" },
 	-- L = latex
+	-- P = python
 		["Q"] = { "<cmd>:Bdeleteexcept<cr><cmd>NvimTreeToggle<cr><cmd>NvimTreeToggle<cr>", "Close Other Buffers" },
 	-- a = auto-options
 	-- c = comment box
@@ -99,7 +100,7 @@ local mappings = {
 		["F"] = { "<cmd>%s/\\s\\+$//e<cr>", "Trailing spaces" },
 	-- g = git
 	-- l = lsp
-	-- p = python
+		["p"] = { "<cmd>Prettier<cr>", "Prettier" },
 		["q"] = { "<cmd>Bdelete<cr>", "Close Buffer" },
 	-- t = telescope
 		["w"] = { "<cmd>w!<cr>", "Save" },
@@ -147,6 +148,24 @@ local mappings = {
 			o = { "<cmd>VimtexTocOpen<cr>", "Open TOC" },
 			t = { "<cmd>VimtexTocToggle<cr>", "Toggle TOC" },
 		},
+	},
+	P = {
+		name = "Python",
+		i = { "<cmd>lua require('swenv.api').pick_venv()<cr>", "Pick Env" },
+		v = { "<cmd>lua require('swenv.api').get_current_venv()<cr>", "Show Env" },
+		d = { "<cmd>lua require('dap-python').debug_selection()<cr>", "Debug Selection" },
+		c = { "<cmd>lua require('dap-python').test_class()<cr>", "Test Class" },
+		m = { "<cmd>lua require('dap-python').test_method()<cr>", "Test Method" },
+		-- Jupyter
+		D = { "<Cmd>MagmaDelete<cr>", "Delete cell" },
+		E = { "<esc><cmd>MagmaEvaluateVisual<cr>", "Evaluate Highlighted Line" },
+		I = { "<Cmd>MagmaInit<cr>", "Init Magma" },
+		R = { "<Cmd>MagmaRestart!<cr>", "Restart Magma" },
+		S = { "<Cmd>MagmaSave<cr>", "Save" },
+		e = { "<Cmd>MagmaEvaluateLine<cr>", "Evaluate Line" },
+		k = { "<Cmd>MagmaDeinit<cr>", "Deinit Magma" },
+		r = { "<Cmd>MagmaReevaluateCell<cr>", "Re evaluate cell" },
+		s = { "<Cmd>MagmaShowOutput<cr>", "Show Output" },
 	},
 	a = {
 		name = "Auto-options",
@@ -231,24 +250,6 @@ local mappings = {
 			"<cmd>lua vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with( vim.lsp.diagnostic.on_publish_diagnostics, {underline = false})<cr>",
 			"disable underline",
 		},
-	},
-	p = {
-		name = "Python",
-		i = { "<cmd>lua require('swenv.api').pick_venv()<cr>", "Pick Env" },
-		v = { "<cmd>lua require('swenv.api').get_current_venv()<cr>", "Show Env" },
-		d = { "<cmd>lua require('dap-python').debug_selection()<cr>", "Debug Selection" },
-		c = { "<cmd>lua require('dap-python').test_class()<cr>", "Test Class" },
-		m = { "<cmd>lua require('dap-python').test_method()<cr>", "Test Method" },
-		-- Jupyter
-		D = { "<Cmd>MagmaDelete<cr>", "Delete cell" },
-		E = { "<esc><cmd>MagmaEvaluateVisual<cr>", "Evaluate Highlighted Line" },
-		I = { "<Cmd>MagmaInit<cr>", "Init Magma" },
-		R = { "<Cmd>MagmaRestart!<cr>", "Restart Magma" },
-		S = { "<Cmd>MagmaSave<cr>", "Save" },
-		e = { "<Cmd>MagmaEvaluateLine<cr>", "Evaluate Line" },
-		k = { "<Cmd>MagmaDeinit<cr>", "Deinit Magma" },
-		r = { "<Cmd>MagmaReevaluateCell<cr>", "Re evaluate cell" },
-		s = { "<Cmd>MagmaShowOutput<cr>", "Show Output" },
 	},
 	r = {
 		name = "Rust",
