@@ -7,7 +7,7 @@ configs.setup {
 	highlight = {
 		enable = true,
 		disable = { "" },
-		additional_vim_regex_highlighting = false,
+		additional_vim_regex_highlighting = true,
 		use_languagetree = false,
 	},
 	rainbow = {
@@ -19,5 +19,8 @@ configs.setup {
 	context_commentstring = {
 		enable = true,
 		enable_autocmd = false,
-	}
+	},
+	indent = {
+		enable = true,
+	},
 }
