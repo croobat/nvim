@@ -87,7 +87,10 @@ return packer.startup(function(use) --}}}
 	}
 	use { "williamboman/mason-lspconfig.nvim" }
 	use { "tamago324/nlsp-settings.nvim" }
+	use { "jose-elias-alvarez/null-ls.nvim", config = "require 'plugins.null-ls'" }
 	use { "williamboman/mason.nvim", config = "require 'plugins.mason'" }
+	use { 'MunifTanjim/prettier.nvim' }
+	use { 'MunifTanjim/eslint.nvim' }
 
 	-- Comments
 	use { "LudoPinelli/comment-box.nvim", config = "require 'plugins.comment-box'" }
@@ -105,7 +108,10 @@ return packer.startup(function(use) --}}}
 
 	-- Markdown
 	use { "npxbr/glow.nvim", ft = { "markdown" } }
-	use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+	use { "iamcco/markdown-preview.nvim", run = "cd app && npm install",
+		setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
+		ft = { "markdown" },
+	}
 
 	-- HTML/CSS/JS
 	use { "neoclide/vim-jsx-improve", ft = { "javascript", "javascriptreact" } }
