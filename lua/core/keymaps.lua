@@ -7,7 +7,6 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
---## Disable mappings ##
 -- Better scrolling
 keymap("n", "<C-j>", "5gj", opts)
 keymap("n", "<C-k>", "5gk", opts)

@@ -2,15 +2,8 @@ local nvim_tree = require("nvim-tree")
 local nvim_web_devicons = require("nvim-web-devicons")
 local nvim_tree_config = require("nvim-tree.config")
 
--- disable netrw
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
--- TODO: add autocommand to autoclose nvim-tree buffer
-
 nvim_tree.setup({
 	hijack_cursor = true,
-	-- sync_root_with_cwd = true,
 	respect_buf_cwd = true,
 	view = {
 		adaptive_size = true,
