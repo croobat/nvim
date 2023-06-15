@@ -89,12 +89,13 @@ local mappings = {
 	["/"] = { "<cmd>Telescope live_grep<cr>", "Find text" },
 	["?"] = { "<cmd>Telescope find_files<cr>", "Find Files" },
 	["<leader>"] = { "i <esc>l", "Insert space" },
+	-- D = debug
 	-- L = latex
 	-- P = python
 	["Q"] = { "<cmd>:Bdeleteexcept<cr><cmd>NvimTreeToggle<cr><cmd>NvimTreeToggle<cr>", "Close Other Buffers" },
 	-- a = auto-options
 	-- c = comment box
-	-- d = debug
+	["d"] = { '"_d', "Delete withouth yanking" },
 	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
 	["f"] = { "<cmd>lua vim.lsp.buf.format { async = true }<cr>", "LSP format" },
 	["F"] = { "<cmd>%s/\\s\\+$//e<cr>", "Trailing spaces" },
@@ -107,6 +108,23 @@ local mappings = {
 	["W"] = { "<cmd>SudaWrite<cr>", "Save (sudo)" },
 	["x"] = { "I* [ ] <esc>", "Insert checkbox" },
 	["z"] = { "<cmd>:ZenMode<cr>", "Zen mode" },
+	D = {
+		name = "Debug",
+		b = { "<cmd>lua require'dap'.step_back()<cr>", "Step Back" },
+		c = { "<cmd>lua require'dap'.continue()<cr>", "Continue" },
+		C = { "<cmd>lua require'dap'.run_to_cursor()<cr>", "Run To Cursor" },
+		d = { "<cmd>lua require'dap'.disconnect()<cr>", "Disconnect" },
+		g = { "<cmd>lua require'dap'.session()<cr>", "Get Session" },
+		i = { "<cmd>lua require'dap'.step_into()<cr>", "Step Into" },
+		o = { "<cmd>lua require'dap'.step_over()<cr>", "Step Over" },
+		p = { "<cmd>lua require'dap'.pause()<cr>", "Pause" },
+		q = { "<cmd>lua require'dap'.close()<cr>", "Quit" },
+		r = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Toggle Repl" },
+		s = { "<cmd>lua require'dap'.continue()<cr>", "Start" },
+		t = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" },
+		u = { "<cmd>lua require'dap'.step_out()<cr>", "Step Out" },
+		U = { "<cmd>lua require'dapui'.toggle({reset = true})<cr>", "Toggle UI" },
+	},
 	L = {
 		name = "LaTeX",
 		m = { "<cmd>VimtexContextMenu<cr>", "Open Context Menu" },
@@ -195,23 +213,6 @@ local mappings = {
 		h = { "<cmd>lua require('comment-box').albox(3)<cr>", "Heavy" },
 		L = { "<cmd>lua require('comment-box').cline(1)<cr>", "Simple line" },
 		t = { "<cmd>lua require('comment-box').accbox(7)<cr>", "Title" },
-	},
-	d = {
-		name = "Debug",
-		b = { "<cmd>lua require'dap'.step_back()<cr>", "Step Back" },
-		c = { "<cmd>lua require'dap'.continue()<cr>", "Continue" },
-		C = { "<cmd>lua require'dap'.run_to_cursor()<cr>", "Run To Cursor" },
-		d = { "<cmd>lua require'dap'.disconnect()<cr>", "Disconnect" },
-		g = { "<cmd>lua require'dap'.session()<cr>", "Get Session" },
-		i = { "<cmd>lua require'dap'.step_into()<cr>", "Step Into" },
-		o = { "<cmd>lua require'dap'.step_over()<cr>", "Step Over" },
-		p = { "<cmd>lua require'dap'.pause()<cr>", "Pause" },
-		q = { "<cmd>lua require'dap'.close()<cr>", "Quit" },
-		r = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Toggle Repl" },
-		s = { "<cmd>lua require'dap'.continue()<cr>", "Start" },
-		t = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" },
-		u = { "<cmd>lua require'dap'.step_out()<cr>", "Step Out" },
-		U = { "<cmd>lua require'dapui'.toggle({reset = true})<cr>", "Toggle UI" },
 	},
 	g = {
 		name = "Git",

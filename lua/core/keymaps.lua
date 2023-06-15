@@ -26,14 +26,9 @@ keymap("x", "<C-l>", "3l", opts)
 keymap("n", "j", "gj", opts)
 keymap("n", "k", "gk", opts)
 
+-- Center screen when jumping to next
 keymap("n", "n", "nzz", opts)
 keymap("n", "N", "Nzz", opts)
-
---Quickfix
-keymap("n", "<C-n>", ":cnext<CR>", opts)
-keymap("n", "<C-p>", ":cprevious<CR>", opts)
-keymap("n", "<C-q>", ":copen<CR>", opts)
-keymap("n", "<C-A-q>", ":cclose<CR>", opts)
 
 -- Better window navigation
 keymap("n", "<A-h>", "<C-w>h", opts)
@@ -62,6 +57,12 @@ keymap("n", "<A-enter>", "i<CR><esc>", opts)
 -- Word Wrap
 keymap("n", "<A-z>", ":set wrap!<CR>", opts)
 
+--Quickfix
+keymap("n", "<C-n>", ":cnext<CR>", opts)
+keymap("n", "<C-p>", ":cprevious<CR>", opts)
+keymap("n", "<C-q>", ":copen<CR>", opts)
+keymap("n", "<C-A-q>", ":cclose<CR>", opts)
+
 --## Insert ##
 -- Better insert navigation
 keymap("i", "<A-l>", "<ESC>la", opts)
@@ -84,6 +85,9 @@ keymap("v", ">", ">gv", opts)
 -- Move text up and down
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
+
+-- Paste replace register with leader
+keymap("v", "p", '"_dp', opts)
 
 --## Visual Block ##
 -- Move text up and down
