@@ -58,10 +58,10 @@ telescope.setup {
 			initial_mode = "normal",
 			mappings = {
 				i = {
-						["<C-d>"] = actions.delete_buffer,
+					["<C-d>"] = actions.delete_buffer,
 				},
 				n = {
-						["dd"] = actions.delete_buffer,
+					["dd"] = actions.delete_buffer,
 				},
 			},
 		},

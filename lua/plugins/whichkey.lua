@@ -82,31 +82,31 @@ local opts = {
 }                --}}}
 
 local mappings = {
-		[","] = { "A,<esc>", "Insert comma" },
-		["."] = { "A.<esc>", "Insert dot" },
-		[";"] = { "A;<esc>", "Insert semicolon" },
-		["="] = { "A = ", "Insert equal" },
-		["/"] = { "<cmd>Telescope live_grep<cr>", "Find text" },
-		["?"] = { "<cmd>Telescope find_files<cr>", "Find Files" },
-		["<leader>"] = { "i <esc>l", "Insert space" },
+	[","] = { "A,<esc>", "Insert comma" },
+	["."] = { "A.<esc>", "Insert dot" },
+	[";"] = { "A;<esc>", "Insert semicolon" },
+	["="] = { "A = ", "Insert equal" },
+	["/"] = { "<cmd>Telescope live_grep<cr>", "Find text" },
+	["?"] = { "<cmd>Telescope find_files<cr>", "Find Files" },
+	["<leader>"] = { "i <esc>l", "Insert space" },
 	-- L = latex
 	-- P = python
-		["Q"] = { "<cmd>:Bdeleteexcept<cr><cmd>NvimTreeToggle<cr><cmd>NvimTreeToggle<cr>", "Close Other Buffers" },
+	["Q"] = { "<cmd>:Bdeleteexcept<cr><cmd>NvimTreeToggle<cr><cmd>NvimTreeToggle<cr>", "Close Other Buffers" },
 	-- a = auto-options
 	-- c = comment box
 	-- d = debug
-		["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-		["f"] = { "<cmd>lua vim.lsp.buf.format { async = true }<cr>", "LSP format" },
-		["F"] = { "<cmd>%s/\\s\\+$//e<cr>", "Trailing spaces" },
+	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+	["f"] = { "<cmd>lua vim.lsp.buf.format { async = true }<cr>", "LSP format" },
+	["F"] = { "<cmd>%s/\\s\\+$//e<cr>", "Trailing spaces" },
 	-- g = git
 	-- l = lsp
-		["p"] = { "<cmd>Prettier<cr>", "Prettier" },
-		["q"] = { "<cmd>Bdelete<cr>", "Close Buffer" },
+	["p"] = { "<cmd>Prettier<cr>", "Prettier" },
+	["q"] = { "<cmd>Bdelete<cr>", "Close Buffer" },
 	-- t = telescope
-		["w"] = { "<cmd>w!<cr>", "Save" },
-		["W"] = { "<cmd>SudaWrite<cr>", "Save (sudo)" },
-		["x"] = { "I* [ ] <esc>", "Insert checkbox" },
-		["z"] = { "<cmd>:ZenMode<cr>", "Zen mode" },
+	["w"] = { "<cmd>w!<cr>", "Save" },
+	["W"] = { "<cmd>SudaWrite<cr>", "Save (sudo)" },
+	["x"] = { "I* [ ] <esc>", "Insert checkbox" },
+	["z"] = { "<cmd>:ZenMode<cr>", "Zen mode" },
 	L = {
 		name = "LaTeX",
 		m = { "<cmd>VimtexContextMenu<cr>", "Open Context Menu" },
@@ -292,9 +292,9 @@ local mappings = {
 		q = { "<cmd>Telescope quickfix<cr>", "LSP quickfix" },
 		r = { "<cmd>Telescope lsp_references<cr>", "LSP reference" },
 		t = { "<cmd>Telescope resume<cr>", "Resume search" },
-			["="] = { "<cmd>Tabularize /=<cr>", "Tabularize =" },
-			["-"] = { "<cmd>Tabularize /--<cr>", "Tabularize --" },
-			[":"] = { "<cmd>Tabularize /:<cr>", "Tabularize :" },
+		["="] = { "<cmd>Tabularize /=<cr>", "Tabularize =" },
+		["-"] = { "<cmd>Tabularize /--<cr>", "Tabularize --" },
+		[":"] = { "<cmd>Tabularize /:<cr>", "Tabularize :" },
 	},
 }
 

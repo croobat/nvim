@@ -2,7 +2,7 @@ require('comment-box').setup({
 	doc_width = 79, -- width of the document
 	box_width = 40, -- width of the boxes
 	borders = {
-	             -- symbols used to draw a box
+		-- symbols used to draw a box
 		top = "─",
 		bottom = "─",
 		left = "│",
@@ -14,7 +14,7 @@ require('comment-box').setup({
 	},
 	line_width = 79, -- width of the lines
 	line = {
-	              -- symbols used to draw a line
+		-- symbols used to draw a line
 		line = "─",
 		line_start = "─",
 		line_end = "─",

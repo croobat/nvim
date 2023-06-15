@@ -8,14 +8,14 @@ gitsigns.setup {
 		delete = { hl = "GitSignsDelete", text = "█", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
 		topdelete = { hl = "GitSignsDelete", text = "█", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
 	},
-	signcolumn = true,                    -- :Gitsigns toggle_signs
-	numhl = false,                        -- :Gitsigns toggle_numhl
-	linehl = false,                       -- :Gitsigns toggle_linehl
-	word_diff = false,                    -- :Gitsigns toggle_word_diff
-	current_line_blame = false,           -- :Gitsigns toggle_current_line_blame
+	signcolumn = true,       -- :Gitsigns toggle_signs
+	numhl = false,           -- :Gitsigns toggle_numhl
+	linehl = false,          -- :Gitsigns toggle_linehl
+	word_diff = false,       -- :Gitsigns toggle_word_diff
+	current_line_blame = false, -- :Gitsigns toggle_current_line_blame
 	current_line_blame_opts = {
 		virt_text = true,
-		virt_text_pos = "eol",            -- 'eol' | 'overlay' | 'right_align'
+		virt_text_pos = "eol", -- 'eol' | 'overlay' | 'right_align'
 		delay = 100,
 		ignore_whitespace = false,
 	},

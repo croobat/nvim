@@ -7,23 +7,23 @@ cmp.setup({
 		expand = function(args) luasnip.lsp_expand(args.body) end,
 	},
 	mapping = cmp.mapping.preset.insert({
-			["<C-n>"] = cmp.mapping.select_next_item { behavior = cmp.SelectBehavior.Insert },
-			["<C-p>"] = cmp.mapping.select_prev_item { behavior = cmp.SelectBehavior.Insert },
-			["<C-Space>"] = cmp.mapping.complete(),
-			["<C-d>"] = cmp.mapping.scroll_docs(-4),
-			["<C-f>"] = cmp.mapping.scroll_docs(4),
-			["<C-e>"] = cmp.mapping.abort(),
-			["<C-l>"] = cmp.mapping(cmp.mapping.confirm { select = false, },
+		["<C-n>"] = cmp.mapping.select_next_item { behavior = cmp.SelectBehavior.Insert },
+		["<C-p>"] = cmp.mapping.select_prev_item { behavior = cmp.SelectBehavior.Insert },
+		["<C-Space>"] = cmp.mapping.complete(),
+		["<C-d>"] = cmp.mapping.scroll_docs(-4),
+		["<C-f>"] = cmp.mapping.scroll_docs(4),
+		["<C-e>"] = cmp.mapping.abort(),
+		["<C-l>"] = cmp.mapping(cmp.mapping.confirm { select = false, },
 			{ "i", "c" }
 		),
-			["<CR>"] = cmp.mapping.confirm({ select = false }),
-			["<C-j>"] = cmp.mapping(function()
+		["<CR>"] = cmp.mapping.confirm({ select = false }),
+		["<C-j>"] = cmp.mapping(function()
 			if luasnip.jumpable(1) then
 				luasnip.jump(1)
 			end
 		end, { "i", "s", }
 		),
-			["<C-k>"] = cmp.mapping(function()
+		["<C-k>"] = cmp.mapping(function()
 			if luasnip.jumpable(-1) then
 				luasnip.jump(-1)
 			end
@@ -42,11 +42,11 @@ cmp.setup({
 		fields = { "kind", "abbr", "menu" },
 		format = function(entry, vim_item)
 			vim_item.menu = ({
-					luasnip = "[Snip]",
-					nvim_lsp = "[LSP]",
-					buffer = "[Buff]",
-					path = "[Path]",
-				})[entry.source.name]
+				luasnip = "[Snip]",
+				nvim_lsp = "[LSP]",
+				buffer = "[Buff]",
+				path = "[Path]",
+			})[entry.source.name]
 			return vim_item
 		end,
 	},

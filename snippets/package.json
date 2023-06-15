@@ -1,6 +1,5 @@
 {
   "name": "tony-snippets",
-  "author": "Tony Ramirez",
   "engines": {
     "vscode": "^1.11.0"
   },

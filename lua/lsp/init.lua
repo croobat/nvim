@@ -132,7 +132,7 @@ lspconfig.rust_analyzer.setup {
 	flags = lsp_flags,
 	capabilities = capabilities,
 	settings = {
-			["rust-analyzer"] = {}
+		["rust-analyzer"] = {}
 	}
 }
 
@@ -147,8 +147,8 @@ lspconfig.lua_ls.setup {
 			},
 			workspace = {
 				library = {
-						[vim.fn.expand("$VIMRUNTIME/lua")] = true,
-						[vim.fn.stdpath("config") .. "/lua"] = true,
+					[vim.fn.expand("$VIMRUNTIME/lua")] = true,
+					[vim.fn.stdpath("config") .. "/lua"] = true,
 				},
 			},
 		},
@@ -164,8 +164,8 @@ lspconfig.tsserver.setup {
 		html = {
 			options = {
 				-- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
-					["bem.enabled"] = true,
-					["output.format"] = true,
+				["bem.enabled"] = true,
+				["output.format"] = true,
 			},
 		},
 	}

@@ -1,4 +1,4 @@
--- Check if the 'noplugin'
+-- Check if loaded without plugins 'noplugin'
 local noplugin = false
 for _, arg in ipairs(vim.v.argv) do
 	if arg == '--noplugin' then

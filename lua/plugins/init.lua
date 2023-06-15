@@ -64,10 +64,10 @@ return packer.startup(function(use) --}}}
 	use { "nvim-treesitter/nvim-treesitter", config = "require 'plugins.treesitter'", run = ":TSUpdate" }
 	use { "p00f/nvim-ts-rainbow" }
 	use { "romgrk/nvim-treesitter-context", config = "require 'plugins.treesitter-context'" }
-	use { "JoosepAlviste/nvim-ts-context-commentstring", event = "BufRead" }
+	-- use { "JoosepAlviste/nvim-ts-context-commentstring", event = "BufRead" }
 	use { "windwp/nvim-ts-autotag", config = "require('nvim-ts-autotag').setup()" }
 	use { "windwp/nvim-autopairs", config = "require 'plugins.autopairs'" }
-	use { "nvim-treesitter/playground", event = "BufRead" }
+	-- use { "nvim-treesitter/playground", event = "BufRead" }
 
 	-- Navigation
 	use { "nvim-tree/nvim-tree.lua", config = "require 'plugins.nvim-tree'",
@@ -102,7 +102,7 @@ return packer.startup(function(use) --}}}
 	-- Visuals
 	use { "RRethy/vim-illuminate", config = "require('illuminate').configure({ delay = 500, })" }
 	use { "ojroques/nvim-hardline", config = "require 'plugins.hardline'" }
-	use { "lukas-reineke/indent-blankline.nvim", config = "require 'plugins.indentline'" }
+	-- use { "lukas-reineke/indent-blankline.nvim", config = "require 'plugins.indentline'" }
 	use { "norcalli/nvim-colorizer.lua", config = "require 'colorizer'.setup()" }
 	use { "lewis6991/gitsigns.nvim", config = "require 'plugins.gitsigns'" }
 
@@ -114,24 +114,24 @@ return packer.startup(function(use) --}}}
 	}
 
 	-- HTML/CSS/JS
-	use { "neoclide/vim-jsx-improve", ft = { "javascript", "javascriptreact" } }
-	use { "joshua7v/vim-tsx-improve", ft = { "typescript", "typescriptreact" } }
-	use { "turbio/bracey.vim",
-		cmd = { "Bracey", "BracyStop", "BraceyReload", "BraceyEval" },
-		run = "npm install --prefix server",
-	}
+	-- use { "neoclide/vim-jsx-improve", ft = { "javascript", "javascriptreact" } }
+	-- use { "joshua7v/vim-tsx-improve", ft = { "typescript", "typescriptreact" } }
+	-- use { "turbio/bracey.vim",
+	-- 	cmd = { "Bracey", "BracyStop", "BraceyReload", "BraceyEval" },
+	-- 	run = "npm install --prefix server",
+	-- }
 
 	-- Rust
-	use { "simrat39/rust-tools.nvim" }
-	use { "saecki/crates.nvim", config = function()
-		require("crates").setup({
-			-- null_ls = { enabled = true, name = "crates.nvim" },
-			popup = { border = "rounded" },
-		})
-	end,
-		version = "v0.3.0",
-		requires = { "nvim-lua/plenary.nvim" },
-	}
+	-- use { "simrat39/rust-tools.nvim" }
+	-- use { "saecki/crates.nvim", config = function()
+	-- 	require("crates").setup({
+	-- 		-- null_ls = { enabled = true, name = "crates.nvim" },
+	-- 		popup = { border = "rounded" },
+	-- 	})
+	-- end,
+	-- 	version = "v0.3.0",
+	-- 	requires = { "nvim-lua/plenary.nvim" },
+	-- }
 
 	-- Vanilla
 	use { "qiushihe/vim-bbye" }
