@@ -26,6 +26,9 @@ keymap("x", "<C-l>", "3l", opts)
 keymap("n", "j", "gj", opts)
 keymap("n", "k", "gk", opts)
 
+keymap("n", "n", "nzz", opts)
+keymap("n", "N", "Nzz", opts)
+
 --Quickfix
 keymap("n", "<C-n>", ":cnext<CR>", opts)
 keymap("n", "<C-p>", ":cprevious<CR>", opts)
@@ -58,9 +61,6 @@ keymap("n", "<A-enter>", "i<CR><esc>", opts)
 
 -- Word Wrap
 keymap("n", "<A-z>", ":set wrap!<CR>", opts)
-
--- Better pasting
-keymap("n", "<A-p>", "pg;h", opts)
 
 --## Insert ##
 -- Better insert navigation
