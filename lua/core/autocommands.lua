@@ -182,7 +182,7 @@ autocmd("CmdWinEnter", {
 -- Highlight yanked text
 autocmd("TextYankPost", {
 	callback = function()
-		vim.highlight.on_yank({ higroup = "Visual", timeout = 300 })
+		vim.highlight.on_yank({ higroup = "Visual", timeout = 500 })
 	end,
 })
 
