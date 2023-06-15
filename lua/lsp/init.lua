@@ -131,7 +131,6 @@ lspconfig.rust_analyzer.setup {
 	on_attach = on_attach,
 	flags = lsp_flags,
 	capabilities = capabilities,
-	-- Server-specific settings...
 	settings = {
 			["rust-analyzer"] = {}
 	}
@@ -170,4 +169,10 @@ lspconfig.tsserver.setup {
 			},
 		},
 	}
+}
+
+lspconfig.jsonls.setup {
+	on_attach = on_attach,
+	flags = lsp_flags,
+	capabilities = capabilities,
 }
