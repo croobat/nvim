@@ -86,9 +86,6 @@ keymap("v", ">", ">gv", opts)
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 
--- Paste replace register with leader
-keymap("v", "p", '"_dp', opts)
-
 --## Visual Block ##
 -- Move text up and down
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)

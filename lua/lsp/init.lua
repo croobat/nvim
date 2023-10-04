@@ -1,3 +1,6 @@
+-- Github copilot
+require "../plugins/copilot"
+
 -- Mappings
 local opts = { noremap = true, silent = true }
 vim.keymap.set('n', 'gl', vim.diagnostic.open_float, opts)

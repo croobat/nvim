@@ -62,11 +62,11 @@ return packer.startup(function(use) --}}}
 
 	-- Treesitter
 	use { "nvim-treesitter/nvim-treesitter", config = "require 'plugins.treesitter'", run = ":TSUpdate" }
-	use { "p00f/nvim-ts-rainbow" }
-	use { "romgrk/nvim-treesitter-context", config = "require 'plugins.treesitter-context'" }
+	-- use { "p00f/nvim-ts-rainbow" }
+	-- use { "romgrk/nvim-treesitter-context", config = "require 'plugins.treesitter-context'" }
 	-- use { "JoosepAlviste/nvim-ts-context-commentstring", event = "BufRead" }
-	use { "windwp/nvim-ts-autotag", config = "require('nvim-ts-autotag').setup()" }
-	use { "windwp/nvim-autopairs", config = "require 'plugins.autopairs'" }
+	-- use { "windwp/nvim-ts-autotag", config = "require('nvim-ts-autotag').setup()" }
+	-- use { "windwp/nvim-autopairs", config = "require 'plugins.autopairs'" }
 	-- use { "nvim-treesitter/playground", event = "BufRead" }
 
 	-- Navigation
@@ -82,15 +82,13 @@ return packer.startup(function(use) --}}}
 	use { "nvim-telescope/telescope-symbols.nvim" }
 
 	-- LSP
-	use { "neovim/nvim-lspconfig",
-		requires = { "mason-lspconfig.nvim", "nlsp-settings.nvim" },
-	}
+	use { "neovim/nvim-lspconfig" }
 	use { "williamboman/mason-lspconfig.nvim" }
 	use { "tamago324/nlsp-settings.nvim" }
-	use { "jose-elias-alvarez/null-ls.nvim", config = "require 'plugins.null-ls'" }
+	-- use { "jose-elias-alvarez/null-ls.nvim", config = "require 'plugins.null-ls'" }
 	use { "williamboman/mason.nvim", config = "require 'plugins.mason'" }
-	use { 'MunifTanjim/prettier.nvim' }
-	use { 'MunifTanjim/eslint.nvim' }
+	-- use { 'MunifTanjim/prettier.nvim' }
+	-- use { 'MunifTanjim/eslint.nvim' }
 
 	-- Comments
 	use { "LudoPinelli/comment-box.nvim", config = "require 'plugins.comment-box'" }

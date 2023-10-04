@@ -200,3 +200,19 @@ autocmd("CursorHold", {
 		end
 	end,
 })
+
+-- Auto Tabularize bookmarks file
+autocmd("BufWritePost", {
+	pattern = "/home/tony/.bmks/urls",
+	callback = function()
+		vim.cmd([[silent! Tabularize / - ]])
+	end,
+})
+
+-- Auto export png when saving mermaid
+-- autocmd("BufWritePost", {
+--     pattern = "*.mmd",
+--     callback = function()
+--         vim.cmd([[silent! !mmdc -i % -o %:r.png --theme forest -s 2]])
+--     end,
+-- })

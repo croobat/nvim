@@ -86,5 +86,8 @@ vim.cmd("set whichwrap+=<,>,[,],h,l")
 -- Recursive finds
 vim.cmd("set path+=**")
 
+-- Remove autocomment new line
+vim.cmd("set formatoptions-=c formatoptions-=r formatoptions-=o")
+
 -- New word delimitators
 -- vim.cmd("set iskeyword+=^-,^_")
