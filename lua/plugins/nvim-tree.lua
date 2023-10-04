@@ -9,10 +9,14 @@ nvim_tree.setup({
 		adaptive_size = true,
 		mappings = {
 			list = {
-				{ key = { "l", "<CR>", "o" }, action = "edit" },
-				{ key = "h",                  action = "close_node" },
-				{ key = "u",                  action = "dir_up" },
-				{ key = "v",                  action = "vsplit" },
+				{ key = {
+					"l",
+					"<CR>",
+					"o"
+					},           action = "edit" },
+				{ key = "h",     action = "close_node" },
+				{ key = "u",     action = "dir_up" },
+				{ key = "v",     action = "vsplit" },
 			},
 		},
 	},
