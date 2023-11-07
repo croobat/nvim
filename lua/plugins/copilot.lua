@@ -5,3 +5,5 @@
 --   return vim.fn['copilot#Accept']("<C-Enter>")
 -- end
 vim.g.copilot_enabled = 1
+
+vim.g.copilot_filetypes = {markdown = true, json = true}

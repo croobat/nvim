@@ -91,7 +91,6 @@ autocmd("Filetype", {
 -- Change tabs to spaces
 autocmd("Filetype", {
 	pattern = {
-		"javascript",
 		"vue",
 		"json",
 		"sh",

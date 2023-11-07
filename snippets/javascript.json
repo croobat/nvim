@@ -1,0 +1,6 @@
+{
+  "console.tron": {
+    "prefix": "tron",
+    "body": "console.tron.log(${0})"
+  }
+}

@@ -232,8 +232,10 @@ local mappings = {
 	l = {
 		name = "LSP",
 		R = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
-		S = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
+		-- S = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
+		S = { "<cmd>lua vim.diagnostic.config({signs=true})<cr>", "Enable signs" },
 		a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "CodeLens Action" },
+		c = { "<cmd>lua require('Comment').setup { pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook() }<cr>", "Jsx comments" },
 		d = { "<cmd>lua vim.lsp.buf.type_definition()<cr>", "List definitions" },
 		f = { "<cmd>lua vim.lsp.buf.format { async = true }<cr>", "Format" },
 		i = { "<cmd>lua vim.lsp.buf.implementation()<cr>", "List implementations" },
@@ -242,7 +244,8 @@ local mappings = {
 		l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Run" },
 		q = { "<cmd>lua vim.diagnostic.setloclist<cr>", "Quickfix" },
 		r = { "<cmd>lua vim.lsp.buf.references()<cr>", "List references" },
-		s = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "Signature help" },
+		-- s = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "Signature help" },
+		s = { "<cmd>lua vim.diagnostic.config({signs=false})<cr>", "Disable signs" },
 		u = {
 			"<cmd>lua vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with( vim.lsp.diagnostic.on_publish_diagnostics, {underline = true})<cr>",
 			"enable underline",

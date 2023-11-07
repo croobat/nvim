@@ -17,7 +17,7 @@ configs.setup {
 		colors = { '#e0af68', '#f7768e', '#2ac3de', '#bb9af7', '#9ece6a' },
 	},
 	context_commentstring = {
-		enable = false,
+		enable = true,
 		enable_autocmd = false,
 	},
 	indent = {
