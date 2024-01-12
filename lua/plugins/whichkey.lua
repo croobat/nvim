@@ -103,6 +103,7 @@ local mappings = {
 	-- l = lsp
 	["p"] = { "<cmd>Prettier<cr>", "Prettier" },
 	["q"] = { "<cmd>:TSDisable rainbow<cr><cmd>Bdelete<cr><cmd>:TSEnable rainbow<cr>", "Close Buffer" },
+	-- s = search and replace word under cursor (autocommands.lua)
 	-- t = telescope
 	["w"] = { "<cmd>w!<cr>", "Save" },
 	["W"] = { "<cmd>SudaWrite<cr>", "Save (sudo)" },
@@ -167,24 +168,24 @@ local mappings = {
 			t = { "<cmd>VimtexTocToggle<cr>", "Toggle TOC" },
 		},
 	},
-	P = {
-		name = "Python",
-		i = { "<cmd>lua require('swenv.api').pick_venv()<cr>", "Pick Env" },
-		v = { "<cmd>lua require('swenv.api').get_current_venv()<cr>", "Show Env" },
-		d = { "<cmd>lua require('dap-python').debug_selection()<cr>", "Debug Selection" },
-		c = { "<cmd>lua require('dap-python').test_class()<cr>", "Test Class" },
-		m = { "<cmd>lua require('dap-python').test_method()<cr>", "Test Method" },
-		-- Jupyter
-		D = { "<Cmd>MagmaDelete<cr>", "Delete cell" },
-		E = { "<esc><cmd>MagmaEvaluateVisual<cr>", "Evaluate Highlighted Line" },
-		I = { "<Cmd>MagmaInit<cr>", "Init Magma" },
-		R = { "<Cmd>MagmaRestart!<cr>", "Restart Magma" },
-		S = { "<Cmd>MagmaSave<cr>", "Save" },
-		e = { "<Cmd>MagmaEvaluateLine<cr>", "Evaluate Line" },
-		k = { "<Cmd>MagmaDeinit<cr>", "Deinit Magma" },
-		r = { "<Cmd>MagmaReevaluateCell<cr>", "Re evaluate cell" },
-		s = { "<Cmd>MagmaShowOutput<cr>", "Show Output" },
-	},
+	-- P = {
+	-- 	name = "Python",
+	-- 	i = { "<cmd>lua require('swenv.api').pick_venv()<cr>", "Pick Env" },
+	-- 	v = { "<cmd>lua require('swenv.api').get_current_venv()<cr>", "Show Env" },
+	-- 	d = { "<cmd>lua require('dap-python').debug_selection()<cr>", "Debug Selection" },
+	-- 	c = { "<cmd>lua require('dap-python').test_class()<cr>", "Test Class" },
+	-- 	m = { "<cmd>lua require('dap-python').test_method()<cr>", "Test Method" },
+	-- 	-- Jupyter
+	-- 	D = { "<Cmd>MagmaDelete<cr>", "Delete cell" },
+	-- 	E = { "<esc><cmd>MagmaEvaluateVisual<cr>", "Evaluate Highlighted Line" },
+	-- 	I = { "<Cmd>MagmaInit<cr>", "Init Magma" },
+	-- 	R = { "<Cmd>MagmaRestart!<cr>", "Restart Magma" },
+	-- 	S = { "<Cmd>MagmaSave<cr>", "Save" },
+	-- 	e = { "<Cmd>MagmaEvaluateLine<cr>", "Evaluate Line" },
+	-- 	k = { "<Cmd>MagmaDeinit<cr>", "Deinit Magma" },
+	-- 	r = { "<Cmd>MagmaReevaluateCell<cr>", "Re evaluate cell" },
+	-- 	s = { "<Cmd>MagmaShowOutput<cr>", "Show Output" },
+	-- },
 	a = {
 		name = "Auto-options",
 		C = { "<cmd>setlocal formatoptions-=cro<cr>", "Auto-comment off" },
@@ -231,8 +232,7 @@ local mappings = {
 	},
 	l = {
 		name = "LSP",
-		R = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
-		-- S = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
+		r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
 		S = { "<cmd>lua vim.diagnostic.config({signs=true})<cr>", "Enable signs" },
 		a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "CodeLens Action" },
 		c = { "<cmd>lua require('Comment').setup { pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook() }<cr>", "Jsx comments" },
@@ -243,8 +243,7 @@ local mappings = {
 		k = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", "Prev diagnostic" },
 		l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Run" },
 		q = { "<cmd>lua vim.diagnostic.setloclist<cr>", "Quickfix" },
-		r = { "<cmd>lua vim.lsp.buf.references()<cr>", "List references" },
-		-- s = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "Signature help" },
+		R = { "<cmd>lua vim.lsp.buf.references()<cr>", "List references" },
 		s = { "<cmd>lua vim.diagnostic.config({signs=false})<cr>", "Disable signs" },
 		u = {
 			"<cmd>lua vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with( vim.lsp.diagnostic.on_publish_diagnostics, {underline = true})<cr>",
