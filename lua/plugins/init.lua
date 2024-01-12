@@ -144,12 +144,11 @@ return packer.startup(function(use) --}}}
 
 	-- Miscellaneous
 	use { "folke/which-key.nvim", config = function() require "plugins.whichkey" end }
-	use { "vimwiki/vimwiki", config = "require 'plugins.vimwiki'",
-		ft = { "vimwiki", "markdown" }
-	}
+	use { "vimwiki/vimwiki", ft = { "vimwiki", "markdown" } }
 	use { "folke/todo-comments.nvim", config = function() require("todo-comments").setup() end,
 		requires = "nvim-lua/plenary.nvim",
 	}
+	use { "sotte/presenting.vim" }
 
 	-- Finish setup{{{
 	-- Automatically set up your configuration after cloning packer.nvim

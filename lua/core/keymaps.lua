@@ -89,9 +89,6 @@ keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 -- Delete without yanking (leader + d)
 keymap("v", "<leader>d", '"_d', opts)
 
--- Replace selected text without yanking
-keymap("v", "p", '"_dP', opts)
-
 --## Visual Block ##
 -- Move text up and down
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
