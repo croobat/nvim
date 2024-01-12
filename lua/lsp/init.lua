@@ -162,11 +162,20 @@ lspconfig.tsserver.setup {
 	on_attach = on_attach,
 	flags = lsp_flags,
 	capabilities = capabilities,
-	filetypes = { 'javascript', 'typescript', 'typescriptreact', 'javascriptreact', 'vue' },
+	filetypes = {
+		"javascript",
+		"javascriptreact",
+		"javascript.jsx",
+		"typescript",
+		"typescriptreact",
+		"typescript.tsx",
+		"vue"
+	},
 	init_options = {
+		hostInfo = "neovim",
 		html = {
 			options = {
-				-- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
+				-- options: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
 				["bem.enabled"] = true,
 				["output.format"] = true,
 			},
@@ -175,6 +184,12 @@ lspconfig.tsserver.setup {
 }
 
 lspconfig.jsonls.setup {
+	on_attach = on_attach,
+	flags = lsp_flags,
+	capabilities = capabilities,
+}
+
+lspconfig.marksman.setup {
 	on_attach = on_attach,
 	flags = lsp_flags,
 	capabilities = capabilities,
