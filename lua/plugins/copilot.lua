@@ -6,4 +6,9 @@
 -- end
 vim.g.copilot_enabled = 1
 
-vim.g.copilot_filetypes = {markdown = true, json = true}
+vim.g.copilot_filetypes = {
+	markdown = true,
+	json = true,
+	yaml = true,
+	gicommit = true,
+}
