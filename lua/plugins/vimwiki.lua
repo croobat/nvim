@@ -1,5 +1,19 @@
-vim.cmd("let g:vimwiki_list = [{'path': '~/Documents/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]")
-vim.cmd("let g:vimwiki_key_mappings = { 'global': 0, }")
+-- use markdown
+vim.g.vimwiki_list = {
+  {
+	path = "~/Documents/vimwiki/",
+	syntax = "markdown",
+	ext = ".md",
+  },
+}
+
+-- disable global markdown (only g:vimwiki_list files count as vimwiki type)
+vim.g.vimwiki_global_ext = 0
+
+-- disable default mappings
+vim.g.vimwiki_key_mappings = { global = 0 }
+
+-- colors
 vim.cmd("hi VimwikiHeader2 guifg=#ffb86c gui=bold")
 vim.cmd("hi VimwikiHeader3 guifg=#ff79c6 gui=bold")
 vim.cmd("hi VimwikiHeader4 guifg=#50fa7b gui=bold")
