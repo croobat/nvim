@@ -57,7 +57,7 @@ keymap("n", "<A-enter>", "i<CR><esc>", opts)
 -- Word Wrap
 keymap("n", "<A-z>", ":set wrap!<CR>", opts)
 
---Quickfix
+--quickfix
 keymap("n", "<C-n>", ":cnext<CR>", opts)
 keymap("n", "<C-p>", ":cprevious<CR>", opts)
 keymap("n", "<C-q>", ":copen<CR>", opts)
@@ -85,6 +85,12 @@ keymap("v", ">", ">gv", opts)
 -- Move text up and down
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
+
+-- Delete without yanking (leader + d)
+keymap("v", "<leader>d", '"_d', opts)
+
+-- Replace selected text without yanking
+keymap("v", "p", '"_dP', opts)
 
 --## Visual Block ##
 -- Move text up and down
