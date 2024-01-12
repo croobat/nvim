@@ -64,7 +64,9 @@ return packer.startup(function(use) --}}}
 	use { "nvim-treesitter/nvim-treesitter", config = "require 'plugins.treesitter'", run = ":TSUpdate" }
 	-- use { "p00f/nvim-ts-rainbow" }
 	use { "romgrk/nvim-treesitter-context", config = "require 'plugins.treesitter-context'" }
-	use { "JoosepAlviste/nvim-ts-context-commentstring", event = "BufRead" }
+	use { "JoosepAlviste/nvim-ts-context-commentstring", config = "require 'plugins.treesitter-context-commentstring'",
+		event = "BufRead"
+	}
 	-- use { "windwp/nvim-ts-autotag", config = "require('nvim-ts-autotag').setup()" }
 	-- use { "windwp/nvim-autopairs", config = "require 'plugins.autopairs'" }
 	-- use { "nvim-treesitter/playground", event = "BufRead" }

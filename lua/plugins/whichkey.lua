@@ -235,7 +235,6 @@ local mappings = {
 		r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
 		S = { "<cmd>lua vim.diagnostic.config({signs=true})<cr>", "Enable signs" },
 		a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "CodeLens Action" },
-		c = { "<cmd>lua require('Comment').setup { pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook() }<cr>", "Jsx comments" },
 		d = { "<cmd>lua vim.lsp.buf.type_definition()<cr>", "List definitions" },
 		f = { "<cmd>lua vim.lsp.buf.format { async = true }<cr>", "Format" },
 		i = { "<cmd>lua vim.lsp.buf.implementation()<cr>", "List implementations" },
