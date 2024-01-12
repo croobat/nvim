@@ -36,6 +36,7 @@ local options = {
 	wrap           = false,          -- Start with text wrapped
 	scrolloff      = 8,              -- Min distance from top-down borders
 	sidescrolloff  = 0,              -- Min distance from left-right borders
+	colorcolumn    = "100",          -- Column to show color
 
 	-- Left column
 	number         = true,           -- Numbered lines
