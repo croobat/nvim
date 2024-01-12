@@ -33,6 +33,13 @@ autocmd("BufEnter", {
 	end
 })
 
+-- Search and replace word under cursor
+autocmd("BufEnter", {
+	callback = function()
+		vim.cmd("nnoremap <Leader>s :%s/\\<<C-r><C-w>\\>//g<Left><Left>")
+	end,
+})
+
 -- Auto close nvim-tree if only buffer
 -- autocmd("BufEnter", {
 -- 	nested = true,
@@ -104,6 +111,7 @@ autocmd("Filetype", {
 autocmd("Filetype", {
 	pattern = {
 		"vimwiki",
+		"markdown",
 	},
 	callback = function()
 		vim.opt_local.textwidth = 100
