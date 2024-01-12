@@ -13,6 +13,10 @@ require "core.autocommands"
 
 if not noplugin then
 	require "impatient"
+
+	-- require vimwiki constants before plugins
+	require "plugins.vimwiki"
+
 	require "plugins"
 	require "lsp"
 else
