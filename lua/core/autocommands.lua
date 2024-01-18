@@ -88,6 +88,7 @@ autocmd("Filetype", {
 		"json",
 		"sh",
 		"zsh",
+		"gitcommit",
 	},
 	callback = function()
 		vim.opt_local.tabstop = 2
@@ -123,6 +124,32 @@ autocmd("Filetype", {
 	pattern = { "csv, sql", "tmux", "crontab", "html" },
 	callback = function()
 		vim.opt_local.textwidth = 0
+	end,
+})
+
+-- color column 80
+autocmd("Filetype", {
+	pattern = { "gitcommit" },
+	callback = function()
+		vim.opt_local.colorcolumn = "72"
+	end,
+})
+
+-- color column 120
+autocmd("Filetype", {
+	pattern = {
+		"html",
+		"css",
+		"scss",
+		"javascript",
+		"typescript",
+		"vue",
+		"json",
+		"javascriptreact",
+		"typescriptreact",
+	},
+	callback = function()
+		vim.opt_local.colorcolumn = "120"
 	end,
 })
 

@@ -1,6 +1,9 @@
 -- Setup {{{
 local fn = vim.fn
 
+-- Declare packer_bootstrap at the beginning
+local packer_bootstrap
+
 -- Automatically install packer
 local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -87,9 +90,9 @@ return packer.startup(function(use) --}}}
 	use { "neovim/nvim-lspconfig" }
 	use { "williamboman/mason-lspconfig.nvim" }
 	use { "tamago324/nlsp-settings.nvim" }
-	-- use { "jose-elias-alvarez/null-ls.nvim", config = "require 'plugins.null-ls'" }
+	use { "jose-elias-alvarez/null-ls.nvim", config = "require 'plugins.null-ls'" }
 	use { "williamboman/mason.nvim", config = "require 'plugins.mason'" }
-	-- use { 'MunifTanjim/prettier.nvim' }
+	use { 'MunifTanjim/prettier.nvim' }
 	-- use { 'MunifTanjim/eslint.nvim' }
 
 	-- Comments
