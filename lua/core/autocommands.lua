@@ -244,9 +244,9 @@ autocmd("BufWritePost", {
 })
 
 -- Auto export png when saving mermaid
--- autocmd("BufWritePost", {
---     pattern = "*.mmd",
---     callback = function()
---         vim.cmd([[silent! !mmdc -i % -o %:r.png --theme forest -s 2]])
---     end,
--- })
+autocmd("BufWritePost", {
+    pattern = "*.mmd",
+    callback = function()
+        vim.cmd([[silent! !mmdc -i % -o %:r.png --theme forest -s 2]])
+    end,
+})
