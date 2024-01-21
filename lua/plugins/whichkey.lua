@@ -97,8 +97,7 @@ local mappings = {
 	-- c = comment box
 	["d"] = { '"_d', "Delete withouth yanking" },
 	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-	["f"] = { "<cmd>lua vim.lsp.buf.format { async = true }<cr>", "LSP format" },
-	["F"] = { "<cmd>%s/\\s\\+$//e<cr>", "Trailing spaces" },
+	-- f = format
 	-- g = git
 	-- l = lsp
 	["p"] = { "<cmd>Prettier<cr>", "Prettier" },
@@ -214,6 +213,13 @@ local mappings = {
 		h = { "<cmd>lua require('comment-box').albox(3)<cr>", "Heavy" },
 		L = { "<cmd>lua require('comment-box').cline(1)<cr>", "Simple line" },
 		t = { "<cmd>lua require('comment-box').accbox(7)<cr>", "Title" },
+	},
+	f = {
+		name = "Format",
+		e = { "<cmd>EslintFixAll<cr>", "eslint format" },
+		f = { "<cmd>lua vim.lsp.buf.format { async = true }<cr>", "LSP format" },
+		p = { "<cmd>Prettier<cr>", "Prettier format" },
+		s = { "<cmd>%s/\\s\\+$//e<cr>", "Trailing spaces" },
 	},
 	g = {
 		name = "Git",

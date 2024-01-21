@@ -194,3 +194,27 @@ lspconfig.marksman.setup {
 	flags = lsp_flags,
 	capabilities = capabilities,
 }
+
+lspconfig.eslint.setup {
+	on_attach = on_attach,
+	flags = lsp_flags,
+	capabilities = capabilities,
+	settings = {
+		codeAction = {
+			disableRuleComment = {
+				enable = true,
+				location = "separateLine",
+			},
+			showDocumentation = {
+				enable = true,
+			},
+		},
+	},
+}
+
+lspconfig.clangd.setup {
+	on_attach = on_attach,
+	flags = lsp_flags,
+	capabilities = capabilities,
+	cmd = { "clangd", "--offset-encoding=utf-16" },
+}

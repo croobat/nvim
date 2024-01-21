@@ -3,7 +3,7 @@ local null_ls = require("null-ls")
 local prettier = require("prettier")
 
 local group = vim.api.nvim_create_augroup("lsp_format_on_save", { clear = false })
-local event = "BufWritePre" -- or "BufWritePost"
+local event = "BufWritePre" -- "BufWritePost"|"BufReadPre"|"BufReadPost"
 local async = event == "BufWritePost"
 
 -- null-ls setup
@@ -34,29 +34,8 @@ null_ls.setup({
 	end,
 })
 
--- eslint.setup({
--- 	bin = 'eslint', -- or `eslint_d`
--- 	code_actions = {
--- 		enable = true,
--- 		apply_on_save = {
--- 			enable = true,
--- 			types = { "directive", "problem", "suggestion", "layout" },
--- 		},
--- 		disable_rule_comment = {
--- 			enable = true,
--- 			location = "separate_line", -- or `same_line`
--- 		},
--- 	},
--- 	diagnostics = {
--- 		enable = true,
--- 		report_unused_disable_directives = false,
--- 		run_on = "type", -- or `save`
--- 	},
--- })
-
--- prettier setup
 prettier.setup({
-	bin = 'prettierd',
+	bin = 'prettierd', -- `prettier'`|`prettierd`
 	filetypes = {
 		"css",
 		"graphql",
