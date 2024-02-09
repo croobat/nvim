@@ -237,8 +237,8 @@ autocmd("CursorHold", {
 })
 
 -- Auto Tabularize bookmarks file
-autocmd("BufWritePost", {
-	pattern = "/home/tony/.bmks/urls",
+autocmd("BufWritePre", {
+	pattern = "/home/tony/.bmks/*",
 	callback = function()
 		vim.cmd([[silent! Tabularize / - ]])
 	end,
