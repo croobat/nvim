@@ -88,11 +88,12 @@ local default_servers = {
 	"intelephense",
 	"html",
 	"emmet_ls",
-	"cssls",
 	"bashls",
 	"jqls",
 	"sqlls",
-	"volar"
+	"volar",
+	"jsonls",
+	"marksman",
 }
 
 for _, server in ipairs(default_servers) do
@@ -183,18 +184,6 @@ lspconfig.tsserver.setup {
 	}
 }
 
-lspconfig.jsonls.setup {
-	on_attach = on_attach,
-	flags = lsp_flags,
-	capabilities = capabilities,
-}
-
-lspconfig.marksman.setup {
-	on_attach = on_attach,
-	flags = lsp_flags,
-	capabilities = capabilities,
-}
-
 lspconfig.eslint.setup {
 	on_attach = on_attach,
 	flags = lsp_flags,
@@ -217,4 +206,18 @@ lspconfig.clangd.setup {
 	flags = lsp_flags,
 	capabilities = capabilities,
 	cmd = { "clangd", "--offset-encoding=utf-16" },
+}
+
+lspconfig.cssls.setup {
+	on_attach = on_attach,
+	flags = lsp_flags,
+	capabilities = capabilities,
+	settings = {
+		css = {
+			validate = true,
+			lint = {
+				unknownAtRules = "ignore",
+			},
+		},
+	}
 }

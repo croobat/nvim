@@ -147,6 +147,7 @@ autocmd("Filetype", {
 		"json",
 		"javascriptreact",
 		"typescriptreact",
+		"lua",
 	},
 	callback = function()
 		vim.opt_local.colorcolumn = "120"
@@ -245,8 +246,8 @@ autocmd("BufWritePost", {
 
 -- Auto export png when saving mermaid
 autocmd("BufWritePost", {
-    pattern = "*.mmd",
-    callback = function()
-        vim.cmd([[silent! !mmdc -i % -o %:r.png --theme forest -s 2]])
-    end,
+	pattern = "*.mmd",
+	callback = function()
+		vim.cmd([[silent! !mmdc -i % -o %:r.png --theme forest -s 2]])
+	end,
 })

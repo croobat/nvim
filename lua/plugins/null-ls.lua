@@ -80,7 +80,7 @@ prettier.setup({
 		single_quote = true,
 		-- tab_width = 2,
 		trailing_comma = "es5",
-		use_tabs = true,
+		-- use_tabs = true,
 		-- vue_indent_script_and_style = false,
 		-- config_precendence = "prefer-file",
 	},
