@@ -146,13 +146,32 @@ lspconfig.lua_ls.setup {
 	capabilities = capabilities,
 	settings = {
 		Lua = {
-			diagnostics = {
-				globals = { "vim" },
+			-- https://luals.github.io/wiki/settings
+			runtime = {
+				version = 'Lua 5.3',
+			},
+			path = {
+				'?.lua',
+				'?/init.lua',
+				vim.fn.expand '~/.luarocks/share/lua/5.3/?.lua',
+				vim.fn.expand '~/.luarocks/share/lua/5.3/?/init.lua',
+				'/usr/share/5.3/?.lua',
+				'/usr/share/lua/5.3/?/init.lua'
 			},
 			workspace = {
 				library = {
+					vim.fn.expand '~/.luarocks/share/lua/5.3',
+					'/usr/share/lua/5.3',
 					[vim.fn.expand("$VIMRUNTIME/lua")] = true,
 					[vim.fn.stdpath("config") .. "/lua"] = true,
+				},
+			},
+			diagnostics = {
+				globals = { "vim", "awesome", "client", "root", "screen", "tag", "mouse", "root", "screen", "tag", "mouse" },
+			},
+			completion = {
+				telemetry = {
+					enable = false,
 				},
 			},
 		},
