@@ -28,6 +28,10 @@
       {
         "language": "javascriptreact",
         "path": "./react.json"
+      },
+      {
+        "language": "lua",
+        "path": "./lua.json"
       }
     ]
   }
