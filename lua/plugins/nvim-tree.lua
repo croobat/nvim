@@ -1,6 +1,5 @@
 local nvim_tree = require("nvim-tree")
 local nvim_web_devicons = require("nvim-web-devicons")
-local nvim_tree_config = require("nvim-tree.config")
 
 nvim_tree.setup({
 	hijack_cursor = true,
@@ -9,14 +8,13 @@ nvim_tree.setup({
 		adaptive_size = true,
 		mappings = {
 			list = {
-				{ key = {
-					"l",
-					"<CR>",
-					"o"
-					},           action = "edit" },
-				{ key = "h",     action = "close_node" },
-				{ key = "u",     action = "dir_up" },
-				{ key = "v",     action = "vsplit" },
+				{
+					key = { "l", "<CR>", "o" },
+					action = "edit"
+				},
+				{ key = "h", action = "close_node" },
+				{ key = "u", action = "dir_up" },
+				{ key = "v", action = "vsplit" },
 			},
 		},
 	},
@@ -75,6 +73,3 @@ nvim_web_devicons.setup {
 	},
 	default = true,
 }
-
-
-vim.api.nvim_set_keymap("n", "<leader>e", ":NvimTreeToggle<cr>", { noremap = true, silent = true })
