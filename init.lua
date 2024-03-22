@@ -1,3 +1,7 @@
+require "core.options"
+require "core.keymaps"
+require "core.autocommands"
+
 -- Check if loaded without plugins 'noplugin'
 local noplugin = false
 for _, arg in ipairs(vim.v.argv) do
@@ -7,12 +11,8 @@ for _, arg in ipairs(vim.v.argv) do
 	end
 end
 
-require "core.options"
-require "core.keymaps"
-require "core.autocommands"
-
 if not noplugin then
-	require "impatient"
+	pcall(require, "impatient")
 
 	-- require vimwiki constants before plugins
 	require "plugins.vimwiki"
@@ -20,5 +20,6 @@ if not noplugin then
 	require "plugins"
 	require "lsp"
 else
+	-- if no plugins only load colorscheme
 	vim.cmd("colorscheme tokyonight-night")
 end

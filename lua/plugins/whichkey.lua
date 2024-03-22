@@ -263,13 +263,13 @@ local mappings = {
 		h = { "<cmd>Telescope oldfiles<cr>", "History files" },
 		k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
 		m = { "<cmd>Telescope marks<cr>", "Mark" },
-		p = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 		q = { "<cmd>Telescope quickfix<cr>", "LSP quickfix" },
 		r = { "<cmd>Telescope lsp_references<cr>", "LSP reference" },
 		t = { "<cmd>Telescope resume<cr>", "Resume search" },
 		["="] = { "<cmd>Tabularize /=<cr>", "Tabularize =" },
 		["-"] = { "<cmd>Tabularize /--<cr>", "Tabularize --" },
 		[":"] = { "<cmd>Tabularize /:<cr>", "Tabularize :" },
+		["/"] = { "<cmd>Telescope grep_string<cr>", "Cursor text" },
 	},
 }
 
