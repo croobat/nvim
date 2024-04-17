@@ -130,7 +130,8 @@ local plugins = {
 	{ "folke/which-key.nvim", init = function() require "plugins.whichkey" end },
 	{
 		"vimwiki/vimwiki",
-		ft = { "vimwiki", "markdown" }
+		ft = { "vimwiki", "markdown" },
+		lazy = false,
 	},
 	{
 		"folke/todo-comments.nvim",
