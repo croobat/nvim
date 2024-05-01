@@ -92,3 +92,5 @@ vim.cmd("set formatoptions-=c formatoptions-=r formatoptions-=o")
 
 -- New word delimitators
 -- vim.cmd("set iskeyword+=^-,^_")
+
+vim.g.loaded_ruby_provider = 0

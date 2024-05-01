@@ -1,5 +1,7 @@
 local configs = require("nvim-treesitter.configs")
 
+vim.g.loaded_tree_sitter = 1
+
 configs.setup {
 	autopairs = {
 		enable = true,

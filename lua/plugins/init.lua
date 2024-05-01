@@ -26,11 +26,15 @@ local plugins = {
 	},
 
 	-- Colorscheme
-	{ "folke/tokyonight.nvim",       init = function() require "plugins.tokyonight" end },
+	{ "folke/tokyonight.nvim", init = function() require "plugins.tokyonight" end },
 
 	-- Completion
-	{ "hrsh7th/nvim-cmp",            init = function() require "plugins.cmp" end },
-	{ "L3MON4D3/LuaSnip",            init = function() require "plugins.luasnip" end },
+	{ "hrsh7th/nvim-cmp",      init = function() require "plugins.cmp" end },
+	{
+		"L3MON4D3/LuaSnip",
+		init = function() require "plugins.luasnip" end,
+		build = "make install_jsregexp"
+	},
 	{ "hrsh7th/cmp-buffer" },
 	{ "hrsh7th/cmp-path" },
 	{ "hrsh7th/cmp-nvim-lsp" },
@@ -43,7 +47,7 @@ local plugins = {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		init = function() require "plugins.treesitter" end,
-		run = ":TSUpdate"
+		build = ":TSUpdate"
 	},
 	{ "romgrk/nvim-treesitter-context",           init = function() require "plugins.treesitter-context" end },
 	{
@@ -136,7 +140,7 @@ local plugins = {
 	{
 		"folke/todo-comments.nvim",
 		init = function() require("todo-comments").setup() end,
-		requires = "nvim-lua/plenary.nvim"
+		dependencies = "nvim-lua/plenary.nvim"
 	},
 	{ "sotte/presenting.vim" },
 }
