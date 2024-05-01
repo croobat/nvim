@@ -21,5 +21,5 @@ if not noplugin then
 	require "lsp"
 else
 	-- if no plugins only load colorscheme
-	vim.cmd("colorscheme tokyonight-night")
+	vim.cmd("colorscheme desert")
 end

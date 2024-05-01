@@ -1,3 +1,6 @@
+-- disable global markdown (only g:vimwiki_list files count as vimwiki type)
+vim.g.vimwiki_global_ext = 0
+
 -- use markdown
 vim.g.vimwiki_list = {
   {
@@ -6,9 +9,6 @@ vim.g.vimwiki_list = {
 	ext = ".md",
   },
 }
-
--- disable global markdown (only g:vimwiki_list files count as vimwiki type)
-vim.g.vimwiki_global_ext = 0
 
 -- disable default mappings
 vim.g.vimwiki_key_mappings = { global = 0 }
