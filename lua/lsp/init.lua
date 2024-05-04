@@ -78,6 +78,11 @@ local lsp_flags = {
 	debounce_text_changes = 150,
 }
 
+-- vue server path
+local mason_registry = require('mason-registry')
+local vue_language_server_path = mason_registry.get_package('vue-language-server'):get_install_path() ..
+	'/node_modules/@vue/language-server'
+
 -- CPM support
 local def_capabilities = vim.lsp.protocol.make_client_capabilities()
 local capabilities = require('cmp_nvim_lsp').default_capabilities(def_capabilities)
@@ -198,6 +203,13 @@ lspconfig.tsserver.setup {
 				-- options: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
 				["bem.enabled"] = true,
 				["output.format"] = true,
+			},
+		},
+		plugins = {
+			{
+				name = '@vue/typescript-plugin',
+				location = vue_language_server_path,
+				languages = { 'vue' },
 			},
 		},
 	}
