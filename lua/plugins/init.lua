@@ -33,7 +33,8 @@ local plugins = {
 	{
 		"L3MON4D3/LuaSnip",
 		init = function() require "plugins.luasnip" end,
-		build = "make install_jsregexp"
+		build = "make install_jsregexp",
+		dependencies = { "rafamadriz/friendly-snippets" }
 	},
 	{ "hrsh7th/cmp-buffer" },
 	{ "hrsh7th/cmp-path" },

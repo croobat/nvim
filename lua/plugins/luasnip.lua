@@ -27,6 +27,7 @@ luasnip.config.set_config {
 -- Lazy load VSlike (friendly snippets)
 require("luasnip.loaders.from_vscode").lazy_load()
 require("luasnip.loaders.from_vscode").lazy_load({ paths = { "~/.config/nvim/snippets" } })
+
 require'luasnip'.filetype_extend("javascript", {"javascriptreact", "typescript", "typescriptreact", "jsdoc", "tsdoc"})
 require'luasnip'.filetype_extend("javascriptreact ", {"javascript", "typescript", "typescriptreact", "jsdoc", "tsdoc"})
 require'luasnip'.filetype_extend("typescript", {"javascript", "javascriptreact", "typescriptreact", "jsdoc", "tsdoc"})

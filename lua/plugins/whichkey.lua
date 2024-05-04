@@ -75,7 +75,6 @@ local mappings = {
 	["<leader>"] = { "i <esc>l", "Insert space" },
 	-- D = debug
 	-- L = latex
-	-- P = python
 	["Q"] = { "<cmd>:Bdeleteexcept<cr><cmd>NvimTreeToggle<cr><cmd>NvimTreeToggle<cr>", "Close Other Buffers" },
 	-- a = auto-options
 	-- c = comment box
