@@ -32,6 +32,10 @@
       {
         "language": "lua",
         "path": "./lua.json"
+      },
+      {
+        "language": "gitcommit",
+        "path": "./gitcommit.json"
       }
     ]
   }
