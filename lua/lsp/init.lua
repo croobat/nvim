@@ -99,6 +99,7 @@ local default_servers = {
 	"volar",
 	"jsonls",
 	"marksman",
+	"tailwindcss",
 }
 
 for _, server in ipairs(default_servers) do
