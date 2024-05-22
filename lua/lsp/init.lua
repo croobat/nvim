@@ -167,8 +167,8 @@ lspconfig.lua_ls.setup {
 				library = {
 					vim.fn.expand '~/.luarocks/share/lua/5.3',
 					'/usr/share/lua/5.3',
-					[vim.fn.expand("$VIMRUNTIME/lua")] = true,
-					[vim.fn.stdpath("config") .. "/lua"] = true,
+					vim.fn.expand("$VIMRUNTIME/lua"),
+					vim.fn.stdpath("config") .. "/lua",
 				},
 			},
 			diagnostics = {
