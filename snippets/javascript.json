@@ -14,5 +14,9 @@
   "tonyc": {
     "prefix": "tonyc",
     "body": "{/* TONY ELIMINAR */}"
+  },
+  "const module = require('module')": {
+    "prefix": "cr",
+    "body": "const ${1:module} = require('${2:module}')"
   }
 }
