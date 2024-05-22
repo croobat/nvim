@@ -131,7 +131,7 @@ autocmd("Filetype", {
 autocmd("Filetype", {
 	pattern = { "gitcommit" },
 	callback = function()
-		vim.opt_local.colorcolumn = "72"
+		vim.opt_local.colorcolumn = "70"
 	end,
 })
 
