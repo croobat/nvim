@@ -143,7 +143,6 @@ autocmd("Filetype", {
 		"scss",
 		"javascript",
 		"typescript",
-		"vue",
 		"json",
 		"javascriptreact",
 		"typescriptreact",
@@ -151,6 +150,14 @@ autocmd("Filetype", {
 	},
 	callback = function()
 		vim.opt_local.colorcolumn = "120"
+	end,
+})
+
+-- color column 100,120
+autocmd("Filetype", {
+	pattern = { "vue" },
+	callback = function()
+		vim.opt_local.colorcolumn = "100,120"
 	end,
 })
 
