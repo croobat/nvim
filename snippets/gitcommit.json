@@ -13,7 +13,7 @@
     },
     "deploy saeko commit": {
         "prefix": "sdeploy",
-        "body": ["deploy: 🚀 version bump ${1:version} (${2:number})", "", "$0"]
+        "body": ["deploy: 🚀 ${1:type} bump ${2:version} (${3:number})", "", "$0"]
     },
     "chore saeko commit": {
         "prefix": "schore",
