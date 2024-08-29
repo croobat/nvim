@@ -1,0 +1,636 @@
+a lot of damn changes
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is ahead of 'origin/main' by 1 commit.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#	modified:   lazy-lock.json
+#	modified:   lazyvim.json
+#	modified:   lua/config/keymaps.lua
+#	new file:   lua/plugins/mini-pairs.lua
+#	deleted:    lua/plugins/notify.lua
+#	new file:   lua/plugins/nvim-notify.lua
+#	modified:   lua/plugins/which-key.lua
+#	modified:   snippets/gitcommit.json
+#	new file:   spell/en.utf-8.add
+#	new file:   spell/en.utf-8.add.spl
+#	new file:   spell/es.utf-8.spl
+#	new file:   spell/es.utf-8.sug
+#
+# ------------------------ >8 ------------------------
+# Do not modify or remove the line above.
+# Everything below it will be ignored.
+diff --git a/lazy-lock.json b/lazy-lock.json
+index 74b54be..164ff76 100644
+--- a/lazy-lock.json
++++ b/lazy-lock.json
+@@ -1,90 +1,90 @@
+ {
+-  "CopilotChat.nvim": { "branch": "canary", "commit": "82923efe22b604cf9c0cad0bb2a74aa9247755ab" },
+-  "LazyVim": { "branch": "main", "commit": "2a7ba6d09ce85fa752c25e68ca5287e24b8cee75" },
+-  "LuaSnip": { "branch": "master", "commit": "50fcf17db7c75af80e6b6109acfbfb4504768780" },
+-  "SchemaStore.nvim": { "branch": "main", "commit": "93ccaf12b9fb6df87d13da2782d83b34a3cbb893" },
+-  "aerial.nvim": { "branch": "master", "commit": "a1c5476732686da2a51218f47580f0dc1a3b8aa9" },
+-  "bufferline.nvim": { "branch": "main", "commit": "81820cac7c85e51e4cf179f8a66d13dbf7b032d9" },
+-  "catppuccin": { "branch": "main", "commit": "894efb557728e532aa98b98029d16907a214ec05" },
+-  "clangd_extensions.nvim": { "branch": "main", "commit": "a8500531c4ed3a207e744a374ea038744a0f93eb" },
++  "CopilotChat.nvim": { "branch": "canary", "commit": "43d033b68c8bede4cc87092c7db6bb3bbb2fe145" },
++  "LazyVim": { "branch": "main", "commit": "12818a6cb499456f4903c5d8e68af43753ebc869" },
++  "LuaSnip": { "branch": "master", "commit": "45db5addf8d0a201e1cf247cae4cdce605ad3768" },
++  "SchemaStore.nvim": { "branch": "main", "commit": "6d3ba6ad250538446b2727e352e15a425d6692ef" },
++  "aerial.nvim": { "branch": "master", "commit": "92f93f4e155b2135fc47ed2daf8b63f40726b545" },
++  "bufferline.nvim": { "branch": "main", "commit": "0b2fd861eee7595015b6561dade52fb060be10c4" },
++  "catppuccin": { "branch": "main", "commit": "4fd72a9ab64b393c2c22b168508fd244877fec96" },
++  "clangd_extensions.nvim": { "branch": "main", "commit": "385a44f133f4145e3a3da1a2a557225dccc3e1f8" },
+   "cmake-tools.nvim": { "branch": "master", "commit": "4be3c229fe932043fd83ad52fdf0ba9af7297789" },
+   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
+   "cmp-emoji": { "branch": "main", "commit": "e8398e2adf512a03bb4e1728ca017ffeac670a9f" },
+-  "cmp-git": { "branch": "main", "commit": "8dfbc33fb32c33e5c0be9dcc8176a4f4d395f95e" },
++  "cmp-git": { "branch": "main", "commit": "50d526dff0f6bc441b51fc269d9fdc99a50c76af" },
+   "cmp-nvim-lsp": { "branch": "main", "commit": "39e2eda76828d88b773cc27a3f61d2ad782c922d" },
+   "cmp-path": { "branch": "main", "commit": "91ff86cd9c29299a64f968ebb45846c485725f23" },
+   "cmp_luasnip": { "branch": "master", "commit": "05a9ab28b53f71d1aece421ef32fee2cb857a843" },
+-  "conform.nvim": { "branch": "master", "commit": "c26dadf8a47a547768d1048a0d698ecec33494ce" },
++  "conform.nvim": { "branch": "master", "commit": "62eba813b7501b39612146cbf29cd07f1d4ac29c" },
+   "copilot-cmp": { "branch": "master", "commit": "b6e5286b3d74b04256d0a7e3bd2908eabec34b44" },
+   "copilot.lua": { "branch": "master", "commit": "86537b286f18783f8b67bccd78a4ef4345679625" },
+-  "crates.nvim": { "branch": "main", "commit": "eecd13449945ee2c064e00c618dfec9b2d856ea3" },
+-  "dashboard-nvim": { "branch": "master", "commit": "69a4c935cc43d3d725ed0600c6d00593bc23d132" },
+-  "dial.nvim": { "branch": "master", "commit": "750f802879c90ea51f92b68c35fa562ee575804a" },
+-  "flash.nvim": { "branch": "main", "commit": "43f67935d388fbb540f8b40e8cbfd80de54f978a" },
+-  "friendly-snippets": { "branch": "main", "commit": "682157939e57bd6a2c86277dfd4d6fbfce63dbac" },
+-  "fzf-lua": { "branch": "main", "commit": "98f315bfe61bca7ecb8e721b5c733dd2d23ee0cb" },
+-  "gitsigns.nvim": { "branch": "main", "commit": "fa42613096ebfa5fee1ea87d70f8625ab9685d01" },
+-  "guess-indent.nvim": { "branch": "main", "commit": "6c75506e71836f34fe5c5efa322dfce3e0494e7b" },
+-  "headlines.nvim": { "branch": "master", "commit": "618ef1b2502c565c82254ef7d5b04402194d9ce3" },
+-  "inc-rename.nvim": { "branch": "main", "commit": "535b508c0cb14d00c1836ad901b3c531cb1152bb" },
+-  "indent-blankline.nvim": { "branch": "master", "commit": "4036c8ae9cc29faf8e6443fa5b23e679db055d24" },
+-  "lazy.nvim": { "branch": "main", "commit": "2ca68f9979dca1a9911b0f7397550a06854ebb27" },
+-  "lazydev.nvim": { "branch": "main", "commit": "6184ebbbc8045d70077659b7d30c705a588dc62f" },
+-  "lualine.nvim": { "branch": "master", "commit": "0a5a66803c7407767b799067986b4dc3036e1983" },
++  "crates.nvim": { "branch": "main", "commit": "891063a2dc8471501b9742406a514be62a20c138" },
++  "dashboard-nvim": { "branch": "master", "commit": "fabf5feec96185817c732d47d363f34034212685" },
++  "dial.nvim": { "branch": "master", "commit": "ed4d6a5bbd5e479b4c4a3019d148561a2e6c1490" },
++  "dressing.nvim": { "branch": "master", "commit": "c5775a888adbc50652cb370073fcfec963eca93e" },
++  "flash.nvim": { "branch": "main", "commit": "34c7be146a91fec3555c33fe89c7d643f6ef5cf1" },
++  "friendly-snippets": { "branch": "main", "commit": "00ebcaa159e817150bd83bfe2d51fa3b3377d5c4" },
++  "fzf-lua": { "branch": "main", "commit": "1572a89acf8c468a230f0f5ee7092a15496213ee" },
++  "gitsigns.nvim": { "branch": "main", "commit": "899e993850084ea33d001ec229d237bc020c19ae" },
++  "grug-far.nvim": { "branch": "main", "commit": "e12bedbc0f216aebab8ca4b520760b96ba524022" },
++  "guess-indent.nvim": { "branch": "main", "commit": "6cd61f7a600bb756e558627cd2e740302c58e32d" },
++  "inc-rename.nvim": { "branch": "main", "commit": "8ba77017ca468f3029bf88ef409c2d20476ea66b" },
++  "indent-blankline.nvim": { "branch": "master", "commit": "db926997af951da38e5004ec7b9fbdc480b48f5d" },
++  "lazy.nvim": { "branch": "main", "commit": "077102c5bfc578693f12377846d427f49bc50076" },
++  "lazydev.nvim": { "branch": "main", "commit": "491452cf1ca6f029e90ad0d0368848fac717c6d2" },
++  "lualine.nvim": { "branch": "master", "commit": "b431d228b7bbcdaea818bdc3e25b8cdbe861f056" },
+   "luvit-meta": { "branch": "main", "commit": "ce76f6f6cdc9201523a5875a4471dcfe0186eb60" },
+   "markdown-preview.nvim": { "branch": "master", "commit": "a923f5fc5ba36a3b17e289dc35dc17f66d0548ee" },
+-  "mason-lspconfig.nvim": { "branch": "main", "commit": "37a336b653f8594df75c827ed589f1c91d91ff6c" },
+-  "mason-nvim-dap.nvim": { "branch": "main", "commit": "f5425eb1d0d794f0305d5eeebddabb74614683ff" },
+-  "mason.nvim": { "branch": "main", "commit": "0950b15060067f752fde13a779a994f59516ce3d" },
+-  "mini.ai": { "branch": "main", "commit": "ebf806de0292ef89b2756cfb0b55040901d1c441" },
+-  "mini.comment": { "branch": "main", "commit": "b8bd7ea58912bd6fa6cf984f2f702a771ce24c1f" },
+-  "mini.hipatterns": { "branch": "main", "commit": "5d28a7e3f399de64c4dbf71f8c6c3b633d986f15" },
+-  "mini.pairs": { "branch": "main", "commit": "18a2d9d7106d08d3560d07c03dcbf5680c8675cc" },
+-  "mini.surround": { "branch": "main", "commit": "af280fc18792b4d142aab4c1638a8949a38ff33a" },
+-  "neo-tree.nvim": { "branch": "v3.x", "commit": "29f7c215332ba95e470811c380ddbce2cebe2af4" },
+-  "neotest": { "branch": "master", "commit": "26ed90509c377d10dbdebd25b7094a886323b32b" },
+-  "neotest-python": { "branch": "master", "commit": "2e83d2bc00acbcc1fd529dbf0a0e677cabfe6b50" },
+-  "neotest-rspec": { "branch": "main", "commit": "48573d5882cbe8d8bcd3b735d9ee7705168b1b87" },
+-  "noice.nvim": { "branch": "main", "commit": "cade1f972ba226e7753a7a113f3f1a942908e73c" },
+-  "nui.nvim": { "branch": "main", "commit": "a2bc1e9d0359caa5d11ad967cd1e30e8d4676226" },
+-  "nvim-ansible": { "branch": "main", "commit": "cb5d0cc79c1864b72d5ae40a926a1176b18f1b65" },
+-  "nvim-cmp": { "branch": "main", "commit": "a110e12d0b58eefcf5b771f533fc2cf3050680ac" },
+-  "nvim-dap": { "branch": "master", "commit": "6f79b822997f2e8a789c6034e147d42bc6706770" },
+-  "nvim-dap-python": { "branch": "master", "commit": "ae0225d0d4a46e18e6057ab3701ef87bbbd6aaad" },
+-  "nvim-dap-ruby": { "branch": "main", "commit": "4176405d186a93ebec38a6344df124b1689cfcfd" },
+-  "nvim-dap-ui": { "branch": "master", "commit": "b7267003ba4dd860350be86f75b9d9ea287cedca" },
+-  "nvim-dap-virtual-text": { "branch": "master", "commit": "d7c695ea39542f6da94ee4d66176f5d660ab0a77" },
+-  "nvim-lint": { "branch": "master", "commit": "941fa1220a61797a51f3af9ec6b7d74c8c7367ce" },
+-  "nvim-lspconfig": { "branch": "master", "commit": "9c9eb07fecc578e25e28db8dc9002b43fff2ed79" },
+-  "nvim-nio": { "branch": "master", "commit": "7969e0a8ffabdf210edd7978ec954a47a737bbcc" },
++  "markdown.nvim": { "branch": "main", "commit": "8c67dbc267549d2e3b3d721c656b644660a77d3f" },
++  "mason-lspconfig.nvim": { "branch": "main", "commit": "482350b050bd413931c2cdd4857443c3da7d57cb" },
++  "mason-nvim-dap.nvim": { "branch": "main", "commit": "8b9363d83b5d779813cdd2819b8308651cec2a09" },
++  "mason.nvim": { "branch": "main", "commit": "e2f7f9044ec30067bc11800a9e266664b88cda22" },
++  "mini.ai": { "branch": "main", "commit": "a9b992b13d22a8db8df6beac25afa59a10b5584d" },
++  "mini.comment": { "branch": "main", "commit": "03c13e37318bdb18481311c0ac1adc9ed731caf1" },
++  "mini.hipatterns": { "branch": "main", "commit": "1811b0661721285fc83494d2e687d538fb3ddac8" },
++  "mini.icons": { "branch": "main", "commit": "12e7b5d47bfc1b4c5ba4278fb49ec9100138df14" },
++  "mini.pairs": { "branch": "main", "commit": "927d19cbdd0e752ab1c7eed87072e71d2cd6ff51" },
++  "mini.surround": { "branch": "main", "commit": "d8913ed23be0a1a4585ae34414821cc343a46174" },
++  "neo-tree.nvim": { "branch": "main", "commit": "206241e451c12f78969ff5ae53af45616ffc9b72" },
++  "neotest": { "branch": "master", "commit": "6d6ad113f56edc7c3f2a77a0836ea8c1b955ebea" },
++  "neotest-python": { "branch": "master", "commit": "72603dfdbaad5695160268cb10531a14cc37236e" },
++  "noice.nvim": { "branch": "main", "commit": "448bb9c524a7601035449210838e374a30153172" },
++  "nui.nvim": { "branch": "main", "commit": "61574ce6e60c815b0a0c4b5655b8486ba58089a1" },
++  "nvim-ansible": { "branch": "main", "commit": "7b1b994e4267b4c99045ef2798f7c12f326c2247" },
++  "nvim-cmp": { "branch": "main", "commit": "ae644feb7b67bf1ce4260c231d1d4300b19c6f30" },
++  "nvim-dap": { "branch": "master", "commit": "281a2e4cd1e7a17cea7ecb1745d84a8ab1249925" },
++  "nvim-dap-python": { "branch": "master", "commit": "7c427e2bbc72d46ea3c9602bede6465ef61b8c19" },
++  "nvim-dap-ui": { "branch": "master", "commit": "1c351e4e417d4691da12948b6ecf966936a56d28" },
++  "nvim-dap-virtual-text": { "branch": "master", "commit": "484995d573c0f0563f6a66ebdd6c67b649489615" },
++  "nvim-lint": { "branch": "master", "commit": "debabca63c0905b59ce596a55a8e33eafdf66342" },
++  "nvim-lspconfig": { "branch": "master", "commit": "6bfd9210e312af6cfedba05d272e85618c93ab0d" },
++  "nvim-nio": { "branch": "master", "commit": "a428f309119086dc78dd4b19306d2d67be884eee" },
+   "nvim-notify": { "branch": "master", "commit": "d333b6f167900f6d9d42a59005d82919830626bf" },
+-  "nvim-spectre": { "branch": "master", "commit": "49fae98ef2bfa8342522b337892992e3495065d5" },
+-  "nvim-treesitter": { "branch": "master", "commit": "09700b88b41ed96391de3d2010d74dc54fd5c210" },
+-  "nvim-treesitter-context": { "branch": "master", "commit": "5efba33af0f39942e426340da7bc15d7dec16474" },
+-  "nvim-treesitter-textobjects": { "branch": "master", "commit": "34867c69838078df7d6919b130c0541c0b400c47" },
+-  "nvim-ts-autotag": { "branch": "main", "commit": "ddfccbf0df1b9349c2b9e9b17f4afa8f9b6c1ed1" },
+-  "nvim-ts-context-commentstring": { "branch": "main", "commit": "cb064386e667def1d241317deed9fd1b38f0dc2e" },
+-  "nvim-web-devicons": { "branch": "master", "commit": "c0cfc1738361b5da1cd0a962dd6f774cc444f856" },
+-  "one-small-step-for-vimkind": { "branch": "main", "commit": "e92abbce0b9b77fed1aaf6f122fb18b7045b15ec" },
+-  "outline.nvim": { "branch": "main", "commit": "028e0bc8ad3d511e9fc1f0678594a608eb908ee5" },
+-  "persistence.nvim": { "branch": "main", "commit": "95d03ad5450389ad7dc2a0fab14ebb3d46bc2c96" },
+-  "plenary.nvim": { "branch": "master", "commit": "a3e3bc82a3f95c5ed0d7201546d5d2c19b20d683" },
+-  "rustaceanvim": { "branch": "master", "commit": "d6d7620b66d74b3b16defcf85cbef7b3582795b3" },
++  "nvim-treesitter": { "branch": "master", "commit": "585860a1865853d2c287c8ef534297da8115818e" },
++  "nvim-treesitter-context": { "branch": "master", "commit": "0f3332788e0bd37716fbd25f39120dcfd557c90f" },
++  "nvim-treesitter-textobjects": { "branch": "master", "commit": "41e3abf6bfd9a9a681eb1f788bdeba91c9004b2b" },
++  "nvim-ts-autotag": { "branch": "main", "commit": "e239a560f338be31337e7abc3ee42515daf23f5e" },
++  "nvim-ts-context-commentstring": { "branch": "main", "commit": "375c2d86cee6674afd75b4f727ce3a80065552f7" },
++  "one-small-step-for-vimkind": { "branch": "main", "commit": "0f0d5bc67786c36edc2cb6fb5faa5c09dd1a6e10" },
++  "outline.nvim": { "branch": "main", "commit": "e2fc8d8e10205a65f13581504674f4d305c1abe8" },
++  "persistence.nvim": { "branch": "main", "commit": "f6aad7dde7fcf54148ccfc5f622c6d5badd0cc3d" },
++  "plenary.nvim": { "branch": "master", "commit": "ec289423a1693aeae6cd0d503bac2856af74edaa" },
++  "rustaceanvim": { "branch": "master", "commit": "047f9c9d8cd2861745eb9de6c1570ee0875aa795" },
+   "suda.vim": { "branch": "master", "commit": "b97fab52f9cdeabe2bbb5eb98d82356899f30829" },
+-  "tabular": { "branch": "master", "commit": "339091ac4dd1f17e225fe7d57b48aff55f99b23a" },
++  "tabular": { "branch": "master", "commit": "12437cd1b53488e24936ec4b091c9324cafee311" },
+   "tailwindcss-colorizer-cmp.nvim": { "branch": "main", "commit": "3d3cd95e4a4135c250faf83dd5ed61b8e5502b86" },
+-  "telescope.nvim": { "branch": "master", "commit": "61a4a615366c470a4e9ca8f8b45718b6b92af73f" },
+-  "todo-comments.nvim": { "branch": "main", "commit": "51e10f838e84b4756c16311d0b1ef0972c6482d2" },
+-  "tokyonight.nvim": { "branch": "main", "commit": "30d7be361a7fbf187a881f17e574e9213d5108ea" },
+-  "trouble.nvim": { "branch": "main", "commit": "88c3be40c061ce053ab326ce4fdcb973a1f785ff" },
+-  "ts-comments.nvim": { "branch": "main", "commit": "c075b4ee00f6e111b44bf99a8cfd5a4cfce9258a" },
+-  "venv-selector.nvim": { "branch": "regexp", "commit": "9cbb76e10abed4fff32d015472e7996fd999c996" },
++  "telescope-fzf-native.nvim": { "branch": "main", "commit": "cf48d4dfce44e0b9a2e19a008d6ec6ea6f01a83b" },
++  "telescope.nvim": { "branch": "master", "commit": "5972437de807c3bc101565175da66a1aa4f8707a" },
++  "todo-comments.nvim": { "branch": "main", "commit": "8f45f353dc3649cb9b44cecda96827ea88128584" },
++  "tokyonight.nvim": { "branch": "main", "commit": "b0e7c7382a7e8f6456f2a95655983993ffda745e" },
++  "trouble.nvim": { "branch": "main", "commit": "6efc446226679fda0547c0fd6a7892fd5f5b15d8" },
++  "ts-comments.nvim": { "branch": "main", "commit": "98d7d4dec0af1312d38e288f800bbf6ff562b6ab" },
++  "venv-selector.nvim": { "branch": "regexp", "commit": "c43dc6bf8c7e7cf124a991775ed3defe87112d3a" },
+   "vim-dadbod": { "branch": "master", "commit": "7888cb7164d69783d3dce4e0283decd26b82538b" },
+-  "vim-dadbod-completion": { "branch": "master", "commit": "8c9051c1cfc73fcf5bfe9a84db7097e4f7c0180d" },
+-  "vim-dadbod-ui": { "branch": "master", "commit": "2527310098e7458488e61a528614da142aa2dc42" },
++  "vim-dadbod-completion": { "branch": "master", "commit": "880f7e9f2959e567c718d52550f9fae1aa07aa81" },
++  "vim-dadbod-ui": { "branch": "master", "commit": "2f344874918a3ab6bbe68fb866b3f003a639a5d2" },
+   "vim-illuminate": { "branch": "master", "commit": "5eeb7951fc630682c322e88a9bbdae5c224ff0aa" },
+-  "vimtex": { "branch": "master", "commit": "2dc2a5435809c13f6f4aa07964be4ef19a7864f5" },
++  "vimtex": { "branch": "master", "commit": "76ef99f73a5ff10be59836a4af4f928eaa8ad284" },
+   "vimwiki": { "branch": "dev", "commit": "705ad1e0dded0e3b7ff5fac78547ab67c9d39bdf" },
+-  "which-key.nvim": { "branch": "main", "commit": "0099511294f16b81c696004fa6a403b0ae61f7a0" },
++  "which-key.nvim": { "branch": "main", "commit": "6c1584eb76b55629702716995cca4ae2798a9cca" },
+   "yanky.nvim": { "branch": "main", "commit": "73215b77d22ebb179cef98e7e1235825431d10e4" }
+-}
+\ No newline at end of file
++}
+diff --git a/lazyvim.json b/lazyvim.json
+index b860380..2445bfe 100644
+--- a/lazyvim.json
++++ b/lazyvim.json
+@@ -10,7 +10,6 @@
+     "lazyvim.plugins.extras.dap.nlua",
+     "lazyvim.plugins.extras.editor.aerial",
+     "lazyvim.plugins.extras.editor.dial",
+-    "lazyvim.plugins.extras.editor.fzf",
+     "lazyvim.plugins.extras.editor.illuminate",
+     "lazyvim.plugins.extras.editor.inc-rename",
+     "lazyvim.plugins.extras.editor.outline",
+@@ -27,7 +26,6 @@
+     "lazyvim.plugins.extras.lang.markdown",
+     "lazyvim.plugins.extras.lang.php",
+     "lazyvim.plugins.extras.lang.python",
+-    "lazyvim.plugins.extras.lang.ruby",
+     "lazyvim.plugins.extras.lang.rust",
+     "lazyvim.plugins.extras.lang.sql",
+     "lazyvim.plugins.extras.lang.tailwind",
+@@ -43,7 +41,7 @@
+     "lazyvim.plugins.extras.util.mini-hipatterns"
+   ],
+   "news": {
+-    "NEWS.md": "6077"
++    "NEWS.md": "6520"
+   },
+   "version": 6
+ }
+\ No newline at end of file
+diff --git a/lua/config/keymaps.lua b/lua/config/keymaps.lua
+index ca0b3f9..8193a42 100644
+--- a/lua/config/keymaps.lua
++++ b/lua/config/keymaps.lua
+@@ -112,10 +112,10 @@ map("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
+ map("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+ 
+ -- windows
+-unmap("n", "<leader>ww")
+-unmap("n", "<leader>wd")
+-unmap("n", "<leader>w-")
+-unmap("n", "<leader>w|")
+-unmap("n", "<leader>-")
+-unmap("n", "<leader>|")
+-unmap("n", "<leader>wm")
++-- unmap("n", "<leader>ww")
++-- unmap("n", "<leader>wd")
++-- unmap("n", "<leader>w-")
++-- unmap("n", "<leader>w|")
++-- unmap("n", "<leader>-")
++-- unmap("n", "<leader>|")
++-- unmap("n", "<leader>wm")
+diff --git a/lua/plugins/mini-pairs.lua b/lua/plugins/mini-pairs.lua
+new file mode 100644
+index 0000000..2a84457
+--- /dev/null
++++ b/lua/plugins/mini-pairs.lua
+@@ -0,0 +1,6 @@
++return {
++	{
++		"echasnovski/mini.pairs",
++		enabled = false,
++	}
++}
+diff --git a/lua/plugins/notify.lua b/lua/plugins/notify.lua
+deleted file mode 100644
+index 89bd61e..0000000
+--- a/lua/plugins/notify.lua
++++ /dev/null
+@@ -1,7 +0,0 @@
+-return {
+-  "rcarriga/nvim-notify",
+-  opts = {
+-    timeout = 2000,
+-    -- top_down = false,
+-  },
+-}
+diff --git a/lua/plugins/nvim-notify.lua b/lua/plugins/nvim-notify.lua
+new file mode 100644
+index 0000000..a3963e5
+--- /dev/null
++++ b/lua/plugins/nvim-notify.lua
+@@ -0,0 +1,35 @@
++return {
++	{
++		"rcarriga/nvim-notify",
++		keys = {
++			{
++				"<leader>un",
++				function()
++					require("notify").dismiss({ silent = true, pending = true })
++				end,
++				desc = "Dismiss All Notifications",
++			},
++		},
++		opts = {
++			stages = "static",
++			timeout = 1500,
++			-- max_height = function()
++			-- 	return math.floor(vim.o.lines * 0.25)
++			-- end,
++			-- max_width = function()
++			-- 	return math.floor(vim.o.columns * 0.25)
++			-- end,
++			on_open = function(win)
++				vim.api.nvim_win_set_config(win, { zindex = 100 })
++			end,
++		},
++		init = function()
++			-- when noice is not enabled, install notify on VeryLazy
++			if not LazyVim.has("noice.nvim") then
++				LazyVim.on_very_lazy(function()
++					vim.notify = require("notify")
++				end)
++			end
++		end,
++	}
++}
+diff --git a/lua/plugins/which-key.lua b/lua/plugins/which-key.lua
+index 99f4399..1c04760 100644
+--- a/lua/plugins/which-key.lua
++++ b/lua/plugins/which-key.lua
+@@ -4,121 +4,108 @@ comment config mappings file to avoid overrides:
+ ]]
+ --
+ return {
+-  {
+-    "folke/which-key.nvim",
+-    opts = {
+-      plugins = {
+-        marks = true,
+-        registers = true,
+-        spelling = {
+-          enabled = true,
+-          suggestions = 20,
+-        },
+-        presets = {
+-          operators = false,
+-          motions = false,
+-          text_objects = false,
+-          windows = true,
+-          nav = true,
+-          z = true,
+-          g = true,
+-        },
+-      },
+-      icons = {
+-        breadcrumb = ">>",
+-        separator = "->",
+-        group = "+",
+-      },
+-      popup_mappings = {
+-        scroll_down = "<c-j>",
+-        scroll_up = "<c-k>",
+-      },
+-      window = {
+-        border = "rounded",
+-        position = "bottom",
+-        margin = { 1, 0, 1, 0 },
+-        padding = { 2, 2, 2, 2 },
+-        winblend = 0,
+-      },
+-      layout = {
+-        height = { min = 4, max = 25 },
+-        width = { min = 20, max = 50 },
+-        spacing = 2,
+-        align = "left",
+-      },
+-      ignore_missing = true,
+-      hidden = { "<silent>", "<cmd>", "<Cmd>", "<cr>", "call", "lua", "^:", "^ " },
+-      show_help = true,
+-      triggers = "auto",
+-      triggers_blacklist = {
+-        i = { "j", "k" },
+-        v = { "j", "k" },
+-      },
+-      defaults = {
+-        mode = { "n", "v" },
+-        prefix = "<leader>",
+-        buffer = nil,
+-        silent = true,
+-        noremap = true,
+-        nowait = true,
+-
+-        -- a = auto-options
+-        ["gs"] = { name = "+surround" },
+-        ["z"] = { name = "+fold" },
+-        ["]"] = { name = "+next" },
+-        ["["] = { name = "+prev" },
+-        ["<tab>"] = { name = "+tabs" },
+-        ["b"] = { name = "+buffer" },
+-        ["c"] = { name = "+code" },
+-        ["gh"] = { name = "+hunks" },
+-        ["q"] = { name = "+quit/session" },
+-        ["s"] = { name = "+search" },
+-        ["u"] = { name = "+ui" },
+-        ["x"] = { name = "+diagnostics/quickfix" },
+-        [","] = { "A,<esc>", "Append comma" },
+-        [";"] = { "A;<esc>", "Append semicolon" },
+-        d = { '"_d', "Delete withouth yanking" },
+-        Q = { "<cmd>:BufferLineCloseOthers<cr>", "Close Other Buffers" },
+-        -- q = { "<cmd>:bdelete<cr>", "Close Buffer" },
+-        -- s = search and replace word under cursor (autocommands.lua)
+-        w = { "<cmd>w!<cr>", "Save" },
+-        W = { "<cmd>SudaWrite<cr>", "Save (sudo)" },
+-        a = {
+-          name = "Auto-options",
+-          C = { "<cmd>setlocal formatoptions-=cro<cr>", "Auto-comment off" },
+-          F = { "<cmd>set foldmethod=marker<cr>", "Fold mark" },
+-          H = { "<cmd>nohlsearch<cr>", "Highlight off" },
+-          I = { "<cmd>setlocal noautoindent<cr>", "Auto-indent off" },
+-          L = { "<cmd>set colorcolumn=0<cr>", "Color column off" },
+-          T = { "<cmd>set shiftwidth=4 tabstop=4<cr>", "Indent 4 spaces" },
+-          c = { "<cmd>setlocal formatoptions+=cro<cr>", "Auto-comment on" },
+-          f = { "<cmd>set foldmethod=indent<cr>", "Fold indent" },
+-          h = { "<cmd>lua vim.opt.hlsearch = true<cr>", "Highlight on" },
+-          i = { "<cmd>setlocal autoindent<cr>", "Auto-indent on" },
+-          l = { "<cmd>set colorcolumn=79<cr>", "Color column on" },
+-          s = { "<cmd>%s/\\s\\+$//e<cr>", "Remove traling spaces" },
+-          t = { "<cmd>set shiftwidth=2 tabstop=2<cr>", "Indent 2 spaces" },
+-          x = { "<cmd>ColorizerToggle<cr>", "Hex colors toggle" },
+-        },
+-        f = {
+-          { name = "+file/find" },
+-          f = { "<cmd>lua LazyVim.format({ force = true })<cr>", "Format code" },
+-          e = { "<cmd>EslintFixAll<cr>", "Eslint fix code" },
+-        },
+-        g = {
+-          { name = "+goto (git)" },
+-          j = { "<cmd>lua require('gitsigns').next_hunk()<cr>", "Next Hunk" },
+-          k = { "<cmd>lua require('gitsigns').prev_hunk()<cr>", "Previous Hunk" },
+-          r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
+-          R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
+-          s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
+-        },
+-      },
+-      config = function(_, opts)
+-        local wk = require("which-key")
+-        wk.setup(opts)
+-        wk.register(opts.defaults)
+-      end,
+-    },
+-  },
++	{
++		"folke/which-key.nvim",
++		opts = {
++			plugins = {
++				marks = true,
++				registers = true,
++				spelling = {
++					enabled = true,
++					suggestions = 20,
++				},
++				presets = {
++					operators = false,
++					motions = false,
++					text_objects = false,
++					windows = true,
++					nav = true,
++					z = true,
++					g = true,
++				},
++			},
++			icons = {
++				breadcrumb = ">>",
++				separator = "->",
++				group = "+",
++			},
++			-- popup_mappings = {
++			-- 	scroll_down = "<c-j>",
++			-- 	scroll_up = "<c-k>",
++			-- },
++			-- window = {
++			-- 	border = "rounded",
++			-- 	position = "bottom",
++			-- 	margin = { 1, 0, 1, 0 },
++			-- 	padding = { 2, 2, 2, 2 },
++			-- 	winblend = 0,
++			-- },
++			layout = {
++				height = { min = 4, max = 25 },
++				width = { min = 20, max = 50 },
++				spacing = 2,
++				align = "left",
++			},
++			-- ignore_missing = true,
++			-- hidden = { "<silent>", "<cmd>", "<Cmd>", "<cr>", "call", "lua", "^:", "^ " },
++			show_help = true,
++			-- triggers = "auto",
++			-- triggers_blacklist = {
++			-- 	i = { "j", "k" },
++			-- 	v = { "j", "k" },
++			-- },
++			spec = {
++				{
++					mode = { "n", "v" },
++					{ "<leader>,",     "A,<esc>",                                        desc = "Append comma",            nowait = true, remap = false },
++					{ "<leader>;",     "A;<esc>",                                        desc = "Append semicolon",        nowait = true, remap = false },
++					{ "<leader><tab>", group = "tabs",                                   desc = '',                        nowait = true, remap = false },
++					{ "<leader>Q",     "<cmd>:BufferLineCloseOthers<cr>",                desc = "Close Other Buffers",     nowait = true, remap = false },
++					{ "<leader>W",     "<cmd>SudaWrite<cr>",                             desc = "Save (sudo)",             nowait = true, remap = false },
++					{ "<leader>[",     group = "prev",                                   desc = '',                        nowait = true, remap = false },
++					{ "<leader>]",     group = "next",                                   desc = '',                        nowait = true, remap = false },
++					{ "<leader>a",     group = "Auto-options",                           desc = '',                        nowait = true, remap = false },
++					{ "<leader>aC",    "<cmd>setlocal formatoptions-=cro<cr>",           desc = "Auto-comment off",        nowait = true, remap = false },
++					{ "<leader>aF",    "<cmd>set foldmethod=marker<cr>",                 desc = "Fold mark",               nowait = true, remap = false },
++					{ "<leader>aH",    "<cmd>nohlsearch<cr>",                            desc = "Highlight off",           nowait = true, remap = false },
++					{ "<leader>aI",    "<cmd>setlocal noautoindent<cr>",                 desc = "Auto-indent off",         nowait = true, remap = false },
++					{ "<leader>aL",    "<cmd>set colorcolumn=0<cr>",                     desc = "Color column off",        nowait = true, remap = false },
++					{ "<leader>aT",    "<cmd>set shiftwidth=4 tabstop=4<cr>",            desc = "Indent 4 spaces",         nowait = true, remap = false },
++					{ "<leader>ac",    "<cmd>setlocal formatoptions+=cro<cr>",           desc = "Auto-comment on",         nowait = true, remap = false },
++					{ "<leader>af",    "<cmd>set foldmethod=indent<cr>",                 desc = "Fold indent",             nowait = true, remap = false },
++					{ "<leader>ah",    "<cmd>lua vim.opt.hlsearch = true<cr>",           desc = "Highlight on",            nowait = true, remap = false },
++					{ "<leader>ai",    "<cmd>setlocal autoindent<cr>",                   desc = "Auto-indent on",          nowait = true, remap = false },
++					{ "<leader>al",    "<cmd>set colorcolumn=79<cr>",                    desc = "Color column on",         nowait = true, remap = false },
++					{ "<leader>as",    "<cmd>%s/\\s\\+$//e<cr>",                         desc = "Remove traling spaces",   nowait = true, remap = false },
++					{ "<leader>at",    "<cmd>set shiftwidth=2 tabstop=2<cr>",            desc = "Indent 2 spaces",         nowait = true, remap = false },
++					{ "<leader>ax",    "<cmd>ColorizerToggle<cr>",                       desc = "Hex colors toggle",       nowait = true, remap = false },
++					{ "<leader>b",     group = "buffer",                                 desc = '',                        nowait = true, remap = false },
++					{ "<leader>c",     group = "code",                                   desc = '',                        nowait = true, remap = false },
++					{ "<leader>d",     '"_d',                                            desc = "Delete withouth yanking", nowait = true, remap = false },
++					{ "<leader>f",     group = "file/find",                              desc = '',                        nowait = true, remap = false },
++					{ "<leader>fe",    "<cmd>EslintFixAll<cr>",                          desc = "Eslint fix code",         nowait = true, remap = false },
++					{ "<leader>ff",    "<cmd>lua LazyVim.format({ force = true })<cr>",  desc = "Format code",             nowait = true, remap = false },
++					{ "<leader>g",     group = "goto (git)",                             desc = '',                        nowait = true, remap = false },
++					{ "<leader>gR",    "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", desc = "Reset Buffer",            nowait = true, remap = false },
++					{ "<leader>gh",    group = "hunks",                                  desc = '',                        nowait = true, remap = false },
++					{ "<leader>gj",    "<cmd>lua require('gitsigns').next_hunk()<cr>",   desc = "Next Hunk",               nowait = true, remap = false },
++					{ "<leader>gk",    "<cmd>lua require('gitsigns').prev_hunk()<cr>",   desc = "Previous Hunk",           nowait = true, remap = false },
++					{ "<leader>gr",    "<cmd>lua require 'gitsigns'.reset_hunk()<cr>",   desc = "Reset Hunk",              nowait = true, remap = false },
++					{ "<leader>gs",    group = "surround",                               desc = '',                        nowait = true, remap = false },
++					{ "<leader>gs",    "<cmd>lua require 'gitsigns'.stage_hunk()<cr>",   desc = "Stage Hunk",              nowait = true, remap = false },
++					{ "<leader>q",     group = "quit/session",                           desc = '',                        nowait = true, remap = false },
++					{ "<leader>s",     group = "search",                                 desc = '',                        nowait = true, remap = false },
++					{ "<leader>u",     group = "ui",                                     desc = '',                        nowait = true, remap = false },
++					{ "<leader>w",     "<cmd>w!<cr>",                                    desc = "Save",                    nowait = true, remap = false },
++					{ "<leader>x",     group = "diagnostics/quickfix",                   desc = '',                        nowait = true, remap = false },
++					{ "<leader>z",     group = "fold",                                   desc = '',                        nowait = true, remap = false },
++				},
++			},
++			config = function(_, opts)
++				local wk = require("which-key")
++				wk.setup(opts)
++				-- wk.register(opts.defaults)
++			end,
++		},
++	},
+ }
+diff --git a/snippets/gitcommit.json b/snippets/gitcommit.json
+index 2489fe3..17749e5 100644
+--- a/snippets/gitcommit.json
++++ b/snippets/gitcommit.json
+@@ -1,35 +1,35 @@
+ {
+     "fix saeko commit": {
+         "prefix": "sfix",
+-        "body": ["[SAE-${1:issue}] fix(${2:scope}): 🩹 ${3:title}", "", "$0"]
++        "body": ["[SAE-${1:issue}] fix(${2:scope}): ${3:title}", "", "$0"]
+     },
+     "bugfix saeko commit": {
+         "prefix": "sbugfix",
+-        "body": ["[SAE-${1:issue}] bugfix(${2:scope}): 🐛 ${3:title}", "", "$0"]
++        "body": ["[SAE-${1:issue}] bugfix(${2:scope}): ${3:title}", "", "$0"]
+     },
+     "feat saeko commit": {
+         "prefix": "sfeat",
+-        "body": ["[SAE-${1:issue}] feat(${2:scope}): ✨ ${3:title}", "", "$0"]
++        "body": ["[SAE-${1:issue}] feat(${2:scope}): ${3:title}", "", "$0"]
+     },
+     "deploy saeko commit": {
+         "prefix": "sdeploy",
+-        "body": ["deploy: 🚀 ${1:type} bump ${2:version} (${3:number})", "", "$0"]
++        "body": ["deploy: ${1:type} bump ${2:version} (${3:number})", "", "$0"]
+     },
+     "chore saeko commit": {
+         "prefix": "schore",
+-        "body": ["[SAE-${1:issue}] chore(${2:scope}): 🧹 ${3:title}", "", "$0"]
++        "body": ["[SAE-${1:issue}] chore(${2:scope}): ${3:title}", "", "$0"]
+     },
+     "ci saeko commit": {
+         "prefix": "sci",
+-        "body": ["[SAE-${1:issue}] ci(${2:scope}): 💚 ${3:title}", "", "$0"]
++        "body": ["[SAE-${1:issue}] ci(${2:scope}): ${3:title}", "", "$0"]
+     },
+     "docs saeko commit": {
+         "prefix": "sdocs",
+-        "body": ["[SAE-${1:issue}] docs(${2:scope}): 📝 ${3:title}", "", "$0"]
++        "body": ["[SAE-${1:issue}] docs(${2:scope}): ${3:title}", "", "$0"]
+     },
+     "style saeko commit": {
+         "prefix": "sstyle",
+-        "body": ["[SAE-${1:issue}] style(${2:scope}): 💄 ${3:title}", "", "$0"]
++        "body": ["[SAE-${1:issue}] style(${2:scope}): ${3:title}", "", "$0"]
+     },
+     "refactor saeko commit": {
+         "prefix": "srefactor",
+diff --git a/spell/en.utf-8.add b/spell/en.utf-8.add
+new file mode 100644
+index 0000000..de530a7
+--- /dev/null
++++ b/spell/en.utf-8.add
+@@ -0,0 +1,29 @@
++saeko
++v2
++Linters
++Saeko's
++js
++npm
++buildNumber
++versionCode
++json
++ios
++eas
++Dotfiles
++ESLint
++TypeScript
++Redux
++plaintext
++utils
++api
++app
++tsx
++components
++enum
++linter
++LSP
++Middlewares
++enums
++middlewares
++bugsnag
++oauth
+diff --git a/spell/en.utf-8.add.spl b/spell/en.utf-8.add.spl
+new file mode 100644
+index 0000000..eb3b8a7
+Binary files /dev/null and b/spell/en.utf-8.add.spl differ
+diff --git a/spell/es.utf-8.spl b/spell/es.utf-8.spl
+new file mode 100644
+index 0000000..62d848d
+Binary files /dev/null and b/spell/es.utf-8.spl differ
+diff --git a/spell/es.utf-8.sug b/spell/es.utf-8.sug
+new file mode 100644
+index 0000000..9064321
+Binary files /dev/null and b/spell/es.utf-8.sug differ

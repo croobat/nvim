@@ -1,0 +1,16 @@
+0000000000000000000000000000000000000000 4818e4b72fc24b0fceed88f83e21e908def4c386 Tony Ramírez <tonyramirez.business@outlook.com> 1717979212 -0600	clone: from https://github.com/LazyVim/starter
+4818e4b72fc24b0fceed88f83e21e908def4c386 803143ea478a7f0d776fdc60b1a6141e2c096646 Tony Ramírez <tonyramirez.business@outlook.com> 1717980135 -0600	commit: chore: update lock file
+803143ea478a7f0d776fdc60b1a6141e2c096646 60534fd03ee01a10e7f3645ab9bfd7c00ea71498 Tony Ramírez <tonyramirez.business@outlook.com> 1717984895 -0600	commit: feat(colorscheme): set tokyonight night theme
+60534fd03ee01a10e7f3645ab9bfd7c00ea71498 f999116eee4dda253918eb8e9d0643ba05d01263 Tony Ramírez <tonyramirez.business@outlook.com> 1718587321 -0600	commit: feat: sync old config
+f999116eee4dda253918eb8e9d0643ba05d01263 f85488294d61a313c390bdee4a9a0aa63bf3c7dd Tony Ramírez <tonyramirez.business@outlook.com> 1718594027 -0600	commit (amend): feat: sync old config
+f85488294d61a313c390bdee4a9a0aa63bf3c7dd 3a013da749d1b083d90c052b97c8f1e510ba30e8 Tony Ramírez <tonyramirez.business@outlook.com> 1718594446 -0600	commit (amend): feat: sync old config
+3a013da749d1b083d90c052b97c8f1e510ba30e8 9926463e3d153de269ec7890adee17423a617f1d Tony Ramírez <tonyramirez.business@outlook.com> 1718596157 -0600	commit (amend): feat: sync old config
+9926463e3d153de269ec7890adee17423a617f1d 4818e4b72fc24b0fceed88f83e21e908def4c386 Tony Ramírez <tonyramirez.business@outlook.com> 1718596294 -0600	reset: moving to 4818e4b72fc24b0fceed88f83e21e908def4c386
+4818e4b72fc24b0fceed88f83e21e908def4c386 4818e4b72fc24b0fceed88f83e21e908def4c386 Tony Ramírez <tonyramirez.business@outlook.com> 1718596310 -0600	reset: moving to HEAD
+4818e4b72fc24b0fceed88f83e21e908def4c386 cb79b0e6a9d0ec81041150dc87fe47352a54a2ba Tony Ramírez <tonyramirez.business@outlook.com> 1718596314 -0600	pull: Fast-forward
+cb79b0e6a9d0ec81041150dc87fe47352a54a2ba fcb3af0b7b45ab390a3c2324074bf5851db78c7e Tony Ramírez <tonyramirez.business@outlook.com> 1718602741 -0600	commit: my config
+fcb3af0b7b45ab390a3c2324074bf5851db78c7e 2ed2ec90ba8894ff66019d41013f614859d49751 Tony Ramírez <tonyramirez.business@outlook.com> 1719091357 -0600	commit (amend): my config
+2ed2ec90ba8894ff66019d41013f614859d49751 49ba6b0a2afa1efc0059f2dda2f0030a8450c812 Tony Ramírez <tonyramirez.business@outlook.com> 1719199379 -0600	commit (amend): my config
+49ba6b0a2afa1efc0059f2dda2f0030a8450c812 c57a32831dd4f3e9b1fcc2e7636f441a0a90171c Tony Ramírez <tonyramirez.business@outlook.com> 1719336613 -0600	commit (amend): my config
+c57a32831dd4f3e9b1fcc2e7636f441a0a90171c 55063d1feed49fe20b515a38ec4c214816a8339e Tony Ramírez <tonyramirez.business@outlook.com> 1724953773 -0600	commit: a lot of damn changes
+55063d1feed49fe20b515a38ec4c214816a8339e cb79b0e6a9d0ec81041150dc87fe47352a54a2ba Tony Ramírez <tonyramirez.business@outlook.com> 1724954132 -0600	reset: moving to cb79b0e6a9d0ec81041150dc87fe47352a54a2ba
