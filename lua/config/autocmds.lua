@@ -76,33 +76,30 @@ autocmd("VimResized", {
   end,
 })
 
--- Change tab size to 2
--- autocmd("Filetype", {
---   pattern = {
---     "javascript",
---     "vue",
---     "json",
---     "sh",
---     "zsh",
---     "gitcommit",
---   },
---   callback = function()
---     vim.opt_local.tabstop = 2
---     vim.opt_local.shiftwidth = 2
---   end,
--- })
-
 -- Change tabs to spaces
--- autocmd("Filetype", {
---   pattern = {
---     "vue",
---     "json",
---     "sh",
---   },
---   callback = function()
---     vim.opt_local.expandtab = true
---   end,
--- })
+autocmd("Filetype", {
+  pattern = {
+    "vue",
+    "json",
+    "sh",
+  },
+  callback = function()
+    vim.opt_local.expandtab = true
+  end,
+})
+
+
+autocmd("Filetype", {
+  pattern = {
+    "astro",
+  },
+  callback = function()
+    vim.opt_local.expandtab = true
+		vim.opt_local.tabstop = 4
+		vim.opt_local.shiftwidth = 4
+	end,
+})
+
 
 -- Filetype sh for zsh
 autocmd("Filetype", {

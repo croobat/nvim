@@ -86,6 +86,7 @@ return {
 					{ "<leader>fe",    "<cmd>EslintFixAll<cr>",                          desc = "Eslint fix code",         nowait = true, remap = false },
 					{ "<leader>ff",    "<cmd>lua LazyVim.format({ force = true })<cr>",  desc = "Format code",             nowait = true, remap = false },
 					{ "<leader>g",     group = "goto (git)",                             desc = '',                        nowait = true, remap = false },
+					{ "<leader>gb",    "<cmd>lua require('gitsigns').blame_line()<cr>",  desc = "Blame",                   nowait = true, remap = false },
 					{ "<leader>gR",    "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", desc = "Reset Buffer",            nowait = true, remap = false },
 					{ "<leader>gh",    group = "hunks",                                  desc = '',                        nowait = true, remap = false },
 					{ "<leader>gj",    "<cmd>lua require('gitsigns').next_hunk()<cr>",   desc = "Next Hunk",               nowait = true, remap = false },
