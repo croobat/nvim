@@ -1,0 +1,26 @@
+{
+	"console.stringify": {
+		"prefix": "cj",
+		"body": "console.log(JSON.stringify(${0}))"
+	},
+  "console.tron": {
+    "prefix": "tron",
+    "body": "console.tron.log(${0})"
+  },
+  "console.display": {
+    "prefix": "dis",
+    "body": "console.tron.display({ name: '${1:display}', preview: '${1:display}', value: ${0} });"
+  },
+  "tony": {
+    "prefix": "tony",
+    "body": "// TONY ELIMINAR"
+  },
+  "tonyc": {
+    "prefix": "tonyc",
+    "body": "{/* TONY ELIMINAR */}"
+  },
+  "const module = require('module')": {
+    "prefix": "cr",
+    "body": "const ${1:module} = require('${2:module}')"
+  }
+}

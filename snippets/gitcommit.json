@@ -1,0 +1,54 @@
+{
+    "fix saeko commit": {
+        "prefix": "sfix",
+        "body": ["[SAE-${1:issue}] fix(${2:scope}): ${3:title}", "", "$0"]
+    },
+    "bugfix saeko commit": {
+        "prefix": "sbugfix",
+        "body": ["[SAE-${1:issue}] bugfix(${2:scope}): ${3:title}", "", "$0"]
+    },
+    "feat saeko commit": {
+        "prefix": "sfeat",
+        "body": ["[SAE-${1:issue}] feat(${2:scope}): ${3:title}", "", "$0"]
+    },
+    "deploy saeko commit": {
+        "prefix": "sdeploy",
+        "body": ["deploy: ${1:type} bump ${2:version} (${3:number})", "", "$0"]
+    },
+    "chore saeko commit": {
+        "prefix": "schore",
+        "body": ["[SAE-${1:issue}] chore(${2:scope}): ${3:title}", "", "$0"]
+    },
+    "ci saeko commit": {
+        "prefix": "sci",
+        "body": ["[SAE-${1:issue}] ci(${2:scope}): ${3:title}", "", "$0"]
+    },
+    "docs saeko commit": {
+        "prefix": "sdocs",
+        "body": ["[SAE-${1:issue}] docs(${2:scope}): ${3:title}", "", "$0"]
+    },
+    "style saeko commit": {
+        "prefix": "sstyle",
+        "body": ["[SAE-${1:issue}] style(${2:scope}): ${3:title}", "", "$0"]
+    },
+    "refactor saeko commit": {
+        "prefix": "srefactor",
+        "body": ["[SAE-${1:issue}] refactor(${2:scope}): ♻️ ${3:title}", "", "$0"]
+    },
+    "perf saeko commit": {
+        "prefix": "sperf",
+        "body": ["[SAE-${1:issue}] perf(${2:scope}): ⚡️ ${3:title}", "", "$0"]
+    },
+    "test saeko commit": {
+        "prefix": "stest",
+        "body": ["[SAE-${1:issue}] test(${2:scope}): ✅ ${3:title}", "", "$0"]
+    },
+    "internationalization saeko commit": {
+        "prefix": "slocale",
+        "body": ["[SAE-${1:issue}] i18n(${2:scope}): 🌐 ${3:title}", "", "$0"]
+    },
+    "breaking change saeko commit footer": {
+        "prefix": "sBREAK",
+        "body": ["BREAKING CHANGE: $0"]
+    }
+}

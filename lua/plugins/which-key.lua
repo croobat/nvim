@@ -1,0 +1,100 @@
+
+return {
+}
+
+--[[
+comment config mappings file to avoid overrides:
+~/.local/share/nvim/lazy/LazyVim/lua/lazyvim/plugins/editor.lua
+]]
+--
+-- return {
+--   {
+--     "folke/which-key.nvim",
+--     opts = {
+--       plugins = {
+--         marks = true,
+--         registers = true,
+--         spelling = {
+--           enabled = true,
+--           suggestions = 20,
+--         },
+--         presets = {
+--           operators = false,
+--           motions = false,
+--           text_objects = false,
+--           windows = true,
+--           nav = true,
+--           z = true,
+--           g = true,
+--         },
+--       },
+--       icons = {
+--         breadcrumb = ">>",
+--         separator = "->",
+--         group = "+",
+--       },
+--       layout = {
+--         height = { min = 4, max = 25 },
+--         width = { min = 20, max = 50 },
+--         spacing = 2,
+--         align = "left",
+--       },
+--       show_help = true,
+--       spec = {
+--         {
+--           mode = { "n", "v" },
+--           { "<leader>S", ":%s/\\<<C-r><C-w>\\>//g<Left><Left>", desc = "Search and replace" },
+--           -- { "<leader>,",     "A,<esc>",                                        desc = "Append comma",            nowait = true},
+--           -- { "<leader>;",     "A;<esc>",                                        desc = "Append semicolon",        nowait = true},
+--           -- { "<leader>Q",     "<cmd>:BufferLineCloseOthers<cr>",                desc = "Close Other Buffers",     nowait = true},
+--           -- { "<leader>W",     "<cmd>SudaWrite<cr>",                             desc = "Save (sudo)",             nowait = true},
+--           -- { "<leader>aC",    "<cmd>setlocal formatoptions-=cro<cr>",           desc = "Auto-comment off",        nowait = true},
+--           -- { "<leader>aF",    "<cmd>set foldmethod=marker<cr>",                 desc = "Fold mark",               nowait = true},
+--           -- { "<leader>aH",    "<cmd>nohlsearch<cr>",                            desc = "Highlight off",           nowait = true},
+--           -- { "<leader>aI",    "<cmd>setlocal noautoindent<cr>",                 desc = "Auto-indent off",         nowait = true},
+--           -- { "<leader>aL",    "<cmd>set colorcolumn=0<cr>",                     desc = "Color column off",        nowait = true},
+--           -- { "<leader>aT",    "<cmd>set shiftwidth=4 tabstop=4<cr>",            desc = "Indent 4 spaces",         nowait = true},
+--           -- { "<leader>ac",    "<cmd>setlocal formatoptions+=cro<cr>",           desc = "Auto-comment on",         nowait = true},
+--           -- { "<leader>af",    "<cmd>set foldmethod=indent<cr>",                 desc = "Fold indent",             nowait = true},
+--           -- { "<leader>ah",    "<cmd>lua vim.opt.hlsearch = true<cr>",           desc = "Highlight on",            nowait = true},
+--           -- { "<leader>ai",    "<cmd>setlocal autoindent<cr>",                   desc = "Auto-indent on",          nowait = true},
+--           -- { "<leader>al",    "<cmd>set colorcolumn=79<cr>",                    desc = "Color column on",         nowait = true},
+--           -- { "<leader>as",    "<cmd>%s/\\s\\+$//e<cr>",                         desc = "Remove traling spaces",   nowait = true},
+--           -- { "<leader>at",    "<cmd>set shiftwidth=2 tabstop=2<cr>",            desc = "Indent 2 spaces",         nowait = true},
+--           -- { "<leader>ax",    "<cmd>ColorizerToggle<cr>",                       desc = "Hex colors toggle",       nowait = true},
+--           -- { "<leader>d",     '"_d',                                            desc = "Delete withouth yanking", nowait = true},
+--           -- { "<leader>f",     group = "file/find",                              desc = '',                        nowait = true},
+--           { "<leader>w",     "<cmd>w!<cr>",                                    desc = "Save",                    nowait = true},
+--           { "<leader>fe",    "<cmd>EslintFixAll<cr>",                          desc = "Eslint fix code",         nowait = true },
+--           { "<leader>ff",    "<cmd>lua LazyVim.format({ force = true })<cr>",  desc = "Format code",             nowait = true},
+--
+--           { "<leader>gh",    group = "hunks",                                  desc = '',                        nowait = true},
+--           { "<leader>gb",    "<cmd>lua require('gitsigns').blame_line()<cr>",  desc = "Blame",                   nowait = true},
+--           { "<leader>gR",    "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", desc = "Reset Buffer",            nowait = true},
+--           { "<leader>gj",    "<cmd>lua require('gitsigns').next_hunk()<cr>",   desc = "Next Hunk",               nowait = true},
+--           { "<leader>gk",    "<cmd>lua require('gitsigns').prev_hunk()<cr>",   desc = "Previous Hunk",           nowait = true},
+--           { "<leader>gr",    "<cmd>lua require 'gitsigns'.reset_hunk()<cr>",   desc = "Reset Hunk",              nowait = true},
+--           { "<leader>gs",    "<cmd>lua require 'gitsigns'.stage_hunk()<cr>",   desc = "Stage Hunk",              nowait = true},
+--
+--           -- { "<leader>gs",    group = "surround",                               desc = '',                        nowait = true},
+--           -- { "<leader>q",     group = "quit/session",                           desc = '',                        nowait = true},
+--           -- { "<leader>s",     group = "search",                                 desc = '',                        nowait = true},
+--           -- { "<leader>u",     group = "ui",                                     desc = '',                        nowait = true},
+--           -- { "<leader>x",     group = "diagnostics/quickfix",                   desc = '',                        nowait = true},
+--           -- { "<leader>z",     group = "fold",                                   desc = '',                        nowait = true},
+--           -- { "<leader><tab>", group = "tabs",                                   desc = '',                        nowait = true},
+--           -- { "<leader>[",     group = "prev",                                   desc = '',                        nowait = true},
+--           -- { "<leader>]",     group = "next",                                   desc = '',                        nowait = true},
+--           -- { "<leader>a",     group = "Auto-options",                           desc = '',                        nowait = true},
+--           -- { "<leader>b",     group = "buffer",                                 desc = '',                        nowait = true},
+--           -- { "<leader>c",     group = "code",                                   desc = '',                        nowait = true},
+--         },
+--       },
+--       config = function(_, opts)
+--         local wk = require("which-key")
+--         wk.setup(opts)
+--         -- wk.register(opts.defaults)
+--       end,
+--     },
+--   },
+-- }
