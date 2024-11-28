@@ -1,0 +1,6 @@
+{
+  "dumpFunction": {
+    "prefix": "dumpf",
+    "body": "function dump(o, indent)\n\tindent = indent or \"\"\n\tif type(o) == 'table' then\n\t\tlocal s = '{\\n'\n\t\tfor k, v in pairs(o) do\n\t\t\tif type(k) ~= 'number' then k = '\"' .. k .. '\"' end\n\t\t\ts = s .. indent .. '  [' .. k .. '] = ' .. dump(v, indent .. '  ') .. ',\\n'\n\t\tend\n\t\treturn s .. indent .. '}'\n\telse\n\t\treturn tostring(o)\n\tend\nend"
+  }
+}

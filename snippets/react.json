@@ -1,0 +1,7 @@
+{
+    "reactFunctionComponentWithCustomName": {
+        "prefix": "rc",
+        "body": "\nconst ${1:functionname} = (${2:props}) => {\n\treturn (\n\t\t<div>\n\t\t\t$3\n\t\t</div>\n\t)\n}$0\n\n",
+        "description": "Creates a React function component with custom name and props"
+    }
+}
